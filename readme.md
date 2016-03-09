@@ -1,4 +1,4 @@
-# JavaScript Coding Standards @ Sebastian Software GmbH <br/>![Downloads][npm-version-img] ![Downloads][npm-downloads-img] ![Dependencies][deps-img]
+# JavaScript Coding Standards<br/>![Downloads][npm-version-img] ![Downloads][npm-downloads-img] ![Dependencies][deps-img]
 
 [deps-img]: https://david-dm.org/sebastian-software/s15e-javascript.svg
 [npm-downloads-img]: https://img.shields.io/npm/dm/s15e-javascript.svg
