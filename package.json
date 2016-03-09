@@ -1,0 +1,17 @@
+{
+  "name": "s15e-javascript",
+  "version": "1.0.0",
+  "description": "JavaScript Coding Standard of Sebastian Software GmbH",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lint",
+    "es6",
+    "eslint",
+    "eslintconfig",
+    "standard"
+  ],
+  "author": "Sebastian Werner <s.werner@sebastian-software.de>",
+  "license": "Apache-2.0"
+}
