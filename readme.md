@@ -1,4 +1,8 @@
-# JavaScript Coding Standards @ Sebastian Software GmbH 
+# JavaScript Coding Standards @ Sebastian Software GmbH <br/>![Downloads][npm-version-img] ![Downloads][npm-downloads-img] ![Dependencies][deps-img]
+
+[deps-img]: https://david-dm.org/sebastian-software/postcss-font-system.svg
+[npm-downloads-img]: https://img.shields.io/npm/dm/postcss-font-system.svg
+[npm-version-img]: https://img.shields.io/npm/v/postcss-font-system.svg
 
 Pool of configuration files for sharing coding standards between different projects
 
