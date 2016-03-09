@@ -14,5 +14,8 @@
     "standard"
   ],
   "author": "Sebastian Werner <s.werner@sebastian-software.de>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "eslint": "^2.3.0"
+  }
 }
