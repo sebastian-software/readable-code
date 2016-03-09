@@ -4,7 +4,12 @@
 [npm-downloads-img]: https://img.shields.io/npm/dm/s15e-javascript.svg
 [npm-version-img]: https://img.shields.io/npm/v/s15e-javascript.svg
 
-Pool of configuration files for sharing coding standards between different projects
+Pool of configuration files for sharing coding standards between different projects.
+
+## Links
+
+- [GitHub](https://github.com/sebastian-software/s15e-javascript)
+- [NPM](https://www.npmjs.com/package/s15e-javascript)
 
 
 ## Usage
