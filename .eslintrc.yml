@@ -155,7 +155,7 @@ rules:
   no-octal-escape:
     - error
 
-  # Prevent side effects to arguments objects, but also makes code sometimes more complexer 
+  # Prevent side effects to arguments objects, but also makes code sometimes more complexer
   # when you have some logic in place to deal with different argument sets
   no-param-reassign:
     - off
@@ -315,7 +315,7 @@ rules:
     - error
     - min: 3
       max: 30
-      exceptions: ["i", "j", "l"]
+      exceptions: ["i", "l", "id"]
 
   key-spacing:
     - error
