@@ -1,6 +1,6 @@
 {
   "name": "s15e-javascript",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "JavaScript Coding Standard of Sebastian Software GmbH",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
