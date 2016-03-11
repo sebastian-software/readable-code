@@ -374,11 +374,12 @@ rules:
   newline-after-var:
     - off
 
-  # Increase readability
+  # Increase readability, but does not work everywhere... therefor we keep it off
+  # and let the individual developer decide.
   newline-before-return:
-    - error
+    - off
   newline-per-chained-call:
-    - error
+    - off
 
   no-array-constructor:
     - error
