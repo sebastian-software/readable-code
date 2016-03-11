@@ -21,9 +21,12 @@ rules:
     - error
     - 2
     - SwitchCase: 1
+      VariableDeclarator: 0
+
   linebreak-style:
     - error
     - unix
+
   quotes:
     - error
     - double
