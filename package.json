@@ -17,6 +17,7 @@
   ],
   "author": "Sebastian Werner <s.werner@sebastian-software.de>",
   "license": "Apache-2.0",
+  "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "eslint": "^2.3.0"
   }
