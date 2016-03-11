@@ -4,7 +4,9 @@
   "description": "JavaScript Coding Standard of Sebastian Software GmbH",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it --github.release --npm.publish"
+    "release": "release-it --github.release --npm.publish --non-interactive",
+    "release-minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
+    "release-major": "release-it --github.release --npm.publish --non-interactive --increment major"
   },
   "keywords": [
     "lint",
