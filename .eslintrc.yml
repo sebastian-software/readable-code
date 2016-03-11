@@ -313,7 +313,7 @@ rules:
   id-length:
     - error
     - min: 3
-      max: 20
+      max: 30
       exceptions: ["i", "j", "l"]
 
   key-spacing:
