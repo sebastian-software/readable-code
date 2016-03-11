@@ -155,9 +155,10 @@ rules:
   no-octal-escape:
     - error
 
-  # Prevent side effects...
+  # Prevent side effects to arguments objects, but also makes code sometimes more complexer 
+  # when you have some logic in place to deal with different argument sets
   no-param-reassign:
-    - error
+    - off
 
   # For maintainability of NodeJS code
   no-process-env:
