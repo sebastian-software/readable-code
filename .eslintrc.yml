@@ -136,7 +136,7 @@ rules:
   no-magic-numbers:
     - error
     - ignoreArrayIndexes: true
-      ignore: [ 0, 1, 2, 10 ]
+      ignore: [ 0, 1, 2, 10, 100, 1000 ]
 
   # Useless formatting with high maintenance
   no-multi-spaces:
