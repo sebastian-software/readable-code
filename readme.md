@@ -21,6 +21,13 @@ extends:
   "./node_modules/s15e-javascript/.eslintrc.yml"
 ```
 
+For Node.js environment use the following ESLint configuration:
+
+```yaml
+extends:
+  "./node_modules/s15e-javascript/.eslintrc.node.yml"
+```
+
 
 ## Copyright
 
