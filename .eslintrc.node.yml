@@ -1,0 +1,12 @@
+
+env:
+  node: true
+
+extends:
+  "./.eslintrc.yml"
+
+rules:
+  strict:
+    - off
+  no-console:
+    - off
