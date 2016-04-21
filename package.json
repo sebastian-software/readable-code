@@ -7,7 +7,7 @@
     "release": "release-it --github.release --npm.publish --non-interactive",
     "release-minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
     "release-major": "release-it --github.release --npm.publish --non-interactive --increment major",
-    "check-eslint-rules": "eslint-find-new-rules || true"
+    "check-eslint-rules": "eslint-find-rules -u .eslintrc.yml || true"
   },
   "keywords": [
     "lint",
@@ -21,6 +21,6 @@
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "eslint": "^2.3.0",
-    "eslint-find-new-rules": "^2.0.1"
+    "eslint-find-rules": "^1.5.0"
   }
 }
