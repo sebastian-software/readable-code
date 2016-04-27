@@ -68,7 +68,7 @@ rules:
     - object
   dot-notation:
     - error
-    - allowKeywords: false
+    - allowKeywords: true
 
   # Smart option allows simple equal for null-comparison which is good
   eqeqeq:
@@ -139,7 +139,7 @@ rules:
   no-magic-numbers:
     - error
     - ignoreArrayIndexes: true
-      ignore: [ 0, 1, 2, 10, 100, 1000 ]
+      ignore: [ 0, 1, 2, 10, 16, 100, 1000 ]
 
   # Useless formatting with high maintenance
   no-multi-spaces:
@@ -318,7 +318,7 @@ rules:
     - error
     - min: 3
       max: 30
-      exceptions: ["i", "l", "id"]
+      exceptions: ["i", "l", "id", "fs"]
 
   key-spacing:
     - error
@@ -531,7 +531,7 @@ rules:
   # Call me old fashioned
   arrow-body-style:
     - error
-    - always
+    - as-needed
   arrow-parens:
     - error
     - always
