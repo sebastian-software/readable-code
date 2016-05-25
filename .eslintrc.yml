@@ -139,7 +139,7 @@ rules:
   no-magic-numbers:
     - error
     - ignoreArrayIndexes: true
-      ignore: [ 0, 1, 2, 10, 16, 100, 1000 ]
+      ignore: [ -1, 0, 1, 2, 10, 16, 100, 1000 ]
 
   # Useless formatting with high maintenance
   no-multi-spaces:
@@ -199,6 +199,7 @@ rules:
     - error
   no-unused-expressions:
     - error
+    - allowTernary: true
   no-useless-call:
     - error
   no-useless-concat:
