@@ -65,7 +65,7 @@ rules:
     - multi
   dot-location:
     - error
-    - object
+    - property
   dot-notation:
     - error
     - allowKeywords: true
