@@ -21,6 +21,6 @@
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "eslint": "^2.10.2",
-    "eslint-find-rules": "^1.9.2"
+    "eslint-find-rules": "^1.10.0"
   }
 }
