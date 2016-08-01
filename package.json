@@ -20,7 +20,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
-    "eslint": "^3.1.1",
+    "eslint": "^3.2.1",
     "eslint-find-rules": "^1.11.1"
   }
 }
