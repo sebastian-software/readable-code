@@ -323,7 +323,7 @@ rules:
       max: 30
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
-      exceptions: ["i", "l", "t", "id", "fs"]
+      exceptions: ["i", "l", "t", "id", "to", "fs"]
 
   key-spacing:
     - error
@@ -535,7 +535,7 @@ rules:
 
   # Call me old fashioned
   arrow-body-style:
-    - error
+    - warn
     - as-needed
   arrow-parens:
     - error
