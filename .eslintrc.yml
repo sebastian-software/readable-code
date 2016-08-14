@@ -30,7 +30,8 @@ rules:
   quotes:
     - error
     - double
-    - avoid-escape
+    - avoidEscape
+    - allowTemplateLiterals
 
   # Keeping semicolons only for the "return" edge case seems a little to historic for my taste
   semi:
@@ -319,7 +320,9 @@ rules:
     - error
     - min: 3
       max: 30
-      exceptions: ["i", "l", "id", "fs"]
+      # 'i' + 'l' = typical looping constructs
+      # 't' = support convention in ava test runner
+      exceptions: ["i", "l", "t", "id", "fs"]
 
   key-spacing:
     - error
