@@ -30,8 +30,8 @@ rules:
   quotes:
     - error
     - double
-    - avoidEscape
-    - allowTemplateLiterals
+    - avoidEscape: true
+      allowTemplateLiterals: true
 
   # Keeping semicolons only for the "return" edge case seems a little to historic for my taste
   semi:
