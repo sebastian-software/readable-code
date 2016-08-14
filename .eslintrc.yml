@@ -279,6 +279,7 @@ rules:
     - always
 
   # Keeping starting and ending brace symbol on one visible column
+  # See also: https://en.wikipedia.org/wiki/Indent_style#Allman_style
   brace-style:
     - error
     - allman
