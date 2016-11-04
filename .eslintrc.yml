@@ -786,6 +786,7 @@ rules:
 
   no-use-extend-native/no-use-extend-native: error
   filenames/match-regex:
-    - 2
+    - error
     - "^[a-zA-Z0-9]+$"
-  filenames/match-exported: 2
+  filenames/match-exported: error
+  lodash/prefer-lodash-method: off

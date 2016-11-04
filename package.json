@@ -9,6 +9,9 @@
     "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
     "check": "eslint-find-rules -u .eslintrc.yml || true"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "keywords": [
     "lint",
     "es6",
