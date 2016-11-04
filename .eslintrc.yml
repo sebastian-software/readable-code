@@ -376,7 +376,8 @@ rules:
       max: 30
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
-      exceptions: ["i", "l", "t", "id", "to", "ex"]
+      # 'fs' = built-in fs module
+      exceptions: ["i", "l", "t", "id", "to", "fs"]
 
   key-spacing:
     - error
