@@ -1,9 +1,12 @@
 /* eslint-disable prefer-arrow-callback */
 
-const gulp = require("gulp")
-const eslint = require("gulp-eslint")
-const stylelint = require("gulp-stylelint")
-const exec = require("child_process").execSync
+var fs = require("fs")
+var postcss = require("postcss")
+var gulp = require("gulp")
+var eslint = require("gulp-eslint")
+var stylelint = require("gulp-stylelint")
+var stylefmt = require("stylefmt")
+var exec = require("child_process").execSync
 
 function getGitFiles(regexp) {
   var gitFiles = exec("git ls-files").toString().trim().split("\n")
@@ -16,6 +19,12 @@ gulp.task("lint:js", function() {
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
 })
 
+gulp.task("fix:js", function() {
+  return gulp.src(getGitFiles(/\.(js|jsx)$/))
+    .pipe(eslint({ fix: true }))
+    .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
+})
+
 gulp.task("lint:css", function() {
   return gulp.src(getGitFiles(/\.(css|sass|scss|sss)$/))
     .pipe(stylelint({
@@ -23,5 +32,14 @@ gulp.task("lint:css", function() {
         { formatter: "string", console: true }
       ]
     }))
-    .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
+})
+
+gulp.task("fix:css", function() {
+  var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
+  cssFiles.forEach(function(fileName) {
+    var fileContent = fs.readFileSync(fileName, "utf-8")
+    postcss([ stylefmt ]).process(fileContent).then(function(result) {
+      fs.writeFileSync(fileName, result.css, "utf-8")
+    })
+  })
 })
