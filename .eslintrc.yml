@@ -1,3 +1,24 @@
+plugins:
+  - import
+  - react
+  - unicorn
+  - flowtype
+  - jsx-a11y
+  - promise
+  - no-use-extend-native
+  - filenames
+  - lodash
+  - node
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:unicorn/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:lodash/recommended
+  - plugin:node/recommended
+
 env:
   browser: true
   node: true
@@ -15,23 +36,6 @@ parserOptions:
     generators: true
     jsx: true
   sourceType: module
-
-plugins:
-  - import
-  - react
-  - unicorn
-  - flowtype
-  - jsx-a11y
-  - promise
-  - no-use-extend-native
-  - filenames
-
-extends:
-  - eslint:recommended
-  - plugin:react/recommended
-  - plugin:unicorn/recommended
-  - plugin:import/errors
-  - plugin:import/warnings
 
 rules:
   #######################################################################################
