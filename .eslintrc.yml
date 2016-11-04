@@ -807,5 +807,8 @@ rules:
   # Duplicated
   unicorn/no-process-exit: off
 
+  # We have something more powerful available to check filenames
+  unicorn/filename-case: off
+
   # Improve support for usage of Flowtype
   flowtype-errors/show-errors: error
