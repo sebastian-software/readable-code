@@ -24,6 +24,7 @@ plugins:
   - jsx-a11y
   - promise
   - no-use-extend-native
+  - filenames
 
 extends:
   - eslint:recommended
@@ -780,3 +781,7 @@ rules:
   #######################################################################################
 
   no-use-extend-native/no-use-extend-native: error
+  filenames/match-regex:
+    - 2
+    - "^[a-zA-Z0-9]+$"
+  filenames/match-exported: 2
