@@ -22,6 +22,7 @@ plugins:
   - unicorn
   - flowtype
   - jsx-a11y
+  - promise
 
 extends:
   - eslint:recommended
@@ -760,3 +761,14 @@ rules:
   jsx-a11y/aria-props: error
   jsx-a11y/label-has-for: error
   jsx-a11y/role-has-required-aria-props: error
+
+
+  #######################################################################################
+  # Promise Plugin
+  #######################################################################################
+
+  promise/param-names: 2
+  promise/always-return: 2
+  promise/no-return-wrap: 2
+  promise/catch-or-return: 2
+  promise/no-native: 0
