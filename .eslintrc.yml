@@ -784,9 +784,17 @@ rules:
   # Other Plugins
   #######################################################################################
 
+  # Prevent old style extensions of native objects
   no-use-extend-native/no-use-extend-native: error
+
+  # Don't allow dashes or underscores. Keep in sync with exported symbol name.
   filenames/match-regex:
     - error
     - "^[a-zA-Z0-9]+$"
   filenames/match-exported: error
+
+  # Most of the normal ES2015 methods are okay to use nowadays
   lodash/prefer-lodash-method: off
+
+  # Typically we use Babel/Buble in most projects right now
+  node/no-unsupported-features: off
