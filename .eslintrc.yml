@@ -370,6 +370,7 @@ rules:
   func-style:
     - error
     - declaration
+    - allowArrowFunctions: true
 
   id-length:
     - error
