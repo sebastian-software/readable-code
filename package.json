@@ -22,10 +22,14 @@
   "dependencies": {
     "eslint": "^3.9.1",
     "eslint-find-rules": "^1.14.3",
+    "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-flowtype": "^2.25.0",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-stylelint": "^3.4.0",
     "stylefmt": "^4.3.1",
     "stylelint": "^7.5.0"
   }
