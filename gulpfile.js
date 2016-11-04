@@ -17,12 +17,14 @@ gulp.task("lint:js", function() {
   return gulp.src(getGitFiles(/\.(js|jsx)$/))
     .pipe(eslint())
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
+    .pipe(eslint.failAfterError())
 })
 
 gulp.task("fix:js", function() {
   return gulp.src(getGitFiles(/\.(js|jsx)$/))
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
+    .pipe(gulp.dest("."))
 })
 
 gulp.task("lint:css", function() {
@@ -38,8 +40,11 @@ gulp.task("fix:css", function() {
   var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
   cssFiles.forEach(function(fileName) {
     var fileContent = fs.readFileSync(fileName, "utf-8")
+
+    // TODO: Support different syntax/formats
     postcss([ stylefmt ]).process(fileContent).then(function(result) {
       fs.writeFileSync(fileName, result.css, "utf-8")
     })
   })
 })
+

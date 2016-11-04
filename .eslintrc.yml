@@ -413,7 +413,7 @@ rules:
 
   max-nested-callbacks:
     - error
-    - 2
+    - 3
 
   max-params:
     - error
