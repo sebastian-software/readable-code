@@ -1,69 +1,83 @@
 env:
   browser: true
-  es6: true
   node: true
+  es6: true
+  jest: true
   worker: true
   serviceworker: true
 
-extends:
-  "eslint:recommended"
+installedESLint: true
 
 parserOptions:
-  ecmaVersion: 6
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    generators: true
+    jsx: true
   sourceType: module
 
+plugins:
+  - import
+  - react
+  - flowtype
+  - jsx-a11y
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+
 rules:
-  #################################################################
-  # Basic Config
-  #################################################################
+  #######################################################################################
+  # Basics
+  #######################################################################################
 
   indent:
     - error
     - 2
     - SwitchCase: 1
       VariableDeclarator: 0
-
   linebreak-style:
     - error
     - unix
-
   quotes:
     - error
     - double
     - avoidEscape: true
       allowTemplateLiterals: true
-
-  # Keeping semicolons only for the "return" edge case seems a little to historic for my taste
   semi:
     - error
     - never
-
+  no-console:
+    - off
   no-extra-parens:
+    - off
+  brace-style:
     - off
 
 
-
-  #################################################################
-  # Best Practices
-  #################################################################
+  #######################################################################################
+  # Code Quality
+  #######################################################################################
 
   array-callback-return:
     - error
   block-scoped-var:
     - off
 
-  # Keep this down. The default of 20 is far to high in my opinion.
+  # Keeping complexity down. The default of 20 is far to high in my opinion.
   complexity:
     - error
     - 5
   consistent-return:
     - error
 
-  # New for me: allow curly-free one liners. This might help with my tendency to write
-  # more compact braces in Altman style which does not actually worked well together.
+  # Allo using curly braces or not (e.g. for simple if-statements)
   curly:
-    - warn
-    - multi
+    - off
+
+  default-case:
+    - error
   dot-location:
     - error
     - property
@@ -129,11 +143,7 @@ rules:
     - error
   no-iterator:
     - error
-  no-labels:
-    - error
   no-lone-blocks:
-    - error
-  no-loop-func:
     - error
 
   # Good style
@@ -141,6 +151,15 @@ rules:
     - error
     - ignoreArrayIndexes: true
       ignore: [ -1, 0, 1, 2, 10, 16, 100, 1000 ]
+
+  no-mixed-operators:
+    - warn
+    - groups:
+      - ['&', '|', '^', '~', '<<', '>>', '>>>']
+      - ['==', '!=', '===', '!==', '>', '>=', '<', '<=']
+      - ['&&', '||']
+      - ['in', 'instanceof']
+      allowSamePrecedence: false
 
   # Useless formatting with high maintenance
   no-multi-spaces:
@@ -159,14 +178,16 @@ rules:
   no-octal-escape:
     - error
 
+  valid-typeof: error
+
   # Prevent side effects to arguments objects, but also makes code sometimes more complexer
   # when you have some logic in place to deal with different argument sets
   no-param-reassign:
     - off
 
-  # For maintainability of NodeJS code
+  # Access NodeJS environment. Used mostly for code variations e.g. `NODE_ENV`
   no-process-env:
-    - error
+    - off
 
   # Deprecated feature
   no-proto:
@@ -201,10 +222,23 @@ rules:
   no-unused-expressions:
     - error
     - allowTernary: true
+      allowShortCircuit: true
   no-useless-call:
     - error
   no-useless-concat:
     - error
+  no-useless-computed-key:
+    - error
+  no-useless-constructor:
+    - error
+  no-useless-escape:
+    - error
+  no-useless-rename:
+    - warn
+    - ignoreDestructuring: false
+      ignoreImport: false
+      ignoreExport: false
+
   no-void:
     - error
   no-with:
@@ -230,16 +264,13 @@ rules:
     - error
     - never
 
-
-  #################################################################
-  # Other
-  #################################################################
-
   # Enforce strict mode globally which also happens during bundling
   strict:
     - error
     - global
 
+  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
+  # the same scope. Still no good practice for understanding the code.
   no-catch-shadow:
     - error
 
@@ -251,6 +282,12 @@ rules:
   no-shadow-restricted-names:
     - error
 
+  no-sparse-arrays:
+    - error
+
+  no-this-before-super:
+    - error
+
   # Stupid idea which needs to be prevented
   no-undef-init:
     - error
@@ -259,11 +296,19 @@ rules:
   no-undefined:
     - off
 
-  no-unused-vars:
-    - error
-  no-use-before-define:
+  no-unexpected-multiline:
     - error
 
+  no-unreachable:
+    - error
+
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: '^_'
+      args: none
+  no-use-before-define:
+    - error
+    - nofunc
 
 
   #################################################################
@@ -278,12 +323,10 @@ rules:
     - error
     - always
 
-  # Keeping starting and ending brace symbol on one visible column
-  # See also: https://en.wikipedia.org/wiki/Indent_style#Allman_style
-  brace-style:
-    - error
-    - allman
-    - allowSingleLine: true
+  # See also: https://en.wikipedia.org/wiki/Indent_style
+  # brace-style:
+  #  - error
+  #  - 1tbs
 
   camelcase:
     - error
@@ -323,7 +366,7 @@ rules:
       max: 30
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
-      exceptions: ["i", "l", "t", "id", "to", "fs"]
+      exceptions: ["i", "l", "t", "id", "to", "ex"]
 
   key-spacing:
     - error
@@ -384,29 +427,39 @@ rules:
 
   # Increase readability, but does not work everywhere... therefor we keep it off
   # and let the individual developer decide.
-  newline-before-return:
-    - off
-  newline-per-chained-call:
-    - off
+  newline-before-return: off
+  newline-per-chained-call: off
 
-  no-array-constructor:
-    - error
+  no-array-constructor: error
 
   # Generally prevents errors + rule can be disabled locally when required
-  no-bitwise:
-    - error
+  no-bitwise: error
 
   # Don't see why this is regarded as problematic
-  no-continue:
-    - off
+  no-continue: off
+  no-control-regex: error
+  no-delete-var: error
+
+  no-dupe-args: error
+  no-dupe-keys: error
+  no-duplicate-case: error
+  no-empty-character-class: error
+  no-ex-assign: error
+  no-extra-bind: error
+  no-extra-label: error
+  no-func-assign: error
+  no-invalid-regexp: error
+  no-label-var: error
+  no-labels:
+    - error
+    - allowLoop: false
+      allowSwitch: false
 
   # Leads to complexer to overlook code
-  no-inline-comments:
-    - error
+  no-inline-comments: error
 
   # Might be used to improve code for human logic
-  no-lonely-if:
-    - off
+  no-lonely-if: off
 
   no-multiple-empty-lines:
     - error
@@ -415,14 +468,10 @@ rules:
       maxBOF: 0
 
   # Can help, but also can make code more complex/unnaturally structured
-  no-negated-condition:
-    - off
-
-  no-nested-ternary:
-    - error
-
-  no-new-object:
-    - error
+  no-negated-condition: off
+  no-nested-ternary: error
+  no-new-object: error
+  no-obj-calls: error
 
   # Seems to be a new trend to omit this e.g. in Swift and other modern languages
   # But is pretty convenient in classic for-loops... therefor we allow it there
@@ -435,7 +484,6 @@ rules:
     - WithStatement
     - DebuggerStatement
     - LabeledStatement
-    - YieldExpression
 
   no-spaced-func:
     - error
@@ -444,18 +492,14 @@ rules:
     - off
 
   # Lead to harder to diff changesets
-  no-trailing-spaces:
-    - error
+  no-trailing-spaces: error
 
-  no-underscore-dangle:
-    - off
+  no-underscore-dangle: off
 
   # Getting people to senior level...
-  no-unneeded-ternary:
-    - error
+  no-unneeded-ternary: error
 
-  no-whitespace-before-property:
-    - error
+  no-whitespace-before-property: error
 
   object-curly-spacing:
     - error
@@ -469,12 +513,22 @@ rules:
     - error
     - initializations
 
-  operator-assignment:
-    - off
+  operator-assignment: error
 
   operator-linebreak:
     - error
     - after
+
+  rest-spread-spacing:
+    - error
+    - never
+
+  unicode-bom:
+    - error
+    - never
+
+  use-isnan:
+    - error
 
   # Not needed with Alman style. Interestingly deals with the same issue in a different way.
   padded-blocks:
@@ -527,7 +581,13 @@ rules:
   wrap-regex:
     - error
 
-
+  no-negated-in-lhs: warn
+  no-new-symbol: warn
+  no-regex-spaces: warn
+  no-template-curly-in-string: warn
+  no-undef: error
+  no-unused-labels: warn
+  require-yield: warn
 
   #################################################################
   # ES6+
@@ -569,4 +629,131 @@ rules:
   prefer-spread:
     - warn
   prefer-template:
+    - off
+
+
+  #######################################################################################
+  # Import Plugin
+  #######################################################################################
+
+  import/no-webpack-loader-syntax:
+    - error
+
+
+  #######################################################################################
+  # React Plugin
+  #######################################################################################
+
+  react/jsx-no-undef:
+    - error
+  react/jsx-pascal-case:
+    - error
+    - allowAllCaps: true
+      ignore: []
+  react/jsx-uses-react:
+    - error
+  react/jsx-uses-vars:
+    - error
+  react/jsx-filename-extension:
+    - error
+    - extensions: [ ".js" ]
+
+  # Developer Support
+  react/display-name:
     - warn
+  react/require-render-return:
+    - error
+  react/jsx-key:
+    - error
+
+  # Bad practise
+  react/no-children-prop:
+    - error
+
+  # Make sure React is imported when using JSX
+  react/react-in-jsx-scope:
+    - error
+
+  # Clean code
+  react/no-multi-comp:
+    - error
+  react/no-unused-prop-types:
+    - warn
+  react/prefer-es6-class:
+    - error
+  react/prefer-stateless-function:
+    - error
+  react/self-closing-comp:
+    - warn
+  react/sort-comp:
+    - warn
+  react/jsx-wrap-multilines:
+    - error
+
+  # Formatting
+  react/jsx-closing-bracket-location:
+    - warn
+  react/jsx-curly-spacing:
+    - warn
+  react/jsx-handler-names:
+    - error
+  react/jsx-indent:
+    - error
+    - 2
+  react/jsx-indent-props:
+    - error
+    - 2
+
+  # Unsafe
+  react/no-danger:
+    - error
+  react/no-danger-with-children:
+    - error
+  react/no-direct-mutation-state:
+    - error
+  react/no-unescaped-entities:
+    - error
+  react/style-prop-object:
+    - error
+  react/jsx-no-duplicate-props:
+    - error
+    - ignoreCase: true
+  react/jsx-no-target-blank:
+    - error
+
+  # Don't pollute DOM
+  react/no-unknown-property:
+    - warn
+
+  # Deprecated
+  react/no-deprecated:
+    - error
+  react/no-is-mounted:
+    - error
+  react/no-string-refs:
+    - warn
+
+  # Unsafe + Bad performance + Deprecated
+  react/no-find-dom-node:
+    - error
+
+  # Bad performance
+  react/no-did-mount-set-state:
+    - error
+  react/no-did-update-set-state:
+    - error
+  react/jsx-no-bind:
+    - error
+
+
+  #######################################################################################
+  # Accessibility Plugin
+  #######################################################################################
+
+  jsx-a11y/aria-role: error
+  jsx-a11y/img-has-alt: error
+  jsx-a11y/img-redundant-alt: error
+  jsx-a11y/no-access-key: error
+  jsx-a11y/aria-props: error
+  jsx-a11y/label-has-for: error
+  jsx-a11y/role-has-required-aria-props: error
