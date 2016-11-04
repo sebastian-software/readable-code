@@ -799,3 +799,6 @@ rules:
 
   # Typically we use Babel/Buble in most projects right now
   node/no-unsupported-features: off
+
+  # Duplicated
+  unicorn/no-process-exit: off
