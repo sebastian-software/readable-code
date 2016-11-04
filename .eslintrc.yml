@@ -9,6 +9,7 @@ plugins:
   - filenames
   - lodash
   - node
+  - flowtype-errors
 
 extends:
   - eslint:recommended
@@ -805,3 +806,6 @@ rules:
 
   # Duplicated
   unicorn/no-process-exit: off
+
+  # Improve support for usage of Flowtype
+  flowtype-errors/show-errors: error
