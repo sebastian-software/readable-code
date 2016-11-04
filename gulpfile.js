@@ -14,21 +14,21 @@ function getGitFiles(regexp) {
 }
 
 gulp.task("lint:js", function() {
-  return gulp.src(getGitFiles(/\.(js|jsx)$/))
+  return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
     .pipe(eslint())
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(eslint.failAfterError())
 })
 
 gulp.task("fix:js", function() {
-  return gulp.src(getGitFiles(/\.(js|jsx)$/))
+  return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(gulp.dest("."))
 })
 
 gulp.task("lint:css", function() {
-  return gulp.src(getGitFiles(/\.(css|sass|scss|sss)$/))
+  return gulp.src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
     .pipe(stylelint({
       reporters: [
         { formatter: "string", console: true }
