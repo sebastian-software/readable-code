@@ -23,6 +23,7 @@ plugins:
   - flowtype
   - jsx-a11y
   - promise
+  - no-use-extend-native
 
 extends:
   - eslint:recommended
@@ -767,8 +768,15 @@ rules:
   # Promise Plugin
   #######################################################################################
 
-  promise/param-names: 2
-  promise/always-return: 2
-  promise/no-return-wrap: 2
-  promise/catch-or-return: 2
-  promise/no-native: 0
+  promise/param-names: error
+  promise/always-return: error
+  promise/no-return-wrap: error
+  promise/catch-or-return: error
+  promise/no-native: off
+
+
+  #######################################################################################
+  # Other Plugins
+  #######################################################################################
+
+  no-use-extend-native/no-use-extend-native: error

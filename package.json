@@ -30,6 +30,7 @@
     "eslint-plugin-flowtype": "^2.25.0",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-react": "^6.5.0",
     "eslint-plugin-unicorn": "^1.0.0",
