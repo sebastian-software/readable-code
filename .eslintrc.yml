@@ -9,6 +9,7 @@ env:
 installedESLint: true
 
 parserOptions:
+  ecmaVersion: 2017
   ecmaFeatures:
     experimentalObjectRestSpread: true
     generators: true
@@ -18,12 +19,14 @@ parserOptions:
 plugins:
   - import
   - react
+  - unicorn
   - flowtype
   - jsx-a11y
 
 extends:
   - eslint:recommended
   - plugin:react/recommended
+  - plugin:unicorn/recommended
   - plugin:import/errors
   - plugin:import/warnings
 
