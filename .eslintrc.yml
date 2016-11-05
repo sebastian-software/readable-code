@@ -824,7 +824,7 @@ rules:
   node/no-unsupported-features: off
 
   # NPM installs in a flat hierarchy which prevent detecting request solved by dependencies
-  no-unpublished-require: off
+  node/no-unpublished-require: off
 
   # Duplicated
   unicorn/no-process-exit: off
