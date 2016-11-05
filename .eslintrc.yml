@@ -47,7 +47,14 @@ rules:
     - error
     - 2
     - SwitchCase: 1
-      VariableDeclarator: 0
+      VariableDeclarator: 1
+      outerIIFEBody: 0
+      MemberExpression: 1
+      FunctionExpression:
+        body: 1
+        parameters: 1
+      CallExpression:
+        arguments: 1
   linebreak-style:
     - error
     - unix
@@ -63,6 +70,9 @@ rules:
     - off
   no-extra-parens:
     - off
+
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
   brace-style:
     - off
 
