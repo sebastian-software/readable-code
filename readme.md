@@ -4,7 +4,7 @@
 [npm-downloads-img]: https://img.shields.io/npm/dm/s15e-javascript.svg
 [npm-version-img]: https://img.shields.io/npm/v/s15e-javascript.svg
 
-Pool of configuration files for sharing coding standards between different projects.
+Pool of configuration files and relevant plugins for typical linters.
 
 ## Links
 
@@ -14,19 +14,21 @@ Pool of configuration files for sharing coding standards between different proje
 
 ## Usage
 
-You can copy the relevant files into your own project like `.editorconfig` or `.babelrc`. For ESLint there is a more sophisticated approach: The configuration can be included like this:
+You can copy the relevant files into your own project like `.editorconfig`. For ESLint/Stylelint there is a more sophisticated approach: The configuration can be included like this:
 
 ```yaml
 extends:
   "./node_modules/s15e-javascript/.eslintrc.yml"
 ```
 
-For Node.js environment use the following ESLint configuration:
-
 ```yaml
 extends:
-  "./node_modules/s15e-javascript/.eslintrc.node.yml"
+  "./node_modules/s15e-javascript/.stylelintrc.yml"
 ```
+
+We also bundle the whole tooling aspect in here. You can just include our `gulpfile.js` into yours
+to have easy access to some common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
+
 
 
 ## Copyright
