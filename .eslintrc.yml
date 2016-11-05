@@ -820,6 +820,9 @@ rules:
   # Not every type check has to use a lodash method
   lodash/prefer-lodash-typecheck: off
 
+  # Utility method should not be a requirement
+  lodash/prefer-constant: off
+
   # Typically we use Babel/Buble in most projects right now
   node/no-unsupported-features: off
 
