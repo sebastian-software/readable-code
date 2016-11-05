@@ -125,9 +125,9 @@ rules:
   no-div-regex:
     - error
 
-  # Makes codes easier to read
+  # Prefer what ever the developer thinks make code more readable/understandable
   no-else-return:
-    - error
+    - off
 
   no-empty-function:
     - error
