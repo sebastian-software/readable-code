@@ -661,6 +661,10 @@ rules:
 
   import/no-webpack-loader-syntax:
     - error
+  import/no-absolute-path:
+    - error
+  import/no-namespace:
+    - warn
 
 
   #######################################################################################
@@ -805,6 +809,10 @@ rules:
     - error
     - "^[a-zA-Z][a-zA-Z0-9.]+$"
   filenames/match-exported: error
+
+  # Index files are okay
+  filenames/no-index:
+    - off
 
   # Most of the normal ES2015 methods are okay to use nowadays
   lodash/prefer-lodash-method: off
