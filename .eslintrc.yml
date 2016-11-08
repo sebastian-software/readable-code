@@ -665,6 +665,10 @@ rules:
     - error
   import/no-namespace:
     - warn
+  import/no-commonjs:
+    - error
+  import/no-amd:
+    - error
 
 
   #######################################################################################
