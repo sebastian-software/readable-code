@@ -27,7 +27,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
-    "eslint": "^3.9.1",
+    "eslint": "^3.10.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
@@ -38,7 +38,7 @@
     "eslint-plugin-lodash": "^2.2.0",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^3.0.3",
-    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-promise": "^3.3.2",
     "eslint-plugin-react": "^6.6.0",
     "eslint-plugin-unicorn": "^1.0.0",
     "gulp": "^3.9.1",
