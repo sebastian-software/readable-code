@@ -76,6 +76,10 @@ rules:
   brace-style:
     - off
 
+  comma-dangle:
+    - error
+    - never
+
 
   #######################################################################################
   # Code Quality
