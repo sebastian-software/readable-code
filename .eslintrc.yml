@@ -343,6 +343,8 @@ rules:
   array-bracket-spacing:
     - error
     - always
+    - objectsInArrays: false
+      singleValue: false
 
   block-spacing:
     - error
