@@ -37,8 +37,8 @@
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-lodash": "^2.2.0",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
-    "eslint-plugin-node": "^3.0.3",
-    "eslint-plugin-promise": "^3.4.0-0",
+    "eslint-plugin-node": "^3.0.4",
+    "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.7.1",
     "eslint-plugin-unicorn": "^1.0.0",
     "gulp": "^3.9.1",
@@ -46,6 +46,6 @@
     "gulp-stylelint": "^3.4.0",
     "postcss": "^5.2.5",
     "stylefmt": "^4.4.0",
-    "stylelint": "^7.5.0"
+    "stylelint": "^7.6.0"
   }
 }
