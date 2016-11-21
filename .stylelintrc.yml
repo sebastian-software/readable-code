@@ -151,7 +151,7 @@ rules:
       - properties: [ "@include", composes ]
         order: "flexible"
       # Content, Positioning & Layout
-      - properties: [ content, src, position, z-index, top, right, bottom, left, float, flex, justify-content, align-items, display, overflow, box-sizing, min-width, width, max-width, min-height, height, max-height, padding, margin ]
+      - properties: [ content, src, position, z-index, top, right, bottom, left, display, float, flex, justify-content, align-items, overflow, box-sizing, min-width, width, max-width, min-height, height, max-height, padding, padding-top, padding-right, padding-bottom, padding-left, margin, margin-top, margin-right, margin-bottom, margin-left ]
         order: "flexible"
       # Appearance & Animation
       - properties: [ background, box-shadow, border, outline, color, text-shadow, cursor, font, font-family, font-size, font-weight, font-style, line-height, text-align, opacity, animation, transform, transition, will-change, list-style ]
