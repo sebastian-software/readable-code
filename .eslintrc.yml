@@ -344,7 +344,6 @@ rules:
     - error
     - always
     - objectsInArrays: false
-      singleValue: false
 
   block-spacing:
     - error
