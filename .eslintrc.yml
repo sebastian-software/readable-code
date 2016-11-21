@@ -93,7 +93,7 @@ rules:
   # Keeping complexity down. The default of 20 is far to high in my opinion.
   complexity:
     - error
-    - 5
+    - 10
   consistent-return:
     - error
 
@@ -439,7 +439,7 @@ rules:
 
   max-statements:
     - error
-    - 10
+    - 25
     - ignoreTopLevelFunctions: true
 
   new-cap:
