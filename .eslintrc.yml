@@ -333,7 +333,8 @@ rules:
       args: none
   no-use-before-define:
     - error
-    - nofunc
+    - functions: false
+      classes: false
 
 
   #################################################################
@@ -779,7 +780,7 @@ rules:
   react/no-did-update-set-state:
     - error
   react/jsx-no-bind:
-    - error
+    - warn
 
 
   #######################################################################################
