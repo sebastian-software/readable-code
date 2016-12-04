@@ -31,11 +31,11 @@
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
-    "eslint-plugin-flowtype": "^2.29.0",
+    "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-flowtype-errors": "^1.5.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.1",
-    "eslint-plugin-lodash": "^2.2.1",
+    "eslint-plugin-lodash": "^2.2.2",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^3.0.5",
     "eslint-plugin-promise": "^3.4.0",
@@ -45,7 +45,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.5.0",
     "postcss": "^5.2.6",
-    "stylefmt": "^5.0.1",
+    "stylefmt": "^5.0.2",
     "stylelint": "^7.6.0"
   }
 }
