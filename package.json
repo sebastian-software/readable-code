@@ -10,7 +10,9 @@
     "check": "eslint-find-rules -u .eslintrc.yml || true"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.0.0",
+    "npm": ">=4.0.0",
+    "yarn": ">=0.18.0"
   },
   "keywords": [
     "lint",

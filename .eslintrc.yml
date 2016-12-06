@@ -803,9 +803,11 @@ rules:
 
   promise/param-names: error
   promise/always-return: off
-  promise/no-return-wrap: error
   promise/catch-or-return: warn
   promise/no-native: off
+
+  # Currently fails with hard eslint parse errors in some use cases (v3)
+  # promise/no-return-wrap: error
 
 
   #######################################################################################
