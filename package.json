@@ -35,7 +35,7 @@
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-flowtype-errors": "^1.5.0",
-    "eslint-plugin-graphql": "^0.3.1",
+    "eslint-plugin-graphql": "^0.4.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-lodash": "^2.2.2",
