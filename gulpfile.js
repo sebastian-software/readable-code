@@ -14,7 +14,7 @@ function getGitFiles(regexp) {
 }
 
 gulp.task("lint:js", function() {
-  return gulp.src(getGitFiles(/\.(js|jsx|gql|graphql)$/), { base: "." })
+  return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
     .pipe(eslint())
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(eslint.failAfterError())
