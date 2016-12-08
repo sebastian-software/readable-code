@@ -6,10 +6,10 @@ var gulp = require("gulp")
 var eslint = require("gulp-eslint")
 var stylelint = require("gulp-stylelint")
 var stylefmt = require("stylefmt")
-var exec = require("child_process").execSync
+var exec = require("cross-spawn").sync
 
 function getGitFiles(regexp) {
-  var gitFiles = exec("git ls-files").toString().trim().split("\n")
+  var gitFiles = exec("git", [ "ls-files" ], { stdio: 'pipe' }).stdout.toString().trim().split("\n")
   return gitFiles.filter(function(fileName) { return regexp.exec(fileName) })
 }
 
