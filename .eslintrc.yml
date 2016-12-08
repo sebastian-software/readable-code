@@ -10,7 +10,6 @@ plugins:
   - lodash
   - node
   - flowtype-errors
-  - graphql
 
 extends:
   - eslint:recommended
