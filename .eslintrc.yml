@@ -70,6 +70,10 @@ rules:
     - off
   no-extra-parens:
     - off
+  class-methods-use-this:
+    - error
+  func-call-spacing:
+    - error
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
   # as overall indenting is correct
@@ -178,7 +182,7 @@ rules:
       ignore: [ -1, 0, 1, 2, 10, 16, 100, 1000 ]
 
   no-mixed-operators:
-    - warn
+    - error
     - groups:
       - ['&', '|', '^', '~', '<<', '>>', '>>>']
       - ['==', '!=', '===', '!==', '>', '>=', '<', '<=']
@@ -205,10 +209,34 @@ rules:
 
   valid-typeof: error
 
+  # Disable direct init: new require("app-header")
+  no-new-require:
+    - error
+
+  # Use path.join/resolve instead
+  no-path-concat:
+    - error
+
+  # disallow certain object properties
+  # http://eslint.org/docs/rules/no-restricted-properties
+  no-restricted-properties:
+    - error
+    - object: 'arguments'
+      property: callee
+      message: arguments.callee is deprecated
+    - property: __defineGetter__
+      message: 'Please use Object.defineProperty instead.'
+    - property: __defineSetter__
+      message: 'Please use Object.defineProperty instead.'
+    - object: Math
+      property: pow
+      message: 'Use the exponentiation operator (**) instead.'
+
   # Prevent side effects to arguments objects, but also makes code sometimes more complexer
-  # when you have some logic in place to deal with different argument sets
+  # when you have some logic in place to deal with different argument sets.
+  # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
   no-param-reassign:
-    - off
+    - error
 
   # Access NodeJS environment. Used mostly for code variations e.g. `NODE_ENV`
   no-process-env:
@@ -259,7 +287,7 @@ rules:
   no-useless-escape:
     - error
   no-useless-rename:
-    - warn
+    - error
     - ignoreDestructuring: false
       ignoreImport: false
       ignoreExport: false
@@ -382,11 +410,25 @@ rules:
   func-names:
     - off
 
+  jsx-quotes:
+    - error
+    - prefer-double
+
+  max-lines:
+    - error
+    - skipBlankLines: true
+      skipComments: true
+      max: 250
+
   # Prefering declaration
   func-style:
     - error
     - declaration
     - allowArrowFunctions: true
+
+  max-statements-per-line:
+    - error
+    - max: 2
 
   id-length:
     - error
@@ -505,8 +547,26 @@ rules:
   # Seems to be a new trend to omit this e.g. in Swift and other modern languages
   # But is pretty convenient in classic for-loops... therefor we allow it there
   no-plusplus:
-    - warn
+    - error
     - allowForLoopAfterthoughts: true
+
+  object-property-newline:
+    - error
+
+  no-confusing-arrow:
+    - error
+
+  no-duplicate-imports:
+    - error
+
+  no-new-symbol:
+    - error
+
+  object-shorthand:
+    - error
+    - always
+    - ignoreConstructors: true
+      avoidQuotes: true
 
   no-restricted-syntax:
     - error
@@ -612,11 +672,11 @@ rules:
 
   no-negated-in-lhs: warn
   no-new-symbol: warn
-  no-regex-spaces: warn
-  no-template-curly-in-string: warn
+  no-regex-spaces: error
+  no-template-curly-in-string: error
   no-undef: error
   no-unused-labels: warn
-  require-yield: warn
+  require-yield: error
 
   #################################################################
   # ES6+
@@ -624,7 +684,7 @@ rules:
 
   # Call me old fashioned
   arrow-body-style:
-    - warn
+    - error
     - as-needed
   arrow-parens:
     - error
@@ -652,13 +712,13 @@ rules:
 
   # Trying to start new code the modern way - at least for what it makes sense
   prefer-arrow-callback:
-    - warn
+    - error
   prefer-rest-params:
-    - warn
+    - error
   prefer-spread:
-    - warn
+    - error
   prefer-template:
-    - off
+    - error
 
 
   #######################################################################################
@@ -670,7 +730,7 @@ rules:
   import/no-absolute-path:
     - error
   import/no-namespace:
-    - warn
+    - error
   import/no-commonjs:
     - error
   import/no-amd:
@@ -697,7 +757,7 @@ rules:
 
   # Developer Support
   react/display-name:
-    - warn
+    - error
   react/require-render-return:
     - error
   react/jsx-key:
@@ -715,23 +775,23 @@ rules:
   react/no-multi-comp:
     - error
   react/no-unused-prop-types:
-    - warn
+    - error
   react/prefer-es6-class:
     - error
   react/prefer-stateless-function:
     - error
   react/self-closing-comp:
-    - warn
+    - error
   react/sort-comp:
-    - warn
+    - error
   react/jsx-wrap-multilines:
     - error
 
   # Formatting
   react/jsx-closing-bracket-location:
-    - warn
+    - error
   react/jsx-curly-spacing:
-    - warn
+    - error
   react/jsx-handler-names:
     - error
   react/jsx-indent:
@@ -760,7 +820,7 @@ rules:
 
   # Don't pollute DOM
   react/no-unknown-property:
-    - warn
+    - error
 
   # Deprecated
   react/no-deprecated:
@@ -768,7 +828,7 @@ rules:
   react/no-is-mounted:
     - error
   react/no-string-refs:
-    - warn
+    - error
 
   # Unsafe + Bad performance + Deprecated
   react/no-find-dom-node:
@@ -780,7 +840,7 @@ rules:
   react/no-did-update-set-state:
     - error
   react/jsx-no-bind:
-    - warn
+    - error
 
 
   #######################################################################################
