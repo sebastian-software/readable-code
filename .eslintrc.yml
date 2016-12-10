@@ -409,6 +409,13 @@ rules:
       # 't' = support convention in ava test runner
       # 'fs' = built-in fs module
       exceptions: ["i", "l", "t", "id", "to", "fs"]
+      properties: never
+
+  no-sync:
+    - error
+
+  lines-around-directive:
+    - error
 
   key-spacing:
     - error

@@ -9,7 +9,7 @@ var stylefmt = require("stylefmt")
 var exec = require("cross-spawn").sync
 
 function getGitFiles(regexp) {
-  var gitFiles = exec("git", [ "ls-files" ], { stdio: 'pipe' }).stdout.toString().trim().split("\n")
+  var gitFiles = exec("git", [ "ls-files" ], { stdio: "pipe" }).stdout.toString().trim().split("\n")
   return gitFiles.filter(function(fileName) { return regexp.exec(fileName) })
 }
 
@@ -45,7 +45,7 @@ gulp.task("fix:css", function() {
     postcss([ stylefmt ]).process(fileContent).then(function(result) {
       return fs.writeFileSync(fileName, result.css, "utf-8")
     }).catch(function(err) {
-      throw new Error("Error during CSS formatting: " + err)
+      throw new Error(`Error during CSS formatting: ${ err}`)
     })
   })
 })
