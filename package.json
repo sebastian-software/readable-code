@@ -30,7 +30,7 @@
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.11.1",
+    "eslint": "^3.12.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
