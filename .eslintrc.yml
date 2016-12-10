@@ -525,7 +525,9 @@ rules:
     - error
     - allowForLoopAfterthoughts: true
 
-  object-property-newline: error
+  object-property-newline:
+    - error
+    - allowMultiplePropertiesPerLine: true
 
   no-confusing-arrow: error
 
