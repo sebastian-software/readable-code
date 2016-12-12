@@ -47,7 +47,7 @@
     "flow-bin": "^0.36.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
-    "gulp-stylelint": "^3.5.0",
+    "gulp-stylelint": "^3.6.0",
     "lint-staged": "^3.2.2",
     "postcss": "^5.2.6",
     "stylefmt": "^5.0.2",
