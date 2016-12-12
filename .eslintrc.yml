@@ -71,7 +71,7 @@ rules:
   no-extra-parens:
     - off
   class-methods-use-this:
-    - error
+    - warn
   func-call-spacing: error
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
@@ -386,7 +386,7 @@ rules:
     - prefer-double
 
   max-lines:
-    - error
+    - warn
     - skipBlankLines: true
       skipComments: true
       max: 250
@@ -693,14 +693,10 @@ rules:
   # Import Plugin
   #######################################################################################
 
-  import/no-webpack-loader-syntax:
-    - error
-  import/no-absolute-path:
-    - error
-  import/no-namespace:
-    - error
-  import/no-commonjs:
-    - error
+  import/no-webpack-loader-syntax: error
+  import/no-absolute-path: error
+  import/no-namespace: error
+  import/no-commonjs: error
   import/no-amd: error
 
 
@@ -723,10 +719,8 @@ rules:
     - extensions: [ ".js" ]
 
   # Developer Support
-  react/display-name:
-    - error
-  react/require-render-return:
-    - error
+  react/display-name: error
+  react/require-render-return: error
   react/jsx-key: error
 
   # Bad practise
@@ -736,18 +730,12 @@ rules:
   react/react-in-jsx-scope: error
 
   # Clean code
-  react/no-multi-comp:
-    - error
-  react/no-unused-prop-types:
-    - error
-  react/prefer-es6-class:
-    - error
-  react/prefer-stateless-function:
-    - error
-  react/self-closing-comp:
-    - error
-  react/sort-comp:
-    - error
+  react/no-multi-comp: error
+  react/no-unused-prop-types: error
+  react/prefer-es6-class: error
+  react/prefer-stateless-function: error
+  react/self-closing-comp: error
+  react/sort-comp: error
   react/jsx-wrap-multilines: error
 
   # Formatting
@@ -765,16 +753,11 @@ rules:
     - 2
 
   # Unsafe
-  react/no-danger:
-    - error
-  react/no-danger-with-children:
-    - error
-  react/no-direct-mutation-state:
-    - error
-  react/no-unescaped-entities:
-    - error
-  react/style-prop-object:
-    - error
+  react/no-danger: error
+  react/no-danger-with-children: error
+  react/no-direct-mutation-state: error
+  react/no-unescaped-entities: error
+  react/style-prop-object: error
   react/jsx-no-duplicate-props:
     - error
     - ignoreCase: true
@@ -784,20 +767,16 @@ rules:
   react/no-unknown-property: error
 
   # Deprecated
-  react/no-deprecated:
-    - error
-  react/no-is-mounted:
-    - error
+  react/no-deprecated: error
+  react/no-is-mounted: error
   react/no-string-refs: error
 
   # Unsafe + Bad performance + Deprecated
   react/no-find-dom-node: error
 
   # Bad performance
-  react/no-did-mount-set-state:
-    - error
-  react/no-did-update-set-state:
-    - error
+  react/no-did-mount-set-state: error
+  react/no-did-update-set-state: error
   react/jsx-no-bind: error
 
 
@@ -820,7 +799,7 @@ rules:
 
   promise/param-names: error
   promise/always-return: off
-  promise/catch-or-return: error
+  promise/catch-or-return: warn
   promise/no-native: off
 
   # Currently fails with hard eslint parse errors in some use cases (v3)
@@ -841,8 +820,7 @@ rules:
   filenames/match-exported: error
 
   # Index files are okay
-  filenames/no-index:
-    - off
+  filenames/no-index: off
 
   # Most of the normal ES2015 methods are okay to use nowadays
   lodash/prefer-lodash-method: off
