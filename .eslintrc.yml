@@ -411,8 +411,10 @@ rules:
       exceptions: ["i", "l", "t", "id", "to", "fs"]
       properties: never
 
+  # Makes sense in NodeJS for native methods but is flawed because it is based purely on the
+  # naming and marks errors for a lot of user written UI code.
   no-sync:
-    - error
+    - off
 
   lines-around-directive:
     - error
