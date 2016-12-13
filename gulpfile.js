@@ -13,6 +13,14 @@ function getGitFiles(regexp) {
   return gitFiles.filter(function(fileName) { return regexp.exec(fileName) })
 }
 
+gulp.task("clean", function() {
+  console.log(exec("git", [ "clean", "--force" ], { stdio: "pipe" }).stdout.toString())
+})
+
+gulp.task("clean:full", function() {
+  console.log(exec("git", [ "clean", "--force", "-x" ], { stdio: "pipe" }).stdout.toString())
+})
+
 gulp.task("lint:js", function() {
   return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
     .pipe(eslint())
@@ -49,4 +57,3 @@ gulp.task("fix:css", function() {
     })
   })
 })
-
