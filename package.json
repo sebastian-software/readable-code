@@ -1,7 +1,7 @@
 {
   "name": "s15e-javascript",
   "version": "0.7.4",
-  "description": "JavaScript Coding Standard of Sebastian Software GmbH",
+  "description": "JavaScript/CSS Coding Standard and Tooling",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "release-it --github.release --npm.publish --non-interactive",
@@ -23,14 +23,16 @@
     "code style",
     "check",
     "quality",
-    "standard"
+    "standard",
+    "gulp",
+    "git"
   ],
   "author": "Sebastian Werner <s.werner@sebastian-software.de>",
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.12.0",
+    "eslint": "^3.12.1",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
@@ -44,7 +46,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.8.0",
     "eslint-plugin-unicorn": "^1.0.0",
-    "flow-bin": "^0.36.0",
+    "flow-bin": "^0.37.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.6.0",

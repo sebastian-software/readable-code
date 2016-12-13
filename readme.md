@@ -26,8 +26,7 @@ extends:
   "./node_modules/s15e-javascript/.stylelintrc.yml"
 ```
 
-We also bundle the whole tooling aspect in here. You can just include our `gulpfile.js` into yours
-to have easy access to some common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
+We also bundle the whole tooling aspect in here. You can just include our `gulpfile.js` into yours to have easy access to some common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 
 
