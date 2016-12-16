@@ -693,7 +693,10 @@ rules:
   # Import Plugin
   #######################################################################################
 
-  import/no-webpack-loader-syntax: error
+  # Loader syntax is useful when loading files with alternative approaches e.g.
+  # to detect images sizes, generating API docs, etc.
+  import/no-webpack-loader-syntax: off
+
   import/no-absolute-path: error
   import/no-namespace: error
   import/no-commonjs: error
