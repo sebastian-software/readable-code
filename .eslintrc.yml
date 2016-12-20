@@ -72,6 +72,14 @@ rules:
     - off
   class-methods-use-this:
     - warn
+    - exceptMethods:
+        - componentWillMount
+        - componentDidMount
+        - componentWillReceiveProps
+        - shouldComponentUpdate
+        - componentWillUpdate
+        - componentDidUpdate
+        - componentWillUnmount
   func-call-spacing: error
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
