@@ -20,8 +20,8 @@ acorn@^3.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
 acorn@^4.0.1:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.3.tgz#1a3e850b428e73ba6b09d1cc527f5aaad4d03ef1"
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
 ajv-keywords@^1.0.0:
   version "1.2.0"
@@ -209,8 +209,8 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000539, caniuse-db@^1.0.30000597:
-  version "1.0.30000597"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000597.tgz#b52e6cbe9dc83669affb98501629feaee1af6588"
+  version "1.0.30000601"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000601.tgz#073c9d1c62edb399ecc783a7ab40698b5694d2fe"
 
 chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
   version "1.1.3"
@@ -222,7 +222,7 @@ chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-circular-json@^0.3.0:
+circular-json@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
 
@@ -312,12 +312,12 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
 concat-stream@^1.4.6:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.5.2.tgz#708978624d856af41a5a741defdd261da752c266"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
   dependencies:
-    inherits "~2.0.1"
-    readable-stream "~2.0.0"
-    typedarray "~0.0.5"
+    inherits "^2.0.3"
+    readable-stream "^2.2.2"
+    typedarray "^0.0.6"
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -344,7 +344,7 @@ cosmiconfig@^1.1.0:
     pinkie-promise "^2.0.0"
     require-from-string "^1.1.0"
 
-cosmiconfig@^2.0.0:
+cosmiconfig@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-2.1.1.tgz#817f2c2039347a1e9bf7d090c0923e53f749ca82"
   dependencies:
@@ -430,8 +430,8 @@ debug@2.2.0:
     ms "0.7.1"
 
 debug@^2.1.1, debug@^2.2.0:
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.4.4.tgz#c04d17a654e9202464803f096153f70a6f31f4be"
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.4.5.tgz#34c7b12a1ca96674428f41fe92c49b4ce7cd0607"
   dependencies:
     ms "0.7.2"
 
@@ -686,9 +686,9 @@ eslint-plugin-jsx-a11y@^3.0.2:
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
 
-eslint-plugin-lodash@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.2.4.tgz#2b14bc63bcf4e7f008302100bf53c84d8bf54966"
+eslint-plugin-lodash@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.2.5.tgz#0e8a1dc51b3766c7b016d7c0a6352066c98a03e5"
   dependencies:
     lodash "^4.0.0"
 
@@ -941,10 +941,10 @@ flagged-respawn@^0.3.2:
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
 
 flat-cache@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.1.tgz#6c837d6225a7de5659323740b36d5361f71691ff"
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.2.2.tgz#fa86714e72c21db88601761ecf2f555d1abc6b96"
   dependencies:
-    circular-json "^0.3.0"
+    circular-json "^0.3.1"
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
@@ -953,9 +953,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.37.0.tgz#456ebbd472d20d2d970560cea0a6b3c648878307"
+flow-bin@^0.37.1:
+  version "0.37.1"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.37.1.tgz#ddc3314d18c268ef79efabf14c22870dce4595b3"
 
 for-in@^0.1.5:
   version "0.1.6"
@@ -1171,16 +1171,16 @@ gulp-eslint@^3.0.1:
     eslint "^3.0.0"
     gulp-util "^3.0.6"
 
-gulp-stylelint@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/gulp-stylelint/-/gulp-stylelint-3.6.1.tgz#a83093d2f6c982b73efb944fedf03c00bea05996"
+gulp-stylelint@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/gulp-stylelint/-/gulp-stylelint-3.7.0.tgz#199bd968fbe6447088a584dc7d665543f9fa97b4"
   dependencies:
     chalk "^1.1.3"
     deep-extend "^0.4.1"
     gulp-util "^3.0.7"
     mkdirp "^0.5.1"
     promise "^7.1.1"
-    stylelint "^7.6.0"
+    stylelint "^7.7.0"
     through2 "^2.0.3"
 
 gulp-util@^3.0.0, gulp-util@^3.0.6, gulp-util@^3.0.7:
@@ -1301,7 +1301,7 @@ inherits@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-1.0.2.tgz#ca4309dadee6b54cc0b8d247e8d7c7a0975bdc9b"
 
-inherits@2, inherits@^2.0.1, inherits@~2.0.1:
+inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -1589,9 +1589,9 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-known-css-properties@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.0.5.tgz#33de5b8279010a72db917d33119e4c27c078490a"
+known-css-properties@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.0.6.tgz#71a0b8fde1b6e3431c471efbc3d9733faebbcfbf"
 
 lcid@^1.0.0:
   version "1.0.0"
@@ -1627,9 +1627,9 @@ liftoff@^2.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lint-staged@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-3.2.3.tgz#74a72945b79ceb63ca18b984b02dc176045285cf"
+lint-staged@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-3.2.4.tgz#c7601d80480850dc9ca29e76a1f8b49474f4c7a1"
   dependencies:
     app-root-path "^2.0.0"
     cosmiconfig "^1.1.0"
@@ -1645,8 +1645,8 @@ listr-silent-renderer@^1.1.1:
   resolved "https://registry.yarnpkg.com/listr-silent-renderer/-/listr-silent-renderer-1.1.1.tgz#924b5a3757153770bf1a8e3fbf74b8bbf3f9242e"
 
 listr-update-renderer@^0.1.1:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/listr-update-renderer/-/listr-update-renderer-0.1.2.tgz#bb534ff4b704048e66a9aac45487a365a8d956d5"
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/listr-update-renderer/-/listr-update-renderer-0.1.4.tgz#64262df6efa9da4f7e08e0bac5032895c738a183"
   dependencies:
     chalk "^1.1.3"
     cli-truncate "^0.2.1"
@@ -1739,17 +1739,13 @@ lodash.assignwith@^4.0.7:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assignwith/-/lodash.assignwith-4.2.0.tgz#127a97f02adc41751a954d24b0de17e100e038eb"
 
-lodash.camelcase@4.1.1:
+lodash.camelcase@4.1.1, lodash.camelcase@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.1.1.tgz#065b3ff08f0b7662f389934c46a5504c90e0b2d8"
   dependencies:
     lodash.capitalize "^4.0.0"
     lodash.deburr "^4.0.0"
     lodash.words "^4.0.0"
-
-lodash.camelcase@^4.1.1:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
 lodash.capitalize@^4.0.0:
   version "4.2.1"
@@ -1789,16 +1785,12 @@ lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
-lodash.kebabcase@4.0.1:
+lodash.kebabcase@4.0.1, lodash.kebabcase@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.0.1.tgz#5e63bc9aa2a5562ff3b97ca7af2f803de1bcb90e"
   dependencies:
     lodash.deburr "^4.0.0"
     lodash.words "^4.0.0"
-
-lodash.kebabcase@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
 
 lodash.keys@^3.0.0:
   version "3.1.2"
@@ -1820,16 +1812,12 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-lodash.snakecase@4.0.1:
+lodash.snakecase@4.0.1, lodash.snakecase@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.0.1.tgz#bd012e5d2f93f7b58b9303e9a7fbfd5db13d6281"
   dependencies:
     lodash.deburr "^4.0.0"
     lodash.words "^4.0.0"
-
-lodash.snakecase@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz#39d714a35357147837aefd64b5dcbb16becd8f8d"
 
 lodash.template@^3.0.0:
   version "3.6.2"
@@ -2273,9 +2261,9 @@ postcss-reporter@^1.2.1, postcss-reporter@^1.3.3:
     log-symbols "^1.0.2"
     postcss "^5.0.0"
 
-postcss-reporter@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-reporter/-/postcss-reporter-2.0.0.tgz#d25e74ba7fce911e2aa72ec1ae592fade6ec3671"
+postcss-reporter@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-reporter/-/postcss-reporter-3.0.0.tgz#09ea0f37a444c5693878606e09b018ebeff7cf8f"
   dependencies:
     chalk "^1.0.0"
     lodash "^4.1.0"
@@ -2408,22 +2396,11 @@ readable-stream@^1.0.33, readable-stream@~1.1.9:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@^2.0.2, readable-stream@^2.1.5:
+readable-stream@^2.0.2, readable-stream@^2.1.5, readable-stream@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.2.tgz#a9e6fec3c7dda85f8bb1b3ba7028604556fc825e"
   dependencies:
     buffer-shims "^1.0.0"
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "~1.0.0"
-    process-nextick-args "~1.0.6"
-    string_decoder "~0.10.x"
-    util-deprecate "~1.0.1"
-
-readable-stream@~2.0.0:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
-  dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
@@ -2764,15 +2741,15 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint@^7.5.0, stylelint@^7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.6.0.tgz#ddeb06ccc95f72c119fcde5e85439fb7e9cde4df"
+stylelint@^7.5.0, stylelint@^7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.7.0.tgz#bf222c2a202c0b02d7834ad321fe0883d33cfde0"
   dependencies:
     autoprefixer "^6.0.0"
     balanced-match "^0.4.0"
     chalk "^1.1.1"
     colorguard "^1.2.0"
-    cosmiconfig "^2.0.0"
+    cosmiconfig "^2.1.1"
     doiuse "^2.4.1"
     execall "^1.0.0"
     get-stdin "^5.0.0"
@@ -2780,7 +2757,7 @@ stylelint@^7.5.0, stylelint@^7.6.0:
     globjoin "^0.1.4"
     html-tags "^1.1.1"
     ignore "^3.2.0"
-    known-css-properties "^0.0.5"
+    known-css-properties "^0.0.6"
     lodash "^4.0.0"
     log-symbols "^1.0.2"
     meow "^3.3.0"
@@ -2789,7 +2766,7 @@ stylelint@^7.5.0, stylelint@^7.6.0:
     postcss "^5.0.20"
     postcss-less "^0.14.0"
     postcss-media-query-parser "^0.2.0"
-    postcss-reporter "^2.0.0"
+    postcss-reporter "^3.0.0"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-scss "^0.4.0"
     postcss-selector-parser "^2.1.1"
@@ -2801,7 +2778,7 @@ stylelint@^7.5.0, stylelint@^7.6.0:
     stylehacks "^2.3.0"
     sugarss "^0.2.0"
     svg-tags "^1.0.0"
-    table "^3.7.8"
+    table "^4.0.1"
 
 sugarss@^0.2.0:
   version "0.2.0"
@@ -2836,6 +2813,17 @@ synesthesia@^1.0.1:
 table@^3.7.8:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/table/-/table-3.8.3.tgz#2bbc542f0fda9861a755d3947fefd8b3f513855f"
+  dependencies:
+    ajv "^4.7.0"
+    ajv-keywords "^1.0.0"
+    chalk "^1.1.1"
+    lodash "^4.0.0"
+    slice-ansi "0.0.4"
+    string-width "^2.0.0"
+
+table@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/table/-/table-4.0.1.tgz#a8116c133fac2c61f4a420ab6cdf5c4d61f0e435"
   dependencies:
     ajv "^4.7.0"
     ajv-keywords "^1.0.0"
@@ -2890,7 +2878,7 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-typedarray@~0.0.5:
+typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
