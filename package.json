@@ -1,6 +1,6 @@
 {
   "name": "s15e-javascript",
-  "version": "0.7.11",
+  "version": "0.7.10",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,7 +32,7 @@
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.13.0",
+    "eslint": "^3.12.2",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
@@ -44,15 +44,15 @@
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^3.0.5",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react": "^6.8.0",
     "eslint-plugin-unicorn": "^1.0.0",
     "flow-bin": "^0.37.4",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.7.0",
-    "lint-staged": "^3.2.6",
-    "postcss": "^5.2.9",
+    "lint-staged": "^3.2.4",
+    "postcss": "^5.2.8",
     "stylefmt": "^5.0.3",
-    "stylelint": "^7.7.1"
+    "stylelint": "^7.7.0"
   }
 }
