@@ -707,9 +707,9 @@ eslint-plugin-jsx-a11y@^3.0.2:
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
 
-eslint-plugin-lodash@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.3.1.tgz#423182ef674f84555aec49c7e21ad6fd3908365f"
+eslint-plugin-lodash@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.3.2.tgz#e57f02e6dfbcc44dd1536666478b78750c5e1736"
   dependencies:
     lodash "^4.0.0"
 
@@ -1667,9 +1667,9 @@ liftoff@^2.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lint-staged@^3.2.6:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-3.2.6.tgz#5134b384015a275363d492c3849a387ca0e1d601"
+lint-staged@^3.2.7:
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-3.2.7.tgz#2fc7007f1c89e267ad7bacefd3f6c5baeeb6516f"
   dependencies:
     app-root-path "^2.0.0"
     cosmiconfig "^1.1.0"
