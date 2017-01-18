@@ -755,7 +755,7 @@ rules:
   react/jsx-curly-spacing:
     - error
   react/jsx-handler-names:
-    - error
+    - off
   react/jsx-indent:
     - error
     - 2
