@@ -32,7 +32,7 @@
   "repository": "https://github.com/sebastian-software/s15e-javascript",
   "dependencies": {
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.13.1",
+    "eslint": "^3.14.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-filenames": "^1.1.0",
@@ -46,12 +46,12 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-unicorn": "^1.0.0",
-    "flow-bin": "^0.37.4",
+    "flow-bin": "^0.38.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.7.0",
     "lint-staged": "^3.2.7",
-    "postcss": "^5.2.10",
+    "postcss": "^5.2.11",
     "stylefmt": "^5.1.1",
     "stylelint": "^7.7.1"
   }
