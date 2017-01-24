@@ -1,4 +1,5 @@
 plugins:
+  - compat
   - import
   - react
   - unicorn
@@ -416,7 +417,7 @@ rules:
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
       # 'fs' = built-in fs module
-      exceptions: ["i", "l", "t", "id", "to", "fs"]
+      exceptions: ["i", "l", "t", "id", "fs"]
       properties: never
 
   # Makes sense in NodeJS for native methods but is flawed because it is based purely on the
@@ -698,6 +699,13 @@ rules:
 
 
   #######################################################################################
+  # Compat Plugin
+  #######################################################################################
+
+  compat/compat: warn
+
+
+  #######################################################################################
   # Import Plugin
   #######################################################################################
 
@@ -859,6 +867,10 @@ rules:
 
   # We have something more powerful available to check filenames
   unicorn/filename-case: off
+
+  unicorn/catch-error-name:
+    - error
+    - name: error
 
   # Improve support for usage of Flowtype
   flowtype-errors/show-errors: error

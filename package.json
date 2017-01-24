@@ -35,6 +35,7 @@
     "eslint": "^3.14.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-compat": "^1.0.1",
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-flowtype-errors": "^2.0.3",

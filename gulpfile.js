@@ -53,8 +53,8 @@ gulp.task("fix:css", function() {
     // TODO: Support different syntax/formats
     postcss([ stylefmt ]).process(fileContent).then(function(result) {
       return fs.writeFileSync(fileName, result.css, "utf-8")
-    }).catch(function(err) {
-      throw new Error(`Error during CSS formatting: ${ err}`)
+    }).catch(function(error) {
+      throw new Error(`Error during CSS formatting: ${error}`)
     })
   })
 })
