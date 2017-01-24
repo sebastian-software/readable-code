@@ -412,7 +412,7 @@ rules:
 
   id-length:
     - error
-    - min: 5
+    - min: 4
       max: 40
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
