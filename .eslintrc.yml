@@ -411,8 +411,8 @@ rules:
 
   id-length:
     - error
-    - min: 3
-      max: 30
+    - min: 4
+      max: 40
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
       # 'fs' = built-in fs module
