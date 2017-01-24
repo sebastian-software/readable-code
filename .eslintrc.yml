@@ -764,6 +764,7 @@ rules:
   # Formatting
   react/jsx-closing-bracket-location:
     - error
+    - line-aligned
   react/jsx-curly-spacing:
     - error
   react/jsx-handler-names:
