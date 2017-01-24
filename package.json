@@ -1,6 +1,6 @@
 {
   "name": "s15e-javascript",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
