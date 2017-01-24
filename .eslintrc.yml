@@ -473,7 +473,9 @@ rules:
     - 25
     - ignoreTopLevelFunctions: true
 
-  new-cap: error
+  new-cap: 
+    - error
+    - capIsNew: false
 
   new-parens: error
 
