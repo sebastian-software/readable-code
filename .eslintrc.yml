@@ -740,9 +740,13 @@ rules:
   # Make sure React is imported when using JSX
   react/react-in-jsx-scope: error
 
+  # Good idea but currently warns on too many false issues
+  react/no-unused-prop-types: off
+
+  # Good idea but currently breaks with helper rendering methods for functional components
+  react/no-multi-comp: off
+
   # Clean code
-  react/no-multi-comp: error
-  react/no-unused-prop-types: error
   react/prefer-es6-class: error
   react/prefer-stateless-function: error
   react/self-closing-comp: error
@@ -788,8 +792,7 @@ rules:
   # Bad performance
   react/no-did-mount-set-state: error
   react/no-did-update-set-state: error
-  react/jsx-no-bind: error
-
+  react/jsx-no-bind: warn
 
   #######################################################################################
   # Accessibility Plugin
