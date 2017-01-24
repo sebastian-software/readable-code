@@ -417,7 +417,7 @@ rules:
       # 'i' + 'l' = typical looping constructs
       # 't' = support convention in ava test runner
       # 'fs' = built-in fs module
-      exceptions: ["i", "l", "t", "id", "fs", "key", "obj", "pos", "row", "col", "map"]
+      exceptions: ["i", "l", "t", "id", "fs", "key", "obj", "pos", "row", "col", "map", "min", "max"]
       properties: never
 
   # Makes sense in NodeJS for native methods but is flawed because it is based purely on the
