@@ -51,7 +51,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.7.0",
-    "lint-staged": "^3.2.7",
+    "lint-staged": "^3.2.8",
     "postcss": "^5.2.11",
     "stylefmt": "^5.1.1",
     "stylelint": "^7.7.1"
