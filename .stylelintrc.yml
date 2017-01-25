@@ -215,7 +215,6 @@ rules:
   no-unsupported-browser-features:
     - true
     - severity: warning
-      browsers: "> 3%, last 2 versions, safari > 8, ie > 10, ios > 8, android > 4.3, samsung > 3, chromeandroid > 50, not OperaMini, not UCAndroid"
 
   # Media Queries
   media-feature-colon-space-after: always
