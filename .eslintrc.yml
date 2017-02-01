@@ -11,6 +11,7 @@ plugins:
   - lodash
   - node
   - flowtype-errors
+  - babel
 
 extends:
   - eslint:recommended
@@ -877,3 +878,7 @@ rules:
 
   # Improve support for usage of Flowtype
   flowtype-errors/show-errors: error
+
+  // Babel Plugin - useful when using the Babel Parser
+  babel/new-cap: error
+  babel/object-curly-spacing: error
