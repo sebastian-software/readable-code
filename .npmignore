@@ -2,3 +2,4 @@
 .eslintignore
 .gitignore
 yarn.lock
+assets

@@ -1,5 +1,5 @@
 {
-  "name": "s15e-javascript",
+  "name": "readable-code",
   "version": "0.8.13",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "scripts": {
@@ -29,7 +29,7 @@
   ],
   "author": "Sebastian Werner <s.werner@sebastian-software.de>",
   "license": "Apache-2.0",
-  "repository": "https://github.com/sebastian-software/s15e-javascript",
+  "repository": "https://github.com/sebastian-software/readable-code",
   "dependencies": {
     "cross-spawn": "^5.0.1",
     "eslint": "^3.14.1",
