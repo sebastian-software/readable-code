@@ -32,6 +32,8 @@ env:
 
 installedESLint: true
 
+parser: babel-eslint
+
 parserOptions:
   ecmaVersion: 2017
   ecmaFeatures:
@@ -879,6 +881,11 @@ rules:
   # Improve support for usage of Flowtype
   flowtype-errors/show-errors: error
 
-  // Babel Plugin - useful when using the Babel Parser
-  babel/new-cap: error
-  babel/object-curly-spacing: error
+  # Babel Plugin - useful when using the Babel Parser
+  babel/new-cap:
+    - error
+    - capIsNew: false
+
+  babel/object-curly-spacing:
+    - error
+    - always
