@@ -211,6 +211,10 @@ rules:
 
   valid-typeof: error
 
+  template-tag-spacing:
+    - error
+    - never
+
   # Disable direct init: new require("app-header")
   no-new-require: error
 
