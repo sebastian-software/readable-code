@@ -173,8 +173,11 @@ rules:
 
   no-implied-eval:
     - error
-  no-invalid-this:
-    - error
+
+  # Does not yet work with class properties etc.
+  # no-invalid-this:
+  #  - error
+
   no-iterator:
     - error
   no-lone-blocks: error
