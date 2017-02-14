@@ -49,12 +49,12 @@
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-react": "^6.9.0",
     "eslint-plugin-unicorn": "^2.0.1",
-    "flow-bin": "^0.38.0",
+    "flow-bin": "^0.39.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.8.0",
     "lint-staged": "^3.3.0",
-    "postcss": "^5.2.12",
+    "postcss": "^5.2.13",
     "stylefmt": "^5.1.2",
     "stylelint": "^7.8.0"
   }
