@@ -428,7 +428,7 @@ rules:
       # 't' = support convention in ava test runner
       # 'fs' = built-in fs module
       exceptions: ["i", "l", "t", "id", "fs", "url", "uri",
-        "key", "obj", "pos", "row", "col", "map",
+        "key", "obj", "pos", "row", "col", "map", "env",
         "min", "max",
         "CWD", "pkg"
         ]
