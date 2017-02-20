@@ -711,7 +711,7 @@ rules:
     - error
   prefer-spread:
     - error
-  prefer-template: error
+  prefer-template: warn
 
 
   #######################################################################################

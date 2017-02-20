@@ -212,9 +212,9 @@ rules:
     - ignoreProperties: ["composes", "/^lost-/"]
 
   # Browser Support
-  no-unsupported-browser-features:
-    - true
-    - severity: warning
+  # no-unsupported-browser-features:
+  #   - true
+  #   - severity: warning
 
   # Media Queries
   media-feature-colon-space-after: always
