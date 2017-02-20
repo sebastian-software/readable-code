@@ -33,7 +33,7 @@
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.15.0",
+    "eslint": "^3.16.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-babel": "^4.0.1",
@@ -53,7 +53,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-stylelint": "^3.8.0",
-    "lint-staged": "^3.3.0",
+    "lint-staged": "^3.3.1",
     "postcss": "^5.2.14",
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0"
