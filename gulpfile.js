@@ -6,6 +6,7 @@ var postcss = require("postcss")
 var gulp = require("gulp")
 var eslint = require("gulp-eslint")
 var stylelint = require("gulp-stylelint")
+var prettier = require("gulp-prettier")
 var stylefmt = require("stylefmt")
 var exec = require("cross-spawn").sync
 
@@ -31,6 +32,13 @@ gulp.task("lint:js", function() {
 
 gulp.task("fix:js", function() {
   return gulp.src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
+    .pipe(prettier({
+      printWidth: 140,
+      tabWidth: 2,
+      singleQuote: false,
+      trailingComma: "none",
+      bracketSpacing: true
+    }))
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(gulp.dest("."))

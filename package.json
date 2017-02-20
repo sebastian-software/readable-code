@@ -52,9 +52,11 @@
     "flow-bin": "^0.39.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
+    "gulp-prettier": "^1.1.0",
     "gulp-stylelint": "^3.8.0",
     "lint-staged": "^3.3.1",
     "postcss": "^5.2.14",
+    "prettier": "^0.18.0",
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0"
   }
