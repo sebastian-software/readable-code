@@ -23,14 +23,14 @@ gulp.task("clean:full", function() {
 })
 
 gulp.task("lint:js", function() {
-  return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
+  return gulp.src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
     .pipe(eslint())
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(eslint.failAfterError())
 })
 
 gulp.task("fix:js", function() {
-  return gulp.src(getGitFiles(/\.(js|jsx)$/), { base: "." })
+  return gulp.src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(gulp.dest("."))
