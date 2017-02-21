@@ -48,7 +48,7 @@ rules:
   # Prevent multiple component definition per file
   react/no-multi-comp:
     - error
-    - ignoreStateless: trrue
+    - ignoreStateless: true
 
   # Enforce ES5 or ES6 class for React Components
   react/prefer-es6-class: error
@@ -134,10 +134,11 @@ rules:
   react/jsx-curly-spacing: error
 
   # Validate JSX indentation
+  # Currently buggy with third option: https://github.com/yannickcr/eslint-plugin-react/issues/1083
   react/jsx-indent:
     - error
     - 2
-    - indentLogicalExpressions: true
+    # - indentLogicalExpressions: true
 
   # Validate props indentation in JSX
   react/jsx-indent-props:
