@@ -1,6 +1,6 @@
 {
   "name": "readable-code",
-  "version": "0.9.7",
+  "version": "1.0.0",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
