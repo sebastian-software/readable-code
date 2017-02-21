@@ -1,5 +1,7 @@
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable import/no-commonjs */
+/* eslint-disable import/unambiguous */
+/* eslint-disable promise/prefer-await-to-then */
 
 var fs = require("fs")
 var postcss = require("postcss")
