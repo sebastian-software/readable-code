@@ -3,7 +3,6 @@
 #######################################################################################
 
 rules:
-
   # Suggest using arrow functions as callbacks.
   prefer-arrow-callback:
     - error

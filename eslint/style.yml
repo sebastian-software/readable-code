@@ -34,9 +34,9 @@ rules:
     - error
     - always
 
-  no-extra-parens:
+  # Require Following Curly Brace Conventions
+  curly:
     - off
-
 
   # See also: https://en.wikipedia.org/wiki/Indent_style
   # brace-style:
@@ -61,7 +61,9 @@ rules:
   consistent-this:
     - error
     - self
-
+  dot-location:
+    - error
+    - property
   eol-last: error
 
   # Useful for debugging in older browsers, but a lot of work to manually add everywhere
@@ -180,7 +182,8 @@ rules:
   no-continue: off
   no-control-regex: error
   no-delete-var: error
-
+  no-extra-parens:
+    - off
   no-dupe-args: error
   no-dupe-keys: error
   no-duplicate-case: error

@@ -4,11 +4,10 @@
 
 rules:
   # Verify calls of super() in constructors
-  constructor-super:
-    - error
+  constructor-super: error
 
-  no-console:
-    - off
+  # Don't let console output slip through were not explicitely stated otherwise
+  no-console: error
 
   # Disallow modifying variables of class declarations
   no-class-assign: error
@@ -25,26 +24,25 @@ rules:
   # Disallow duplicate name in class members
   no-dupe-class-members: error
 
-  array-callback-return:
-    - error
-  block-scoped-var:
-    - off
+  # Enforces return statements in callbacks of array’s methods like `filter`
+  array-callback-return: error
 
-  # Keeping complexity down. The default of 20 is far to high in my opinion.
+  # Being explicit about the behavior. Prefer 'let' in more narrow local usage.
+  block-scoped-var: error
+
+  # Enforce minimal code complexity. The default of 20 is far to high for maintainable code.
   complexity:
     - error
     - 10
+
+  # Require return statements to either always or never specify values
   consistent-return: error
 
-  # Allo using curly braces or not (e.g. for simple if-statements)
-  curly:
-    - off
-
+  # Require Default Case in Switch Statements
   default-case:
     - error
-  dot-location:
-    - error
-    - property
+
+  # Require Dot Notation. No need for using array-like accessor in most cases.
   dot-notation:
     - error
     - allowKeywords: true
@@ -53,58 +51,65 @@ rules:
   eqeqeq:
     - error
     - smart
-  no-alert: error
 
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in:
     - off
 
-  # Match ES5 strict
+  # Don't let alerts slip through production systems
+  no-alert: error
+
+  # Disallow Use of caller/callee which make several code optimizations impossible
   no-caller: error
 
   # Hard to read code must be forbidden
   no-div-regex: error
 
   # Prefer what ever the developer thinks make code more readable/understandable
-  no-else-return:
-    - off
+  no-else-return: off
 
-  no-empty-function:
-    - error
+  # Disallow empty functions
+  no-empty-function: error
+
+  # Disallow empty destructuring patterns
   no-empty-pattern: error
 
-  # This is just stupid
-  no-eq-null:
-    - off
+  # Disabled: Disallow Null Comparisons. Stupid check. See also rule `eqeqeq`
+  no-eq-null: off
 
-  no-eval:
-    - error
-  no-extend-native:
-    - error
-  no-fallthrough:
-    - error
+  # Disallow eval()
+  no-eval: error
+
+  # Disallow Extending of Native Objects
+  no-extend-native: error
+
+  # Disallow Case Statement Fallthrough. Disable for rare exceptions.
+  no-fallthrough: error
+
+  # Disallow Floating Decimals. These look like errors.
   no-floating-decimal: error
 
-  # I like some of these, but numbers are to awkward for me.
+  # Disallow the type conversion with shorter notations.
   no-implicit-coercion:
     - error
     - boolean: true
       string: true
-      number: false
+      number: true
 
+  # Disallow variable and function declarations in the global scope
   # Does not make sense with ES6 modules
   no-implicit-globals:
     - off
 
-  no-implied-eval:
-    - error
+  # Disallow Implied eval()
+  no-implied-eval: error
 
-  # Does not yet work with class properties etc.
-  # no-invalid-this:
-  #  - error
+  # Disallow this keywords outside of classes or class-like objects.
+  # Generally a good idea but does not yet work with class properties etc.
+  no-invalid-this:
+   - off
 
-  no-iterator:
-    - error
+  no-iterator: error
   no-lone-blocks: error
 
   # Good style
@@ -125,16 +130,11 @@ rules:
   # Useless formatting with high maintenance
   no-multi-spaces: error
 
-  no-multi-str:
-    - error
-  no-native-reassign:
-    - error
-  no-new-func:
-    - error
-  no-new-wrappers:
-    - error
-  no-octal:
-    - error
+  no-multi-str: error
+  no-native-reassign: error
+  no-new-func: error
+  no-new-wrappers: error
+  no-octal: error
   no-octal-escape: error
 
   valid-typeof: error
