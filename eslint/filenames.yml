@@ -1,0 +1,12 @@
+plugins:
+  - filenames
+
+rules:
+  # Don't allow dashes or underscores. Keep in sync with exported symbol name.
+  filenames/match-regex:
+    - error
+    - "^[a-zA-Z][a-zA-Z0-9.]+$"
+  filenames/match-exported: error
+
+  # Index files are okay
+  filenames/no-index: off

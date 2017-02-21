@@ -41,6 +41,19 @@ rules:
     - off
   no-extra-parens:
     - off
+
+  # Verify calls of super() in constructors
+  constructor-super: error
+
+  # Require braces in arrow function body as needed
+  arrow-body-style:
+    - error
+    - as-needed
+
+  # Require parens in arrow function arguments
+  arrow-parens:
+    - error
+    - always
   class-methods-use-this:
     - warn
     - exceptMethods:

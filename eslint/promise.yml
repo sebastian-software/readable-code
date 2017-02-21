@@ -2,6 +2,9 @@
 # Promise Plugin
 #######################################################################################
 
+plugins:
+  - promise
+
 rules:
   promise/param-names: error
   promise/always-return: off

@@ -1,10 +1,17 @@
-plugins:
-  - unicorn
-  - promise
-  - filenames
-
 extends:
-  - plugin:unicorn/recommended
+  - ./eslint/basics.yml
+  - ./eslint/compat.yml
+  - ./eslint/filenames.yml
+  - ./eslint/import.yml
+  - ./eslint/jsx-a11y.yml
+  - ./eslint/lodash.yml
+  - ./eslint/modern.yml
+  - ./eslint/node.yml
+  - ./eslint/promise.yml
+  - ./eslint/quality.yml
+  - ./eslint/react.yml
+  - ./eslint/readable.yml
+  - ./eslint/style.yml
 
 env:
   browser: true
@@ -22,70 +29,3 @@ parserOptions:
     generators: true
     jsx: true
   sourceType: module
-
-rules:
-
-  #################################################################
-  # ES6+
-  #################################################################
-
-  # Call me old fashioned
-  arrow-body-style:
-    - error
-    - as-needed
-  arrow-parens:
-    - error
-    - always
-
-  arrow-spacing: error
-
-  constructor-super: error
-
-  # The star is no operator but a modifier of the function
-  generator-star-spacing:
-    - error
-    - before
-
-  no-class-assign: error
-
-  no-prototype-builtins: error
-
-  no-loop-func: error
-
-  no-const-assign: error
-
-  no-dupe-class-members: error
-
-  # Trying to start new code the modern way - at least for what it makes sense
-  prefer-arrow-callback:
-    - error
-  prefer-rest-params:
-    - error
-  prefer-spread:
-    - error
-  prefer-template: warn
-
-
-  #######################################################################################
-  # Other Plugins
-  #######################################################################################
-
-
-  # Don't allow dashes or underscores. Keep in sync with exported symbol name.
-  filenames/match-regex:
-    - error
-    - "^[a-zA-Z][a-zA-Z0-9.]+$"
-  filenames/match-exported: error
-
-  # Index files are okay
-  filenames/no-index: off
-
-  # Duplicated
-  unicorn/no-process-exit: off
-
-  # We have something more powerful available to check filenames
-  unicorn/filename-case: off
-
-  unicorn/catch-error-name:
-    - error
-    - name: error

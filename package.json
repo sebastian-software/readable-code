@@ -48,7 +48,6 @@
     "eslint-plugin-node": "^4.0.1",
     "eslint-plugin-promise": "^3.4.2",
     "eslint-plugin-react": "^6.10.0",
-    "eslint-plugin-unicorn": "^2.0.1",
     "flow-bin": "^0.39.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",

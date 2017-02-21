@@ -3,6 +3,21 @@
 #######################################################################################
 
 rules:
+  # Disallow modifying variables of class declarations
+  no-class-assign: error
+
+  # Disallow use of Object.prototypes builtins directly
+  no-prototype-builtins: error
+
+  # Disallow Functions in Loops
+  no-loop-func: error
+
+  # Disallow modifying variables that are declared using const
+  no-const-assign: error
+
+  # Disallow duplicate name in class members
+  no-dupe-class-members: error
+
   array-callback-return:
     - error
   block-scoped-var:
