@@ -57,6 +57,8 @@
     "postcss": "^5.2.14",
     "prettier": "^0.18.0",
     "stylefmt": "^5.1.2",
-    "stylelint": "^7.9.0"
+    "stylelint": "^7.9.0",
+    "typescript": "^2.1.6",
+    "typescript-eslint-parser": "^1.0.3"
   }
 }

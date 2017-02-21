@@ -10,11 +10,31 @@ extends:
   - plugin:import/warnings
 
 rules:
-  # Loader syntax is useful when loading files with alternative approaches e.g.
-  # to detect images sizes, generating API docs, etc.
-  import/no-webpack-loader-syntax: off
+  import/extensions:
+    - .mjs
+    - .js
+    - .jsx
+    - .ts
+    - .tsx
 
+  # Enable typescript support
+  import/parsers:
+    typescript-eslint-parser: [ .ts, .tsx ]
+
+  # Loader syntax is useful when loading files with alternative approaches e.g.
+  # to detect images sizes, generating API docs, etc. but breaks other tools like Rollup.
+  import/no-webpack-loader-syntax: error
+
+  # Forbid import of modules using absolute paths
   import/no-absolute-path: error
+
+  # Report namespace imports which are typically too much of what you need.
   import/no-namespace: error
+
+  # Report CommonJS require calls and module.exports or exports.*
+  # We go full-in with ES module syntax
   import/no-commonjs: error
+
+  # Report AMD require and define calls.
+  # We go full-in with ES module syntax
   import/no-amd: error
