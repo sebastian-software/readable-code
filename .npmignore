@@ -1,4 +1,6 @@
+node_modules
 .eslintignore
 .gitignore
 yarn.lock
 src
+gulpfile.babel.js
