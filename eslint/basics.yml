@@ -21,6 +21,7 @@ extends:
   - eslint:recommended
 
 rules:
+  # Enforce consistent indentation
   indent:
     - error
     - 2
@@ -33,54 +34,43 @@ rules:
         parameters: 1
       CallExpression:
         arguments: 1
+
+  # Enforce consistent linebreak style
   linebreak-style:
     - error
     - unix
+
+  # Enforce the consistent use of quotes
+  # We go with double quotes as these work well with HTML-inspired JSX, too
   quotes:
     - error
     - double
     - avoidEscape: true
       allowTemplateLiterals: true
+
+  # Disallow semicolons which is mostly safe and cleans up visual clutter
   semi:
     - error
     - never
 
-  no-console:
-    - off
-  no-extra-parens:
-    - off
-
   # Verify calls of super() in constructors
-  constructor-super: error
-
-  # Require braces in arrow function body as needed
-  arrow-body-style:
+  constructor-super:
     - error
-    - as-needed
-
-  # Require parens in arrow function arguments
-  arrow-parens:
-    - error
-    - always
-
-  func-call-spacing: error
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
   # as overall indenting is correct
   brace-style:
     - off
 
-  comma-dangle:
-    - error
-    - never
-
   # Prevent old style extensions of native objects
-  no-use-extend-native/no-use-extend-native: error
+  no-use-extend-native/no-use-extend-native:
+    - error
 
   # Improve support for usage of Flowtype
-  flowtype-errors/show-errors: error
+  flowtype-errors/show-errors:
+    - error
 
-  # Babel Plugin - useful when using the Babel Parser
+  # Babel Plugin settings for compat with Babel parser
   babel/new-cap:
     - error
     - capIsNew: false

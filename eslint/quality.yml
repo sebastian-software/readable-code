@@ -3,6 +3,9 @@
 #######################################################################################
 
 rules:
+  no-console:
+    - off
+
   # Disallow modifying variables of class declarations
   no-class-assign: error
 
