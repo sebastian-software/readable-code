@@ -10,8 +10,10 @@ rules:
     - always
 
   # Require braces in arrow function body as needed
+  # Disabled as in real development the "as-needed" value often times
+  # means reformatting of code when adding additional code.
   arrow-body-style:
-    - error
+    - off
     - as-needed
 
   # Reduce visual clutter though non required commas.

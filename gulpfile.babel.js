@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable prefer-arrow-callback */
-/* eslint-disable import/unambiguous */
 /* eslint-disable promise/prefer-await-to-then */
 
 import fs from "fs"
