@@ -53,10 +53,6 @@ rules:
     - error
     - never
 
-  # Verify calls of super() in constructors
-  constructor-super:
-    - error
-
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
   # as overall indenting is correct
   brace-style:

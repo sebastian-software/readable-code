@@ -6,4 +6,5 @@ plugins:
   - compat
 
 rules:
+  # Lint browser compatibility of API used
   compat/compat: warn

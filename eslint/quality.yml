@@ -3,6 +3,10 @@
 #######################################################################################
 
 rules:
+  # Verify calls of super() in constructors
+  constructor-super:
+    - error
+
   no-console:
     - off
 
