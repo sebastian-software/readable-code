@@ -13,3 +13,6 @@ rules:
 
   # NPM installs in a flat hierarchy which prevent detecting request solved by dependencies
   node/no-unpublished-require: off
+
+  # Disallow import declarations for files that don't exist.
+  node/no-missing-import: error
