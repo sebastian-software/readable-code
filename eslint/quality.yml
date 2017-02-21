@@ -96,8 +96,26 @@ rules:
   # Require parentheses when invoking a constructor with no arguments
   new-parens: error
 
+  # Disallow Array constructors
+  no-array-constructor: error
+
   # Don't let alerts slip through production systems
   no-alert: error
+
+  # Disallow bitwise operators
+  # Generally prevents errors + rule can be disabled locally when required
+  no-bitwise: error
+
+  # Disallow Shadowing of Variables Inside of catch
+  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
+  # the same scope. Still no good practice for understanding the code.
+  no-catch-shadow: error
+
+  # Disabled: Don't see why this is regarded as problematic
+  no-continue: off
+
+  # Disallow control characters in regular expressions
+  no-control-regex: error
 
   # Disallow Use of caller/callee which make several code optimizations impossible
   no-caller: error
@@ -111,16 +129,39 @@ rules:
   # Disallow modifying variables that are declared using const
   no-const-assign: error
 
+  # Disallow deleting variables
+  no-delete-var: error
+
+  # Disallow duplicate arguments in function definitions
+  no-dupe-args: error
+
+  # Disallow duplicate keys in object literals
+  no-dupe-keys: error
+
+  # Disallow a duplicate case label
+  no-duplicate-case: error
+
   # Disallow duplicate name in class members
   no-dupe-class-members: error
 
-  # Disallow Shadowing of Variables Inside of catch
-  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
-  # the same scope. Still no good practice for understanding the code.
-  no-catch-shadow: error
-
   # Hard to read code must be forbidden
   no-div-regex: error
+
+  # Disabled: Disallow unnecessary parentheses.
+  # If it helps for readability, that's fine. Too much structure is still being removed by compression.
+  no-extra-parens: off
+
+  # Disallow empty character classes in regular expressions
+  no-empty-character-class: error
+
+  # Disallow reassigning exceptions in catch clauses
+  no-ex-assign: error
+
+  # Disallow unnecessary function binding
+  no-extra-bind: error
+
+  # Disallow Unnecessary Labels
+  no-extra-label: error
 
   # Prefer what ever the developer thinks make code more readable/understandable
   no-else-return: off
@@ -146,6 +187,9 @@ rules:
   # Disallow Floating Decimals. These look like errors.
   no-floating-decimal: error
 
+  # Disallow reassigning function declarations
+  no-func-assign: error
+
   # Disallow the type conversion with shorter notations.
   no-implicit-coercion:
     - error
@@ -164,12 +208,28 @@ rules:
   # Generally a good idea but does not yet work with class properties etc.
   no-invalid-this: off
 
+  # Disallow invalid regular expression strings in RegExp constructors
+  no-invalid-regexp: error
+
   # Irrelevant extension. The __iterator__ property was a SpiderMonkey extension to JavaScript that could
   # be used to create custom iterators
   no-iterator: error
 
+  # Disallow Labels That Are Variables Names
+  no-label-var: error
+
+  # Disallow Labeled Statements
+  no-labels:
+    - error
+    - allowLoop: false
+      allowSwitch: false
+
   # Disallow Unnecessary Nested Blocks
   no-lone-blocks: error
+
+  # Disallow if statements as the only statement in else blocks
+  # Disabled as it night be used to improve code for human logic / readability
+  no-lonely-if: off
 
   # Disallow Functions in Loops
   no-loop-func: error

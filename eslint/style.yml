@@ -108,40 +108,11 @@ rules:
   newline-before-return: off
   newline-per-chained-call: off
 
-  # Disallow Array constructors
-  no-array-constructor: error
-
-  # Disallow bitwise operators
-  # Generally prevents errors + rule can be disabled locally when required
-  no-bitwise: error
-
-  # Don't see why this is regarded as problematic
-  no-continue: off
-  no-control-regex: error
-  no-delete-var: error
-  no-extra-parens:
-    - off
-  no-dupe-args: error
-  no-dupe-keys: error
-  no-duplicate-case: error
-  no-empty-character-class: error
-  no-ex-assign: error
-  no-extra-bind: error
-  no-extra-label: error
-  no-func-assign: error
-  no-invalid-regexp: error
-  no-label-var: error
-  no-labels:
-    - error
-    - allowLoop: false
-      allowSwitch: false
-
+  # Disallow inline comments after code
   # Leads to complexer to overlook code
   no-inline-comments: error
 
-  # Might be used to improve code for human logic
-  no-lonely-if: off
-
+  # Disallow multiple empty lines
   no-multiple-empty-lines:
     - error
     - max: 4
