@@ -1,34 +1,35 @@
 /* eslint-disable no-console */
 /* eslint-disable prefer-arrow-callback */
-/* eslint-disable import/no-commonjs */
 /* eslint-disable import/unambiguous */
 /* eslint-disable promise/prefer-await-to-then */
 
-var fs = require("fs")
-var postcss = require("postcss")
-var gulp = require("gulp")
-var eslint = require("gulp-eslint")
-var stylelint = require("gulp-stylelint")
-var prettier = require("gulp-prettier")
-var stylefmt = require("stylefmt")
-var exec = require("cross-spawn").sync
+import fs from "fs"
+import postcss from "postcss"
+import gulp from "gulp"
+import eslint from "gulp-eslint"
+import stylelint from "gulp-stylelint"
+import prettier from "gulp-prettier"
+import stylefmt from "stylefmt"
+import spawn from "cross-spawn"
+
+const execSync = spawn.sync
 
 function getGitFiles(regexp) {
-  var gitFiles = exec("git", [ "ls-files" ], { stdio: "pipe" }).stdout.toString().trim().split("\n")
-  return gitFiles.filter(function(fileName) {
+  var gitFiles = execSync("git", [ "ls-files" ], { stdio: "pipe" }).stdout.toString().trim().split("\n")
+  return gitFiles.filter((fileName) => {
     return regexp.exec(fileName)
   })
 }
 
-gulp.task("clean", function() {
-  console.log(exec("git", [ "clean", "--force" ], { stdio: "pipe" }).stdout.toString())
+gulp.task("clean", () => {
+  console.log(execSync("git", [ "clean", "--force" ], { stdio: "pipe" }).stdout.toString())
 })
 
-gulp.task("clean:full", function() {
-  console.log(exec("git", [ "clean", "--force", "-x" ], { stdio: "pipe" }).stdout.toString())
+gulp.task("clean:full", () => {
+  console.log(execSync("git", [ "clean", "--force", "-x" ], { stdio: "pipe" }).stdout.toString())
 })
 
-gulp.task("lint:js", function() {
+gulp.task("lint:js", () => {
   return gulp
     .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
     .pipe(eslint())
@@ -36,7 +37,7 @@ gulp.task("lint:js", function() {
     .pipe(eslint.failAfterError())
 })
 
-gulp.task("fix:js", function() {
+gulp.task("fix:js", () => {
   return gulp
     .src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
     .pipe(prettier({
@@ -51,7 +52,7 @@ gulp.task("fix:js", function() {
     .pipe(gulp.dest("."))
 })
 
-gulp.task("lint:css", function() {
+gulp.task("lint:css", () => {
   return gulp
     .src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
     .pipe(stylelint({
@@ -59,18 +60,18 @@ gulp.task("lint:css", function() {
     }))
 })
 
-gulp.task("fix:css", function() {
+gulp.task("fix:css", () => {
   var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
-  cssFiles.forEach(function(fileName) {
+  cssFiles.forEach((fileName) => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
 
     // TODO: Support different syntax/formats
     postcss([ stylefmt ])
       .process(fileContent)
-      .then(function(result) {
+      .then((result) => {
         return fs.writeFileSync(fileName, result.css, "utf-8")
       })
-      .catch(function(error) {
+      .catch((error) => {
         throw new Error(`Error during CSS formatting: ${error}`)
       })
   })
