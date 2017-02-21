@@ -98,24 +98,20 @@ rules:
       allowArrayStart: true
       allowArrayEnd: false
 
-  new-cap:
-    - error
-    - capIsNew: false
-
-  new-parens: error
-
   # It good to have newlines when declaring a block of variables, but not for just one
   # where we directly have some actionable stuff afterwards.
   newline-after-var:
     - off
 
-  # Increase readability, but does not work everywhere... therefor we keep it off
+  # Improves readability, but does not work everywhere... therefor we keep it off
   # and let the individual developer decide.
   newline-before-return: off
   newline-per-chained-call: off
 
+  # Disallow Array constructors
   no-array-constructor: error
 
+  # Disallow bitwise operators
   # Generally prevents errors + rule can be disabled locally when required
   no-bitwise: error
 

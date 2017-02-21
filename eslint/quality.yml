@@ -88,6 +88,14 @@ rules:
     - error
     - max: 2
 
+  # Require constructor names to begin with a capital letter and being executed with `new` keyword
+  new-cap:
+    - error
+    - capIsNew: false
+
+  # Require parentheses when invoking a constructor with no arguments
+  new-parens: error
+
   # Don't let alerts slip through production systems
   no-alert: error
 
