@@ -21,8 +21,7 @@ rules:
   consistent-return: error
 
   # Require Default Case in Switch Statements
-  default-case:
-    - error
+  default-case: error
 
   # Require Dot Notation. No need for using array-like accessor in most cases.
   dot-notation:
@@ -103,8 +102,7 @@ rules:
 
   # Disallow this keywords outside of classes or class-like objects.
   # Generally a good idea but does not yet work with class properties etc.
-  no-invalid-this:
-   - off
+  no-invalid-this: off
 
   # Irrelevant extension. The __iterator__ property was a SpiderMonkey extension to JavaScript that could
   # be used to create custom iterators
@@ -262,8 +260,7 @@ rules:
       classes: false
 
   # Disallow unmodified conditions of loops. Possible error candidate.
-  no-unmodified-loop-condition:
-    - error
+  no-unmodified-loop-condition: error
 
   # Disallow Unused Expressions. Keep things clean.
   no-unused-expressions:
