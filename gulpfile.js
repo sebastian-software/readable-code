@@ -12,7 +12,9 @@ var exec = require("cross-spawn").sync
 
 function getGitFiles(regexp) {
   var gitFiles = exec("git", [ "ls-files" ], { stdio: "pipe" }).stdout.toString().trim().split("\n")
-  return gitFiles.filter(function(fileName) { return regexp.exec(fileName) })
+  return gitFiles.filter(function(fileName) {
+    return regexp.exec(fileName)
+  })
 }
 
 gulp.task("clean", function() {
@@ -24,14 +26,16 @@ gulp.task("clean:full", function() {
 })
 
 gulp.task("lint:js", function() {
-  return gulp.src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
+  return gulp
+    .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
     .pipe(eslint())
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(eslint.failAfterError())
 })
 
 gulp.task("fix:js", function() {
-  return gulp.src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
+  return gulp
+    .src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
     .pipe(prettier({
       printWidth: 140,
       tabWidth: 2,
@@ -45,11 +49,10 @@ gulp.task("fix:js", function() {
 })
 
 gulp.task("lint:css", function() {
-  return gulp.src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
+  return gulp
+    .src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
     .pipe(stylelint({
-      reporters: [
-        { formatter: "string", console: true }
-      ]
+      reporters: [{ formatter: "string", console: true }]
     }))
 })
 
@@ -59,10 +62,13 @@ gulp.task("fix:css", function() {
     var fileContent = fs.readFileSync(fileName, "utf-8")
 
     // TODO: Support different syntax/formats
-    postcss([ stylefmt ]).process(fileContent).then(function(result) {
-      return fs.writeFileSync(fileName, result.css, "utf-8")
-    }).catch(function(error) {
-      throw new Error(`Error during CSS formatting: ${error}`)
-    })
+    postcss([ stylefmt ])
+      .process(fileContent)
+      .then(function(result) {
+        return fs.writeFileSync(fileName, result.css, "utf-8")
+      })
+      .catch(function(error) {
+        throw new Error(`Error during CSS formatting: ${error}`)
+      })
   })
 })
