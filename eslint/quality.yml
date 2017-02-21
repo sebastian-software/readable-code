@@ -33,6 +33,17 @@ rules:
     - error
     - smart
 
+  # Disallow spacing between function identifiers and their invocations.
+  # Otherwise might be visually confusing.
+  func-call-spacing: error
+
+  # Enforce spacing around the * in generator functions
+  # The star is no operator but a modifier of the function
+  # Good: function *generator() {}
+  generator-star-spacing:
+    - error
+    - before
+
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in: off
 
@@ -312,6 +323,12 @@ rules:
   radix:
     - error
     - always
+
+  # Disallow a space before function parenthesis
+  # Parens belong to the function... a spacing could break easy grasping of the code
+  space-before-function-paren:
+    - error
+    - never
 
   # Require or disallow spacing between template tags and their literals
   # Logical connections should not be broken by formatting.
