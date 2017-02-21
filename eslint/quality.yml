@@ -176,6 +176,9 @@ rules:
       property: pow
       message: 'Use the exponentiation operator (**) instead.'
 
+  # Disallow multiple spaces in regular expression literals
+  no-regex-spaces: error
+
   # Prevent side effects to arguments objects, but also makes code sometimes more complexer
   # when you have some logic in place to deal with different argument sets.
   # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
@@ -222,6 +225,9 @@ rules:
   # Disallow Shadowing of Restricted Names
   no-shadow-restricted-names: error
 
+  # Disallow spacing between function identifiers and their applications
+  no-spaced-func: error
+
   # Disallow sparse arrays
   # It’s recommended to avoid using them unless you are certain that they are useful in your code.
   no-sparse-arrays: error
@@ -232,6 +238,9 @@ rules:
   # Good idea to keep some more error info:
   # "The fundamental benefit of Error objects is that they automatically keep track of where they were built and originated."
   no-throw-literal: error
+
+  # Disallow whitespace before properties
+  no-whitespace-before-property: error
 
   # Disallow Initializing to undefined
   # Stupid idea which needs to be prevented

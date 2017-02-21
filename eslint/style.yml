@@ -3,14 +3,6 @@
 #################################################################
 
 rules:
-  # Require space before/after arrow function’s arrow
-  arrow-spacing: error
-
-  # The star is no operator but a modifier of the function
-  generator-star-spacing:
-    - error
-    - before
-
   # Reduce visual clutter though non required commas.
   # Code is more often read than written. Optimize for that.
   comma-dangle:
@@ -23,24 +15,10 @@ rules:
     - error
     - always
 
-  # Disallow spacing between function identifiers and their invocations.
-  # Otherwise might be visually confusing.
-  func-call-spacing:
-    - error
-
   # Require braces in arrow function body as needed
   arrow-body-style:
     - error
     - as-needed
-
-  array-bracket-spacing:
-    - error
-    - always
-    - objectsInArrays: false
-
-  block-spacing:
-    - error
-    - always
 
   # Require Following Curly Brace Conventions
   curly:
@@ -51,20 +29,13 @@ rules:
   #  - error
   #  - 1tbs
 
+  # Require Camelcase
   camelcase: error
 
-  comma-spacing:
-    - error
-    - before: false
-      after: true
 
   comma-style:
     - error
     - last
-
-  computed-property-spacing:
-    - error
-    - never
 
   consistent-this:
     - error
@@ -119,14 +90,6 @@ rules:
 
   lines-around-directive:
     - error
-
-  key-spacing:
-    - error
-    - beforeColon: false
-      afterColon: true
-      mode: strict
-
-  keyword-spacing: error
 
   lines-around-comment:
     - error
@@ -253,24 +216,13 @@ rules:
     - DebuggerStatement
     - LabeledStatement
 
-  no-spaced-func: error
-
   no-ternary:
     - off
-
-  # Lead to harder to diff changesets
-  no-trailing-spaces: error
 
   no-underscore-dangle: off
 
   # Getting people to senior level...
   no-unneeded-ternary: error
-
-  no-whitespace-before-property: error
-
-  object-curly-spacing:
-    - error
-    - always
 
   one-var:
     - error
@@ -286,9 +238,7 @@ rules:
     - error
     - after
 
-  rest-spread-spacing:
-    - error
-    - never
+
 
   unicode-bom:
     - error
@@ -306,47 +256,16 @@ rules:
     - error
     - consistent-as-needed
 
-  semi-spacing:
-    - error
-    - after: true
-      before: false
-
   # Variables and Imports should be sorted in semantic groups not by name
   sort-imports:
     - off
   sort-vars:
     - off
 
-  # Keeping things readable
-  space-before-blocks:
-    - error
-    - always
-
-  # Parens belong to the function... a spacing could break easy grasping of the code
-  space-before-function-paren:
-    - error
-    - never
-
-  space-in-parens:
-    - error
-    - never
-
-  space-infix-ops: error
-
-  space-unary-ops:
-    - error
-    - words: true
-      nonwords: false
-
-  spaced-comment:
-    - error
-    - always
-
   # I like the improved readability when using parens
   wrap-regex: error
 
   no-negated-in-lhs: error
-  no-regex-spaces: error
   no-template-curly-in-string: error
   no-undef: error
   no-unused-labels: error

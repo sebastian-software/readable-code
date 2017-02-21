@@ -35,6 +35,9 @@ rules:
       CallExpression:
         arguments: 1
 
+  # Disallow trailing whitespace at the end of lines
+  no-trailing-spaces: error
+
   # Useless formatting with high maintenance
   no-multi-spaces: error
 
