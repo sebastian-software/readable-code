@@ -37,7 +37,7 @@ gulp.task("fix:js", function() {
   return gulp
     .src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
     .pipe(prettier({
-      printWidth: 140,
+      printWidth: 111,
       tabWidth: 2,
       singleQuote: false,
       trailingComma: "none",
