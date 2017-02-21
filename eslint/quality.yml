@@ -3,27 +3,6 @@
 #######################################################################################
 
 rules:
-  # Verify calls of super() in constructors
-  constructor-super: error
-
-  # Don't let console output slip through were not explicitely stated otherwise
-  no-console: error
-
-  # Disallow modifying variables of class declarations
-  no-class-assign: error
-
-  # Disallow use of Object.prototypes builtins directly
-  no-prototype-builtins: error
-
-  # Disallow Functions in Loops
-  no-loop-func: error
-
-  # Disallow modifying variables that are declared using const
-  no-const-assign: error
-
-  # Disallow duplicate name in class members
-  no-dupe-class-members: error
-
   # Enforces return statements in callbacks of array’s methods like `filter`
   array-callback-return: error
 
@@ -34,6 +13,9 @@ rules:
   complexity:
     - error
     - 10
+
+  # Verify calls of super() in constructors
+  constructor-super: error
 
   # Require return statements to either always or never specify values
   consistent-return: error
@@ -60,6 +42,18 @@ rules:
 
   # Disallow Use of caller/callee which make several code optimizations impossible
   no-caller: error
+
+  # Don't let console output slip through were not explicitely stated otherwise
+  no-console: error
+
+  # Disallow modifying variables of class declarations
+  no-class-assign: error
+
+  # Disallow modifying variables that are declared using const
+  no-const-assign: error
+
+  # Disallow duplicate name in class members
+  no-dupe-class-members: error
 
   # Disallow Shadowing of Variables Inside of catch
   # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
@@ -119,6 +113,9 @@ rules:
   # Disallow Unnecessary Nested Blocks
   no-lone-blocks: error
 
+  # Disallow Functions in Loops
+  no-loop-func: error
+
   # Disallow Magic Numbers
   # ‘Magic numbers’ are numbers that occur multiple time in code without an explicit meaning.
   no-magic-numbers:
@@ -155,14 +152,8 @@ rules:
   # Disallow octal escape sequences in string literals. Better use real unicode sequences.
   no-octal-escape: error
 
-  # Enforce comparing typeof expressions against valid strings
-  valid-typeof: error
-
-  # Require or disallow spacing between template tags and their literals
-  # Logical connections should not be broken by formatting.
-  template-tag-spacing:
-    - error
-    - never
+  # Disallow use of Object.prototypes builtins directly
+  no-prototype-builtins: error
 
   # Disable direct init: new require("app-header")
   # Also does not work with new `import`/`import()` syntax.
@@ -315,6 +306,15 @@ rules:
   radix:
     - error
     - always
+
+  # Require or disallow spacing between template tags and their literals
+  # Logical connections should not be broken by formatting.
+  template-tag-spacing:
+    - error
+    - never
+
+  # Enforce comparing typeof expressions against valid strings
+  valid-typeof: error
 
   # Prefer inside for readability
   wrap-iife:
