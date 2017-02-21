@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable import/no-commonjs */
 /* eslint-disable import/unambiguous */
