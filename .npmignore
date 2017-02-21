@@ -1,5 +1,4 @@
-.editorconfig
 .eslintignore
 .gitignore
 yarn.lock
-assets
+src

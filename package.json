@@ -2,6 +2,8 @@
   "name": "readable-code",
   "version": "1.0.0",
   "description": "JavaScript/CSS Coding Standard and Tooling",
+  "main": "lib/index.commonjs.js",
+  "module": "lib/index.esmodules.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "release-it --github.release --npm.publish --non-interactive",
