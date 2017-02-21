@@ -1,8 +1,0 @@
-rules:
-  # Require space before/after arrow function’s arrow
-  arrow-spacing: error
-
-  # The star is no operator but a modifier of the function
-  generator-star-spacing:
-    - error
-    - before

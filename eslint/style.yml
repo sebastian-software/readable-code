@@ -3,6 +3,14 @@
 #################################################################
 
 rules:
+  # Require space before/after arrow function’s arrow
+  arrow-spacing: error
+
+  # The star is no operator but a modifier of the function
+  generator-star-spacing:
+    - error
+    - before
+
   # Reduce visual clutter though non required commas.
   # Code is more often read than written. Optimize for that.
   comma-dangle:

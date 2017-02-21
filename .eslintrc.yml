@@ -19,5 +19,4 @@ extends:
   - ./eslint/promise.yml
   - ./eslint/quality.yml
   - ./eslint/react.yml
-  - ./eslint/readable.yml
   - ./eslint/style.yml
