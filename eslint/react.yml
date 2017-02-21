@@ -1,0 +1,90 @@
+#######################################################################################
+# React Plugin
+#######################################################################################
+
+plugins:
+  - react
+
+extends:
+  - plugin:react/recommended
+
+rules:
+  react/jsx-no-undef:
+    - error
+  react/jsx-pascal-case:
+    - error
+    - allowAllCaps: true
+      ignore: []
+  react/jsx-uses-react:
+    - error
+  react/jsx-uses-vars:
+    - error
+  react/jsx-filename-extension:
+    - error
+    - extensions: [ ".js" ]
+
+  # Developer Support
+  react/display-name: error
+  react/require-render-return: error
+  react/jsx-key: error
+
+  # Bad practise
+  react/no-children-prop: error
+
+  # Make sure React is imported when using JSX
+  react/react-in-jsx-scope: error
+
+  # Good idea but currently warns on too many false issues
+  react/no-unused-prop-types: off
+
+  # Good idea but currently breaks with helper rendering methods for functional components
+  react/no-multi-comp: off
+
+  # Clean code
+  react/prefer-es6-class: error
+  react/prefer-stateless-function: error
+  react/self-closing-comp: error
+  react/sort-comp: error
+  react/jsx-wrap-multilines: error
+
+  # Formatting
+  react/jsx-closing-bracket-location:
+    - error
+    - line-aligned
+  react/jsx-curly-spacing:
+    - error
+  react/jsx-handler-names:
+    - off
+  react/jsx-indent:
+    - error
+    - 2
+  react/jsx-indent-props:
+    - error
+    - 2
+
+  # Unsafe
+  react/no-danger: error
+  react/no-danger-with-children: error
+  react/no-direct-mutation-state: error
+  react/no-unescaped-entities: error
+  react/style-prop-object: error
+  react/jsx-no-duplicate-props:
+    - error
+    - ignoreCase: true
+  react/jsx-no-target-blank: error
+
+  # Don't pollute DOM
+  react/no-unknown-property: error
+
+  # Deprecated
+  react/no-deprecated: error
+  react/no-is-mounted: error
+  react/no-string-refs: error
+
+  # Unsafe + Bad performance + Deprecated
+  react/no-find-dom-node: error
+
+  # Bad performance
+  react/no-did-mount-set-state: error
+  react/no-did-update-set-state: error
+  react/jsx-no-bind: warn

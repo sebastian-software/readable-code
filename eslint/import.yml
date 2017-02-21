@@ -1,0 +1,20 @@
+#######################################################################################
+# Import Plugin
+#######################################################################################
+
+plugins:
+  - import
+
+extends:
+  - plugin:import/errors
+  - plugin:import/warnings
+
+rules:
+  # Loader syntax is useful when loading files with alternative approaches e.g.
+  # to detect images sizes, generating API docs, etc.
+  import/no-webpack-loader-syntax: off
+
+  import/no-absolute-path: error
+  import/no-namespace: error
+  import/no-commonjs: error
+  import/no-amd: error

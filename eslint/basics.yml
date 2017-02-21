@@ -1,0 +1,78 @@
+#######################################################################################
+# Basics
+#######################################################################################
+
+parser: babel-eslint
+
+plugins:
+  - babel
+  - flowtype
+  - flowtype-errors
+  - no-use-extend-native
+
+extends:
+  - eslint:recommended
+
+rules:
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+      VariableDeclarator: 1
+      outerIIFEBody: 0
+      MemberExpression: 1
+      FunctionExpression:
+        body: 1
+        parameters: 1
+      CallExpression:
+        arguments: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+    - avoidEscape: true
+      allowTemplateLiterals: true
+  semi:
+    - error
+    - never
+  no-console:
+    - off
+  no-extra-parens:
+    - off
+  class-methods-use-this:
+    - warn
+    - exceptMethods:
+        - componentWillMount
+        - componentDidMount
+        - componentWillReceiveProps
+        - shouldComponentUpdate
+        - componentWillUpdate
+        - componentDidUpdate
+        - componentWillUnmount
+  func-call-spacing: error
+
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
+  brace-style:
+    - off
+
+  comma-dangle:
+    - error
+    - never
+
+  # Prevent old style extensions of native objects
+  no-use-extend-native/no-use-extend-native: error
+
+  # Improve support for usage of Flowtype
+  flowtype-errors/show-errors: error
+
+  # Babel Plugin - useful when using the Babel Parser
+  babel/new-cap:
+    - error
+    - capIsNew: false
+
+  babel/object-curly-spacing:
+    - error
+    - always
