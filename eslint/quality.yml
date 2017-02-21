@@ -109,15 +109,21 @@ rules:
   no-invalid-this:
    - off
 
+  # Irrelevant extension. The __iterator__ property was a SpiderMonkey extension to JavaScript that could
+  # be used to create custom iterators
   no-iterator: error
+
+  # Disallow Unnecessary Nested Blocks
   no-lone-blocks: error
 
-  # Good style
+  # Disallow Magic Numbers
+  # ‘Magic numbers’ are numbers that occur multiple time in code without an explicit meaning.
   no-magic-numbers:
     - error
     - ignoreArrayIndexes: true
       ignore: [ -1, 0, 1, 2, 10, 16, 100, 1000 ]
 
+  # Disallow mixes of different operators
   no-mixed-operators:
     - error
     - groups:
@@ -127,23 +133,36 @@ rules:
       - ['in', 'instanceof']
       allowSamePrecedence: false
 
-  # Useless formatting with high maintenance
-  no-multi-spaces: error
-
+  # Disallow Multiline Strings. Bad practice as it was an undocumented feature of JavaScript.
+  # Use template literals instead.
   no-multi-str: error
+
+  # Disallow Reassignment of Native Objects e.g. `Object`
   no-native-reassign: error
+
+  # Disallow Function Constructor. Comparable to `eval()` light.
   no-new-func: error
+
+  # Disallow Primitive Wrapper Instances. Keep it simple.
   no-new-wrappers: error
+
+  # Disallow octal literals. Typically typos.
   no-octal: error
+
+  # Disallow octal escape sequences in string literals. Better use real unicode sequences.
   no-octal-escape: error
 
+  # Enforce comparing typeof expressions against valid strings
   valid-typeof: error
 
+  # Require or disallow spacing between template tags and their literals
+  # Logical connections should not be broken by formatting.
   template-tag-spacing:
     - error
     - never
 
   # Disable direct init: new require("app-header")
+  # Also does not work with new `import`/`import()` syntax.
   no-new-require: error
 
   # Use path.join/resolve instead

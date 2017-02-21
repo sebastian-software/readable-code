@@ -35,6 +35,9 @@ rules:
       CallExpression:
         arguments: 1
 
+  # Useless formatting with high maintenance
+  no-multi-spaces: error
+
   # Enforce consistent linebreak style
   linebreak-style:
     - error
