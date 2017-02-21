@@ -12,21 +12,49 @@ Pool of configuration files and relevant plugins for typical linters.
 - [NPM](https://www.npmjs.com/package/readable-code)
 
 
+## Features
+
+- Automatic detection of Git tracked files for simple to use approach in all projects.
+
+### JavaScript
+
+- Includes a sophisticated ESLint configuration. Optimized for readability.
+- Contains linting support for ES2017, React, JSX, Flow, Lodash, Accessiblity, etc.
+- Includes configuration for [prettier](https://github.com/prettier/prettier) in conjunction with ESLints fix mode for automatic sane code configuration.
+- Offers gulp tasks `lint:js` and `fix:js` for linting and auto formatting of JavaScript code.
+
+### CSS
+
+- Includes configuration for StyleLint 
+- Offers gulp tasks `lint:css` and `fix:css` for linting and auto formatting of CSS code.
+
+
 ## Usage
 
-You can copy the relevant files into your own project like `.editorconfig`. For ESLint/Stylelint there is a more sophisticated approach: The configuration can be included like this:
+You can copy the relevant files into your own project like `.editorconfig`. 
+
+For ESLint/StyleLint there is a more sophisticated approach: The configuration can be included like shown below:
+
+
+### ESLint Configuration
 
 ```yaml
 extends:
   "./node_modules/readable-code/.eslintrc.yml"
 ```
 
+### Stylelint Configuration
+
 ```yaml
 extends:
   "./node_modules/readable-code/.stylelintrc.yml"
 ```
 
-We also bundle the whole tooling aspect in here. You can just include our `gulpfile.js` into yours to have easy access to some common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
+### Gulp Tasks
+
+We also bundle the whole tooling aspect in here. 
+
+You can just import "readable-core" into you `gulpfile.js` for having easy access to some common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 
 
