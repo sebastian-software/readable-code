@@ -1,3 +1,12 @@
+installedESLint: true
+
+parserOptions:
+  ecmaVersion: 2017
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+
 extends:
   - ./eslint/basics.yml
   - ./eslint/compat.yml
@@ -12,20 +21,3 @@ extends:
   - ./eslint/react.yml
   - ./eslint/readable.yml
   - ./eslint/style.yml
-
-env:
-  browser: true
-  es6: true
-  jest: true
-  worker: true
-  serviceworker: true
-
-installedESLint: true
-
-parserOptions:
-  ecmaVersion: 2017
-  ecmaFeatures:
-    experimentalObjectRestSpread: true
-    generators: true
-    jsx: true
-  sourceType: module

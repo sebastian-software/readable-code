@@ -4,6 +4,13 @@
 
 parser: babel-eslint
 
+env:
+  browser: true
+  es6: true
+  jest: true
+  worker: true
+  serviceworker: true
+
 plugins:
   - babel
   - flowtype
