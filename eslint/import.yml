@@ -9,18 +9,20 @@ extends:
   - plugin:import/errors
   - plugin:import/warnings
 
-rules:
+settings:
+  # Enable typescript support
+  import/parsers:
+    typescript-eslint-parser:
+      - .ts
+      - .tsx
+
   import/extensions:
-    - .mjs
     - .js
     - .jsx
     - .ts
     - .tsx
 
-  # Enable typescript support
-  import/parsers:
-    typescript-eslint-parser: [ .ts, .tsx ]
-
+rules:
   # Loader syntax is useful when loading files with alternative approaches e.g.
   # to detect images sizes, generating API docs, etc. but breaks other tools like Rollup.
   import/no-webpack-loader-syntax: error
@@ -38,3 +40,6 @@ rules:
   # Report AMD require and define calls.
   # We go full-in with ES module syntax
   import/no-amd: error
+
+  # Report potentially ambiguous parse goal
+  import/unambiguous: error
