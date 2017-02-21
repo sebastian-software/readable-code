@@ -6,9 +6,19 @@ plugins:
   - promise
 
 rules:
+  # Enforce consistent param names when creating new promises.
   promise/param-names: error
-  promise/always-return: off
+
+  # Return inside each then to create readable and reusable Promise chains.
+  promise/always-return: warn
+
+  # Enforces the use of catch on un-returned promises.
   promise/catch-or-return: warn
+
+  # Await is part of ES2017... transpiling to generators is efficient enough. Use it.
+  promise/prefer-await-to-then: warn
+
+  # Disabled as we assume it being polyfilled for us
   promise/no-native: off
 
   # Currently fails with hard eslint parse errors in some use cases (v3)
