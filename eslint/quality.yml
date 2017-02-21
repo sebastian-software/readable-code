@@ -33,6 +33,9 @@ rules:
     - error
     - smart
 
+  # Trailing newlines in non-empty files are a common UNIX idiom.
+  eol-last: error
+
   # Disallow spacing between function identifiers and their invocations.
   # Otherwise might be visually confusing.
   func-call-spacing: error
@@ -128,6 +131,12 @@ rules:
 
   # Disallow modifying variables that are declared using const
   no-const-assign: error
+
+  # Disallow arrow functions where they could be confused with comparisons
+  no-confusing-arrow: error
+
+  # Disallow duplicate imports
+  no-duplicate-imports: error
 
   # Disallow deleting variables
   no-delete-var: error
@@ -255,6 +264,22 @@ rules:
   # Use template literals instead.
   no-multi-str: error
 
+  # Disallow negating the left operand in in expressions
+  no-negated-in-lhs: error
+
+  # Disallow negated conditions
+  # Can help, but also can make code more complex/unnaturally structured
+  no-negated-condition: off
+
+  # Disallow nested ternary expressions. Good for readability.
+  no-nested-ternary: error
+
+  # Disallow Object constructor
+  no-new-object: error
+
+  # Disallow Symbol constructor
+  no-new-symbol: error
+
   # Disallow Reassignment of Native Objects e.g. `Object`
   no-native-reassign: error
 
@@ -264,11 +289,21 @@ rules:
   # Disallow Primitive Wrapper Instances. Keep it simple.
   no-new-wrappers: error
 
+  # Disallow calling global object properties as functions
+  no-obj-calls: error
+
   # Disallow octal literals. Typically typos.
   no-octal: error
 
   # Disallow octal escape sequences in string literals. Better use real unicode sequences.
   no-octal-escape: error
+
+  # Disallow the unary operators ++ and --
+  # Seems to be a new trend to omit this e.g. in Swift and other modern languages
+  # But is pretty convenient in classic for-loops... therefor we allow it there
+  no-plusplus:
+    - error
+    - allowForLoopAfterthoughts: true
 
   # Disallow use of Object.prototypes builtins directly
   no-prototype-builtins: error
@@ -280,6 +315,22 @@ rules:
   # Disallow string concatenation when using __dirname and __filename
   # Use path.join/resolve instead
   no-path-concat: error
+
+  # Prevent side effects to arguments objects, but also makes code sometimes more complexer
+  # when you have some logic in place to deal with different argument sets.
+  # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
+  no-param-reassign: error
+
+  # Disallow process.env
+  # The process.env object in Node.js is used to store deployment/configuration parameters.
+  # Littering it through out a project could lead to maintenance issues as it’s another kind of
+  # global dependency.
+  # We'd like to do this for compile/deployment time optimizations. Just keep in mind to
+  # not use it for everything configuration related.
+  no-process-env: off
+
+  # Disallow Use of __proto__
+  no-proto: error
 
   # Disallow certain object properties
   # http://eslint.org/docs/rules/no-restricted-properties
@@ -299,21 +350,12 @@ rules:
   # Disallow multiple spaces in regular expression literals
   no-regex-spaces: error
 
-  # Prevent side effects to arguments objects, but also makes code sometimes more complexer
-  # when you have some logic in place to deal with different argument sets.
-  # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
-  no-param-reassign: error
-
-  # Disallow process.env
-  # The process.env object in Node.js is used to store deployment/configuration parameters.
-  # Littering it through out a project could lead to maintenance issues as it’s another kind of
-  # global dependency.
-  # We'd like to do this for compile/deployment time optimizations. Just keep in mind to
-  # not use it for everything configuration related.
-  no-process-env: off
-
-  # Disallow Use of __proto__
-  no-proto: error
+  # Disallow usage of `with`, `debugger` and `label` statements
+  no-restricted-syntax:
+    - error
+    - WithStatement
+    - DebuggerStatement
+    - LabeledStatement
 
   # Disallow variable redeclaration
   # Disabled. Therefor they are variables, right?
@@ -359,6 +401,13 @@ rules:
   # "The fundamental benefit of Error objects is that they automatically keep track of where they were built and originated."
   no-throw-literal: error
 
+  # Disabled: Disallow ternary operators
+  no-ternary:
+    - off
+
+  # Disallow template literal placeholder syntax in regular strings
+  no-template-curly-in-string: error
+
   # Disallow whitespace before properties
   no-whitespace-before-property: error
 
@@ -388,8 +437,18 @@ rules:
     - functions: false
       classes: false
 
+  # Disallow Undeclared Variables
+  no-undef: error
+
+  # Disallow Unused Labels
+  no-unused-labels: error
+
   # Disallow unmodified conditions of loops. Possible error candidate.
   no-unmodified-loop-condition: error
+
+  # Disallow ternary operators when simpler alternatives exist
+  # Getting people to senior level...
+  no-unneeded-ternary: error
 
   # Disallow Unused Expressions. Keep things clean.
   no-unused-expressions:
@@ -433,6 +492,9 @@ rules:
     - error
     - always
 
+  # Disallow generator functions that do not have yield
+  require-yield: error
+
   # Disallow a space before function parenthesis
   # Parens belong to the function... a spacing could break easy grasping of the code
   space-before-function-paren:
@@ -452,3 +514,15 @@ rules:
   wrap-iife:
     - error
     - inside
+
+  # Require Regex Literals to be Wrapped
+  # I like the improved readability when using parens
+  wrap-regex: error
+
+  # Disallow the Unicode Byte Order Mark
+  unicode-bom:
+    - error
+    - never
+
+  # Require calls to isNaN() when checking for NaN
+  use-isnan: error

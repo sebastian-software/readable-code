@@ -25,9 +25,8 @@ rules:
     - off
 
   # See also: https://en.wikipedia.org/wiki/Indent_style
-  # brace-style:
-  #  - error
-  #  - 1tbs
+  # We are okay with both 1tbs and Alman style
+  brace-style: off
 
   # Require Camelcase
   camelcase: error
@@ -47,9 +46,6 @@ rules:
   dot-location:
     - error
     - property
-
-  # Trailing newlines in non-empty files are a common UNIX idiom.
-  eol-last: error
 
   # Useful for debugging in older browsers, but a lot of work to manually add everywhere
   func-names:
@@ -119,91 +115,52 @@ rules:
       maxEOF: 1
       maxBOF: 0
 
-  # Can help, but also can make code more complex/unnaturally structured
-  no-negated-condition: off
-  no-nested-ternary: error
-  no-new-object: error
-  no-obj-calls: error
-
-  # Seems to be a new trend to omit this e.g. in Swift and other modern languages
-  # But is pretty convenient in classic for-loops... therefor we allow it there
-  no-plusplus:
-    - error
-    - allowForLoopAfterthoughts: true
-
+  # Enforce placing object properties on separate lines. Generally a good idea on a lot of cases.
+  # Unfortunately does not make code with (destructured) named parameters very readable.
   object-property-newline:
     - error
     - allowMultiplePropertiesPerLine: true
 
-  no-confusing-arrow: error
-
-  no-duplicate-imports: error
-
-  no-new-symbol: error
-
+  # Require Object Literal Shorthand Syntax
   object-shorthand:
-    - error
+    - warn
     - always
     - ignoreConstructors: true
       avoidQuotes: true
 
-  no-restricted-syntax:
-    - error
-    - WithStatement
-    - DebuggerStatement
-    - LabeledStatement
-
-  no-ternary:
-    - off
-
+  # Disallow dangling underscores in identifiers
   no-underscore-dangle: off
 
-  # Getting people to senior level...
-  no-unneeded-ternary: error
-
+  # Enforce variables to be declared separately in functions
   one-var:
     - error
     - initialized: never
 
+  # Disallow newlines around variable declarations
   one-var-declaration-per-line:
     - error
     - initializations
 
+  # Disallow assignment operator shorthand where possible
   operator-assignment: error
 
+  # Enforce consistent linebreak style for operators. Place the operator at the end of the line.
   operator-linebreak:
     - error
     - after
 
-
-
-  unicode-bom:
-    - error
-    - never
-
-  use-isnan: error
-
-  # Not needed with Alman style. Interestingly deals with the same issue in a different way.
+  # Disallow padding within blocks.
+  # Use Alman style (which is allowed) where more overview is needed.
   padded-blocks:
     - error
     - never
 
+  # Requires quotes around all object literal property names if any name strictly requires quotes
   # That's a neat little setting for keeping code readable
   quote-props:
     - error
     - consistent-as-needed
 
   # Variables and Imports should be sorted in semantic groups not by name
-  sort-imports:
-    - off
-  sort-vars:
-    - off
-
-  # I like the improved readability when using parens
-  wrap-regex: error
-
-  no-negated-in-lhs: error
-  no-template-curly-in-string: error
-  no-undef: error
-  no-unused-labels: error
-  require-yield: error
+  sort-imports: off
+  sort-vars: off
