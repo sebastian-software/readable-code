@@ -44,6 +44,7 @@ rules:
   semi:
     - error
     - never
+
   no-console:
     - off
   no-extra-parens:
@@ -61,16 +62,7 @@ rules:
   arrow-parens:
     - error
     - always
-  class-methods-use-this:
-    - warn
-    - exceptMethods:
-        - componentWillMount
-        - componentDidMount
-        - componentWillReceiveProps
-        - shouldComponentUpdate
-        - componentWillUpdate
-        - componentDidUpdate
-        - componentWillUnmount
+
   func-call-spacing: error
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
