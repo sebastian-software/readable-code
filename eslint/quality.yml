@@ -61,6 +61,11 @@ rules:
   # Disallow Use of caller/callee which make several code optimizations impossible
   no-caller: error
 
+  # Disallow Shadowing of Variables Inside of catch
+  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
+  # the same scope. Still no good practice for understanding the code.
+  no-catch-shadow: error
+
   # Hard to read code must be forbidden
   no-div-regex: error
 
@@ -198,49 +203,112 @@ rules:
   # Disallow Use of __proto__
   no-proto: error
 
+  # Disallow variable redeclaration
   # Disabled. Therefor they are variables, right?
   no-redeclare: off
 
+  # Disallow Assignment in return Statement
   # Readability wins
   no-return-assign: error
 
-  no-script-url:
-    - error
-  no-self-assign:
-    - error
+  # Disallow Script URLs
+  no-script-url: error
+
+  # Disallow Self Assignment
+  no-self-assign: error
+
+  # Disallow Self Compare
   no-self-compare: error
 
-  # Omit magic syntax... Readability for all wins
+  # Disallow Use of the Comma Operator
+  # Omit quite magic syntax... Readability for all wins
   no-sequences: error
+
+  # Disallow variable declarations from shadowing variables declared in the outer scope
+  # For better maintainability
+  no-shadow:
+    - error
+    - allow: [ "resolve", "reject", "done" ]
+
+  # Disallow Shadowing of Restricted Names
+  no-shadow-restricted-names: error
+
+  # Disallow sparse arrays
+  # It’s recommended to avoid using them unless you are certain that they are useful in your code.
+  no-sparse-arrays: error
+
+  # Disallow use of this/super before calling super() in constructors.
+  no-this-before-super: error
 
   # Good idea to keep some more error info:
   # "The fundamental benefit of Error objects is that they automatically keep track of where they were built and originated."
   no-throw-literal: error
 
+  # Disallow Initializing to undefined
+  # Stupid idea which needs to be prevented
+  no-undef-init: error
+
+  # Disallow Use of undefined Variable
+  # Nowadays in modern JS which is transpiled `undefined` is a valid keyword. No need to prevent usage.
+  no-undefined: off
+
+  # Disallow confusing multiline expressions
+  no-unexpected-multiline: error
+
+  # Disallow unreachable code after return, throw, continue, and break statements. Keeping code clean.
+  no-unreachable: error
+
+  # Disallow Unused Variables
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: '^_'
+      args: none
+
+  # Disallow Early Use
+  no-use-before-define:
+    - error
+    - functions: false
+      classes: false
+
+  # Disallow unmodified conditions of loops. Possible error candidate.
   no-unmodified-loop-condition:
     - error
+
+  # Disallow Unused Expressions. Keep things clean.
   no-unused-expressions:
     - error
-    - allowTernary: true
+    - allowTernary: false
       allowShortCircuit: true
-  no-useless-call:
-    - error
-  no-useless-concat:
-    - error
-  no-useless-computed-key:
-    - error
-  no-useless-constructor:
-    - error
-  no-useless-escape:
-    - error
+
+  # Disallow unnecessary .call() and .apply().
+  no-useless-call: error
+
+  # Disallow unnecessary concatenation of strings
+  no-useless-concat: error
+
+  # Disallow unnecessary computed property keys on objects
+  no-useless-computed-key: error
+
+  # ES2015 provides a default class constructor if one is not specified. As such, it is
+  # unnecessary to provide an empty constructor or one that simply delegates into its parent class.
+  no-useless-constructor: error
+
+  # Disallow unnecessary escape usage. Important for code readability.
+  no-useless-escape: error
+
+  # Disallow renaming import, export, and destructured assignments to the same name
   no-useless-rename:
     - error
     - ignoreDestructuring: false
       ignoreImport: false
       ignoreExport: false
 
-  no-void:
-    - error
+  # Disallow use of the void operator.
+  no-void: error
+
+  # Disallow with statements
+  # The with statement is potentially problematic because it adds members of an object to the
+  # current scope, making it impossible to tell what a variable inside the block actually refers to.
   no-with: error
 
   # Mainly for securing code compatibility
@@ -248,54 +316,7 @@ rules:
     - error
     - always
 
-  # Does not improve maintainability in my opinion... instead makes
-  # unused variables harder to track over time
-  vars-on-top: off
-
   # Prefer inside for readability
   wrap-iife:
     - error
     - inside
-
-  # Actually interesting that this ugliness should be even something to consider
-  yoda:
-    - error
-    - never
-
-  # Enforce strict mode globally which also happens during bundling
-  strict:
-    - error
-    - global
-
-  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
-  # the same scope. Still no good practice for understanding the code.
-  no-catch-shadow: error
-
-  # For better maintainability
-  no-shadow: error
-
-  # Cleaner code
-  no-shadow-restricted-names: error
-
-  no-sparse-arrays: error
-
-  no-this-before-super: error
-
-  # Stupid idea which needs to be prevented
-  no-undef-init: error
-
-  # I sometimes like using it to differentiate between null and undefined
-  no-undefined: off
-
-  no-unexpected-multiline: error
-
-  no-unreachable: error
-
-  no-unused-vars:
-    - error
-    - varsIgnorePattern: '^_'
-      args: none
-  no-use-before-define:
-    - error
-    - functions: false
-      classes: false

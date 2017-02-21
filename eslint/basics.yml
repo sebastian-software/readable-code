@@ -56,6 +56,22 @@ rules:
     - error
     - never
 
+  # Enforce strict mode globally which also happens during bundling
+  strict:
+    - error
+    - global
+
+  # Require Variable Declarations to be at the top of their scope
+  # Does not improve maintainability in my opinion... instead makes
+  # unused variables harder to track over time
+  vars-on-top: off
+
+  # Require or disallow Yoda Conditions
+  # Actually interesting that this ugliness should be even something to consider.
+  yoda:
+    - error
+    - never
+
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
   # as overall indenting is correct
   brace-style:
