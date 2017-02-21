@@ -47,6 +47,47 @@ rules:
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in: off
 
+  # Enforce a maximum depth that blocks can be nested
+  max-depth:
+    - error
+    - maximum: 3
+
+  # Enforce a maximum line length
+  max-len:
+    - error
+    - code: 120
+      comments: 140
+      ignoreUrls: true
+      tabWidth: 2
+
+  # Enforce a maximum file length where we only count actual lines of code
+  max-lines:
+    - warn
+    - skipBlankLines: true
+      skipComments: true
+      max: 250
+
+  # Enforce a maximum depth that callbacks can be nested
+  max-nested-callbacks:
+    - error
+    - 3
+
+  # Enforce a maximum number of parameters in function definitions
+  max-params:
+    - error
+    - 2
+
+  # Enforce a maximum number of statements allowed in function blocks
+  max-statements:
+    - error
+    - 25
+    - ignoreTopLevelFunctions: true
+
+  # Enforce a maximum number of statements allowed per line
+  max-statements-per-line:
+    - error
+    - max: 2
+
   # Don't let alerts slip through production systems
   no-alert: error
 
