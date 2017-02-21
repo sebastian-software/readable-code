@@ -53,8 +53,7 @@ rules:
     - smart
 
   # Was mainly relevant while people extended Object.prototype.xxx
-  guard-for-in:
-    - off
+  guard-for-in: off
 
   # Don't let alerts slip through production systems
   no-alert: error
@@ -98,8 +97,7 @@ rules:
 
   # Disallow variable and function declarations in the global scope
   # Does not make sense with ES6 modules
-  no-implicit-globals:
-    - off
+  no-implicit-globals: off
 
   # Disallow Implied eval()
   no-implied-eval: error
@@ -165,10 +163,11 @@ rules:
   # Also does not work with new `import`/`import()` syntax.
   no-new-require: error
 
+  # Disallow string concatenation when using __dirname and __filename
   # Use path.join/resolve instead
   no-path-concat: error
 
-  # disallow certain object properties
+  # Disallow certain object properties
   # http://eslint.org/docs/rules/no-restricted-properties
   no-restricted-properties:
     - error
@@ -188,16 +187,19 @@ rules:
   # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
   no-param-reassign: error
 
-  # Access NodeJS environment. Used mostly for code variations e.g. `NODE_ENV`
-  no-process-env:
-    - off
+  # Disallow process.env
+  # The process.env object in Node.js is used to store deployment/configuration parameters.
+  # Littering it through out a project could lead to maintenance issues as it’s another kind of
+  # global dependency.
+  # We'd like to do this for compile/deployment time optimizations. Just keep in mind to
+  # not use it for everything configuration related.
+  no-process-env: off
 
-  # Deprecated feature
+  # Disallow Use of __proto__
   no-proto: error
 
   # Disabled. Therefor they are variables, right?
-  no-redeclare:
-    - off
+  no-redeclare: off
 
   # Readability wins
   no-return-assign: error
@@ -248,8 +250,7 @@ rules:
 
   # Does not improve maintainability in my opinion... instead makes
   # unused variables harder to track over time
-  vars-on-top:
-    - off
+  vars-on-top: off
 
   # Prefer inside for readability
   wrap-iife:
@@ -284,8 +285,7 @@ rules:
   no-undef-init: error
 
   # I sometimes like using it to differentiate between null and undefined
-  no-undefined:
-    - off
+  no-undefined: off
 
   no-unexpected-multiline: error
 
