@@ -3,6 +3,9 @@ import gulp from "gulp"
 import postcss from "postcss"
 import stylelint from "gulp-stylelint"
 import stylefmt from "stylefmt"
+import { extname } from "path"
+import scss from "postcss-scss"
+import sugarss from "sugarss"
 
 import { getGitFiles } from "./core"
 
@@ -18,10 +21,21 @@ gulp.task("fix:css", () => {
   var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
   cssFiles.forEach((fileName) => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
+    var fileExtension = extname(fileName)
 
-    // TODO: Support different syntax/formats
+    var fileSyntax = null
+    if (fileExtension === ".scss") {
+      fileSyntax = scss
+    }
+    if (fileExtension === ".sss") {
+      fileSyntax = sugarss
+    }
+
     postcss([ stylefmt ])
-      .process(fileContent)
+      .process(fileContent, {
+        from: fileName,
+        syntax: fileSyntax
+      })
       .then((result) => {
         return fs.writeFileSync(fileName, result.css, "utf-8")
       })
