@@ -1,0 +1,37 @@
+rules:
+  # Number
+  number-leading-zero: always
+  number-max-precision: 3
+  number-no-trailing-zeros: true
+
+  # String
+  string-no-newline: true
+  string-quotes: double
+
+  # Length
+  length-zero-no-unit: true
+
+  # Unit
+  unit-case: lower
+  unit-no-unknown: true
+
+  # Color
+  color-hex-case: lower
+  color-hex-length: short
+  color-named: never
+  color-no-hex: null
+  color-no-invalid-hex: true
+
+  # Font
+  font-family-name-quotes: always-where-required
+  font-weight-notation: numeric
+
+  # Value
+  value-keyword-case: lower
+  value-no-vendor-prefix: true
+
+  # Value List
+  value-list-comma-newline-after: always-multi-line
+  value-list-comma-space-after: always-single-line
+  value-list-comma-space-before: never
+  value-list-max-empty-lines: 0
