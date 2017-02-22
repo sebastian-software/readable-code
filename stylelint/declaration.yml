@@ -22,16 +22,42 @@ rules:
     "/^transition/": ["s"]
     "line-height": ["px", "em", "rem"]
 
-  # declaration-block-properties-order:
-  #   # Inspired by https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/
-  #   -
-  #     # Preprocessor
-  #     - properties: [ "@include", composes ]
-  #       order: "flexible"
-  #     # Content, Positioning & Layout
-  #     - properties: [ content, src, position, z-index, top, right, bottom, left, display, float, flex, justify-content, align-items, overflow, box-sizing, min-width, width, max-width, min-height, height, max-height, padding, padding-top, padding-right, padding-bottom, padding-left, margin, margin-top, margin-right, margin-bottom, margin-left ]
-  #       order: "flexible"
-  #     # Appearance & Animation
-  #     - properties: [ background, box-shadow, border, outline, color, text-shadow, cursor, font, font-family, font-size, font-weight, font-style, line-height, text-align, opacity, animation, transform, transition, will-change, list-style ]
-  #       order: "flexible"
-  #   - unspecified: bottom
+  declaration-block-properties-order:
+    # Inspired by https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/
+    -
+      # Preprocessor
+      - properties: [ "@include", "@extend", composes ]
+        order: "flexible"
+
+      # Content
+      - properties: [
+          content, src
+        ]
+
+      # Positioning
+      - properties: [
+          position, z-index,
+          overflow, box-sizing,
+          display, float,
+          top, right, bottom, left
+
+      # Layout
+      - properties: [
+          flex, flex-basis, flex-direction, flex-flow, flex-grow, flex-shrink, flex-wrap,
+          justify-content, align-items, align-content, align-self, order,
+          min-width, width, max-width,
+          min-height, height, max-height,
+          padding, padding-top, padding-right, padding-bottom, padding-left,
+          margin, margin-top, margin-right, margin-bottom, margin-left
+        ]
+        order: "flexible"
+
+      # Appearance, Colors & Animation
+      - properties: [
+          background, box-shadow, border, outline, color, text-shadow, cursor,
+          font, font-family, font-size, font-weight, font-style, line-height, text-align, list-style,
+          opacity, animation, transform, transition, will-change, filter
+        ]
+        order: "flexible"
+
+    - unspecified: bottomAlphabetical
