@@ -1,9 +1,12 @@
 rules:
-  at-rule-empty-line-before:
-    - always
-    - except: [ blockless-after-blockless, first-nested, after-same-name ]
-      ignore: [ after-comment ]
-      ignoreAtRules: [ else ]
+  # Unfortunately not fully supported by stylefmt.
+  # We also tried a seperate config for excluding this rule but this also does not seem
+  # to work as stylefmt when used as an API prefers the stylelint config lookup.
+  # at-rule-empty-line-before:
+  #   - always
+  #   - except: [ blockless-after-blockless, first-nested, after-same-name ]
+  #     ignore: [ after-comment ]
+  #     ignoreAtRules: [ else ]
   at-rule-name-space-after: always-single-line
   at-rule-no-unknown:
     - true

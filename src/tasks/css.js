@@ -19,18 +19,14 @@ gulp.task("lint:css", () => {
 
 gulp.task("fix:css", () => {
   var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
-  cssFiles.forEach((fileName) => {
+  return Promise.all(cssFiles.forEach((fileName) => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
     var fileExtension = extname(fileName)
 
     var fileSyntax = fileExtension === ".scss" ? scss : null
     var fileParser = fileExtension === ".sss" ? sugarss : null
 
-    postcss([
-      stylefmt({
-        config: resolve(process.cwd(), ".stylefmt.yml")
-      })
-    ])
+    return postcss([ stylefmt ])
       .process(fileContent, {
         from: fileName,
         syntax: fileSyntax,
@@ -39,8 +35,5 @@ gulp.task("fix:css", () => {
       .then((result) => {
         return fs.writeFileSync(fileName, result.css, "utf-8")
       })
-      .catch((error) => {
-        throw new Error(`Error during CSS formatting: ${error}`)
-      })
-  })
+  }))
 })

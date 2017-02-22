@@ -1,5 +1,0 @@
-extends:
-  - ./.stylelintrc.yml
-
-rules:
-  at-rule-empty-line-before: null
