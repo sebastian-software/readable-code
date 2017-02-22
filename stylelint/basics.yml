@@ -13,7 +13,8 @@ rules:
   no-missing-end-of-source-newline: true
   no-unknown-animations: true
 
-  unit-whitelist: ["px", "em", "rem", "%", "s", "ms", "deg", "vh", "vw"]
+  unit-blacklist: [ "in", "pt", "pc", "mm", "cm", "ch", "ex" ]
+  unit-whitelist: [ "px", "em", "rem", "%", "s", "ms", "deg", "vh", "vw" ]
 
   # Property
   property-case: lower
