@@ -1,6 +1,7 @@
 import gulp from "gulp"
 import prettier from "gulp-prettier"
 import eslint from "gulp-eslint"
+import plumber from "gulp-plumber"
 
 import { getGitFiles } from "./core"
 
@@ -15,6 +16,7 @@ gulp.task("lint:js", () => {
 gulp.task("fix:js", () => {
   return gulp
     .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
+    .pipe(plumber())
     .pipe(prettier({
       printWidth: 111,
       tabWidth: 2,
