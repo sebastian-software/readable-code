@@ -38,13 +38,3 @@ rules:
 
   # Shorthand
   shorthand-property-no-redundant-values: true
-
-  # Check color values
-  no-indistinguishable-colors:
-    - true
-    - severity: warning
-
-  # Browser Support
-  # no-unsupported-browser-features:
-  #   - true
-  #   - severity: warning

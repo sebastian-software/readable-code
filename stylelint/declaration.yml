@@ -5,7 +5,6 @@ rules:
     - true
     - ignore: [ "consecutive-duplicates-with-different-values" ]
 
-  declaration-block-no-ignored-properties: true
   declaration-block-no-redundant-longhand-properties: null
   declaration-block-no-shorthand-property-overrides: true
   declaration-block-semicolon-newline-after: always-multi-line
