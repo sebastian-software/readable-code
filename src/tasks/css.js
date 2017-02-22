@@ -3,7 +3,7 @@ import gulp from "gulp"
 import postcss from "postcss"
 import stylelint from "gulp-stylelint"
 import stylefmt from "stylefmt"
-import { extname, resolve } from "path"
+import { extname } from "path"
 import scss from "postcss-scss"
 import sugarss from "sugarss"
 
