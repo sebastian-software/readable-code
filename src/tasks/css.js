@@ -19,7 +19,7 @@ gulp.task("lint:css", () => {
 
 gulp.task("fix:css", () => {
   var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
-  return Promise.all(cssFiles.forEach((fileName) => {
+  return Promise.all(cssFiles.map((fileName) => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
     var fileExtension = extname(fileName)
 
