@@ -33,6 +33,7 @@ rules:
       - properties: [
           content, src
         ]
+        order: "flexible"
 
       # Positioning
       - properties: [
@@ -40,6 +41,8 @@ rules:
           overflow, box-sizing,
           display, float,
           top, right, bottom, left
+        ]
+        order: "flexible"
 
       # Layout
       - properties: [
