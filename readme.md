@@ -12,6 +12,34 @@ Pool of configuration files and relevant plugins for typical linters.
 - [NPM](https://www.npmjs.com/package/readable-code)
 
 
+## Goals
+
+- Don't try to prematurely optimize your code; keep it readable and understandable.
+- All code in any code-base should look like a single person typed it, even when many people are contributing to it.
+
+
+
+## Formatting Rules
+
+### JavaScript
+
+### CSS
+
+- Use one discrete selector per line in multi-selector rulesets.
+- Include a single space before the opening brace of a ruleset.
+- Include one declaration per line in a declaration block.
+- Use one level of indentation for each declaration.
+- Include a single space after the colon of a declaration.
+- Use lowercase and shorthand hex values, e.g., #aaa.
+- Use double quotes.
+- Quote attribute values in selectors, e.g., input[type="checkbox"].
+- Where allowed, avoid specifying units for zero-values, e.g., margin: 0.
+- Include a space after each comma in comma-separated property or function values.
+- Include a semi-colon at the end of the last declaration in a declaration block.
+- Separate each ruleset by a blank line.
+
+
+
 ## Features
 
 - Automatic detection of Git tracked files for simple to use approach in all projects.
