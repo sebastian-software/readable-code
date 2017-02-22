@@ -3,7 +3,7 @@ import gulp from "gulp"
 import postcss from "postcss"
 import stylelint from "gulp-stylelint"
 import stylefmt from "stylefmt"
-import { extname } from "path"
+import { extname, resolve } from "path"
 import scss from "postcss-scss"
 import sugarss from "sugarss"
 
@@ -26,7 +26,11 @@ gulp.task("fix:css", () => {
     var fileSyntax = fileExtension === ".scss" ? scss : null
     var fileParser = fileExtension === ".sss" ? sugarss : null
 
-    postcss([ stylefmt ])
+    postcss([
+      stylefmt({
+        config: resolve(process.cwd(), ".stylefmt.yml")
+      })
+    ])
       .process(fileContent, {
         from: fileName,
         syntax: fileSyntax,
