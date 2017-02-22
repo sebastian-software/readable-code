@@ -30,4 +30,3 @@ rules:
     - "^[a-z][a-zA-Z0-9]+$"
     - resolveNestedSelectors: true
   selector-no-id: true
-  selector-no-empty: true
