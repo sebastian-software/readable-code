@@ -23,18 +23,14 @@ gulp.task("fix:css", () => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
     var fileExtension = extname(fileName)
 
-    var fileSyntax = null
-    if (fileExtension === ".scss") {
-      fileSyntax = scss
-    }
-    if (fileExtension === ".sss") {
-      fileSyntax = sugarss
-    }
+    var fileSyntax = fileExtension === ".scss" ? scss : null
+    var fileParser = fileExtension === ".sss" ? sugarss : null
 
     postcss([ stylefmt ])
       .process(fileContent, {
         from: fileName,
-        syntax: fileSyntax
+        syntax: fileSyntax,
+        parser: fileParser
       })
       .then((result) => {
         return fs.writeFileSync(fileName, result.css, "utf-8")
