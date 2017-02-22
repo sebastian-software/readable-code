@@ -1,10 +1,11 @@
-# Rule Overview
-# https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md
-#
-# Based on Stylelint Config Standard (https://github.com/stylelint/stylelint-config-standard)
-# Tweaked for PostCSS usage + CSS Modules support + Lost Grid
-
-rules:
-  no-indistinguishable-colors:
-    - true
-    - severity: warning
+extends:
+  - ./stylelint/atrules.yml
+  - ./stylelint/basics.yml
+  - ./stylelint/block.yml
+  - ./stylelint/comments.yml
+  - ./stylelint/declaration.yml
+  - ./stylelint/functions.yml
+  - ./stylelint/mediaquery.yml
+  - ./stylelint/rules.yml
+  - ./stylelint/selector.yml
+  - ./stylelint/types.yml
