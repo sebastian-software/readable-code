@@ -26,13 +26,6 @@ rules:
     - true
     - ignoreProperties: ["composes", "/^lost-/"]
 
-  # Custom Property
-  custom-property-no-outside-root: true
-  custom-property-empty-line-before:
-    - always
-    - except: [ after-custom-property, first-nested ]
-      ignore: [ after-comment, inside-single-line-block ]
-
   # Keyframe
   keyframe-declaration-no-important: true
 

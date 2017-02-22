@@ -2,7 +2,7 @@ rules:
   # At-Rules
   at-rule-empty-line-before:
     - always
-    - except: [ blockless-group, first-nested ]
+    - except: [ blockless-after-blockless, first-nested ]
       ignore: [ after-comment ]
       ignoreAtRules: [ else ]
   at-rule-name-space-after: always-single-line
