@@ -14,7 +14,7 @@ gulp.task("lint:js", () => {
 
 gulp.task("fix:js", () => {
   return gulp
-    .src(getGitFiles(/\.(msj|js|jsx)$/), { base: "." })
+    .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
     .pipe(prettier({
       printWidth: 111,
       tabWidth: 2,
