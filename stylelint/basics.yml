@@ -13,11 +13,14 @@ rules:
   no-missing-end-of-source-newline: true
   no-unknown-animations: true
 
-  unit-whitelist: ["em", "rem", "%", "s", "ms"]
+  unit-whitelist: ["px", "em", "rem", "%", "s", "ms", "deg", "vh", "vw"]
 
   # Property
   property-case: lower
-  property-no-vendor-prefix: true
+  property-no-vendor-prefix:
+    - true
+    - severity: error
+
   property-no-unknown:
     - true
     - ignoreProperties: ["composes", "/^lost-/"]
