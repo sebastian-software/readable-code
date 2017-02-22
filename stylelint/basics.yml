@@ -13,6 +13,8 @@ rules:
   no-missing-end-of-source-newline: true
   no-unknown-animations: true
 
+  unit-whitelist: ["em", "rem", "%", "s", "ms"]
+
   # Property
   property-case: lower
   property-no-vendor-prefix: true
