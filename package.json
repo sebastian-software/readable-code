@@ -38,7 +38,7 @@
     "babel-eslint": "^7.1.1",
     "babel-preset-env": "^1.1.8",
     "cross-spawn": "^5.0.1",
-    "eslint": "^3.16.0",
+    "eslint": "^3.16.1",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-babel": "^4.0.1",
@@ -50,7 +50,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-lodash": "^2.3.5",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
-    "eslint-plugin-node": "^4.0.1",
+    "eslint-plugin-node": "^4.1.0",
     "eslint-plugin-promise": "^3.4.2",
     "eslint-plugin-react": "^6.10.0",
     "flow-bin": "^0.39.0",
@@ -65,7 +65,7 @@
     "prettier": "^0.18.0",
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0",
-    "typescript": "^2.1.6",
+    "typescript": "^2.2.1",
     "typescript-eslint-parser": "^1.0.3"
   }
 }
