@@ -13,7 +13,7 @@ gulp.task("lint:js", () => {
     .pipe(eslint.failAfterError())
 })
 
-gulp.task("fix:js", () => {
+gulp.task("pretty:js", () => {
   return gulp
     .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
     .pipe(plumber())
@@ -24,6 +24,15 @@ gulp.task("fix:js", () => {
       trailingComma: "none",
       bracketSpacing: true
     }))
+    .pipe(eslint({ fix: true }))
+    .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
+    .pipe(gulp.dest("."))
+})
+
+gulp.task("fix:js", () => {
+  return gulp
+    .src(getGitFiles(/\.(mjs|js|jsx)$/), { base: "." })
+    .pipe(plumber())
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
     .pipe(gulp.dest("."))
