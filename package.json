@@ -5,7 +5,7 @@
   "main": "lib/index.commonjs.js",
   "module": "lib/index.esmodules.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint --print-config .eslintrc.yml > /dev/null",
     "release": "release-it --github.release --npm.publish --non-interactive",
     "release:minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
@@ -36,13 +36,13 @@
   "dependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
-    "babel-preset-env": "^1.1.8",
-    "cross-spawn": "^5.0.1",
+    "babel-preset-env": "^1.2.0",
+    "cross-spawn": "^5.1.0",
     "eslint": "^3.17.0",
     "eslint-find-rules": "^1.14.3",
     "eslint-formatter-pretty": "^1.1.0",
-    "eslint-plugin-babel": "^4.0.1",
-    "eslint-plugin-compat": "^1.0.2-0",
+    "eslint-plugin-babel": "^4.1.0",
+    "eslint-plugin-compat": "^1.0.2",
     "eslint-plugin-filenames": "^1.1.0",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-flowtype-errors": "^3.0.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-lodash": "^2.3.5",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^4.1.0",
-    "eslint-plugin-promise": "^3.4.2",
+    "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.0",
     "flow-bin": "^0.41.0",
     "gulp": "^3.9.1",
@@ -66,6 +66,6 @@
     "stylefmt": "^5.1.2",
     "stylelint": "^7.9.0",
     "typescript": "^2.2.1",
-    "typescript-eslint-parser": "^1.0.3"
+    "typescript-eslint-parser": "^2.0.0"
   }
 }
