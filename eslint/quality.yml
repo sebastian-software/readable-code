@@ -425,10 +425,11 @@ rules:
   # Disallow unreachable code after return, throw, continue, and break statements. Keeping code clean.
   no-unreachable: error
 
-  # Disallow Unused Variables
+  # Disallow unused Variables
   no-unused-vars:
     - error
     - varsIgnorePattern: '^_'
+      ignoreRestSiblings: true
       args: none
 
   # Disallow Early Use
