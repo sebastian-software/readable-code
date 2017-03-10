@@ -7,6 +7,18 @@ rules:
     - unspecified: "ignore"
 
   order/declaration-block-property-groups-structure:
+    # Logic
+    - emptyLineBefore: always
+      properties: [
+        composes
+      ]
+
+    # Content
+    - emptyLineBefore: always
+      properties: [
+        content, src
+      ]
+
     # Positioning
     - emptyLineBefore: always
       properties: [
