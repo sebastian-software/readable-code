@@ -9,7 +9,9 @@ rules:
   string-quotes: double
 
   # Length
-  length-zero-no-unit: true
+  length-zero-no-unit:
+    - true
+    - severity: warning
 
   # Unit
   unit-case: lower
