@@ -2,7 +2,7 @@ rules:
   indentation: 2
 
   max-empty-lines: 4
-  max-line-length: 120
+  max-line-length: 111
   max-nesting-depth: 3
 
   no-descending-specificity: true
@@ -20,7 +20,6 @@ rules:
   property-case: lower
   property-no-vendor-prefix:
     - true
-    - severity: error
 
   property-no-unknown:
     - true
