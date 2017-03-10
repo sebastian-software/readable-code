@@ -66,6 +66,7 @@
     "stylefmt": "^5.2.0",
     "stylelint": "^7.9.0",
     "stylelint-order": "^0.3.0",
+    "stylelint-scss": "^1.4.3",
     "typescript": "^2.2.1",
     "typescript-eslint-parser": "^2.0.0"
   }

@@ -8,5 +8,6 @@ extends:
   - ./stylelint/mediaquery.yml
   - ./stylelint/order.yml
   - ./stylelint/rules.yml
+  - ./stylelint/scss.yml
   - ./stylelint/selector.yml
   - ./stylelint/types.yml

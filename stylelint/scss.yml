@@ -1,0 +1,17 @@
+plugins:
+  - stylelint-scss
+
+rules:
+  # lowercase-single-dashed-names-only-0
+  scss/at-function-pattern: /^[a-z0-9]+(-[a-z0-9]+)*$/
+  scss/at-import-no-partial-leading-underscore: true
+
+  # TODO: coming in next stylelint-scss release
+  # scss/at-mixin-argumentless-call-parentheses: always
+
+  scss/at-mixin-pattern: /^[a-z0-9]+(-[a-z0-9]+)*$/
+  scss/dollar-variable-no-missing-interpolation: true
+  scss/dollar-variable-pattern: /^[a-z0-9]+(-[a-z0-9]+)*$/
+  scss/media-feature-value-dollar-variable: always
+  scss/percent-placeholder-pattern: /^[a-z0-9]+(-[a-z0-9]+)*$/
+  scss/selector-no-redundant-nesting-selector: true
