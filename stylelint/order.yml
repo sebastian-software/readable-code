@@ -1,0 +1,41 @@
+plugins:
+  - stylelint-order
+
+rules:
+  order/declaration-block-order:
+    - [ custom-properties, at-variables, dollar-variables, declarations, rules ]
+    - unspecified: "ignore"
+
+  order/declaration-block-property-groups-structure:
+    # Positioning
+    - emptyLineBefore: always
+      properties: [
+        position, z-index,
+        overflow, box-sizing,
+        display, float, clear,
+        top, right, bottom, left
+      ]
+
+    # Layout
+    - emptyLineBefore: always
+      properties: [
+        flex, flex-basis, flex-direction, flex-flow, flex-grow, flex-shrink, flex-wrap,
+        justify-content, align, align-items, align-content, align-self, order,
+        min-width, width, max-width,
+        min-height, height, max-height,
+        padding, margin,
+        columns, column-gap, column-fill, column-rule, column-span, column-count, column-width
+      ]
+
+    # Appearance, Colors & Animation
+    - emptyLineBefore: always
+      properties: [
+        background, box-shadow, border, outline, color, text-shadow, cursor,
+        font, font-family, font-size, font-weight, font-style,
+        text-align, text-decoration, text-indent, text-overflow, text-rendering, text-shadow, text-transform,
+        line-height, word-spacing, letter-spacing, white-space, quotes,
+        list-style, caption-side, table-layout, border-collapse, border-spacing, empty-cells,
+        opacity, animation, transform, transform-origin,
+        transition, transition-property, transition-duration, transition-timing-function, transition-delay,
+        will-change, filter
+      ]

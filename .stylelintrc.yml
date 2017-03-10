@@ -6,6 +6,7 @@ extends:
   - ./stylelint/declaration.yml
   - ./stylelint/functions.yml
   - ./stylelint/mediaquery.yml
+  - ./stylelint/order.yml
   - ./stylelint/rules.yml
   - ./stylelint/selector.yml
   - ./stylelint/types.yml
