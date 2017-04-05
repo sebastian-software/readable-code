@@ -1,0 +1,5 @@
+plugins:
+  - security
+
+extends:
+  - plugin:security/recommended

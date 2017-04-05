@@ -10,5 +10,6 @@ extends:
   - ./eslint/promise.yml
   - ./eslint/quality.yml
   - ./eslint/react.yml
+  - ./eslint/security.yml
   - ./eslint/spacing.yml
   - ./eslint/style.yml
