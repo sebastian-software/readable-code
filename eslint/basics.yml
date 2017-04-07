@@ -22,8 +22,6 @@ env:
 
 plugins:
   - babel
-  - flowtype
-  - flowtype-errors
   - no-use-extend-native
 
 extends:
@@ -94,10 +92,6 @@ rules:
 
   # Prevent old style extensions of native objects
   no-use-extend-native/no-use-extend-native:
-    - error
-
-  # Improve support for usage of Flowtype
-  flowtype-errors/show-errors:
     - error
 
   # Babel Plugin settings for compat with Babel parser

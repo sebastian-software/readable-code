@@ -2,6 +2,7 @@ extends:
   - ./eslint/basics.yml
   - ./eslint/compat.yml
   - ./eslint/filenames.yml
+  - ./eslint/flowtype.yml
   - ./eslint/import.yml
   - ./eslint/jsx-a11y.yml
   - ./eslint/lodash.yml
