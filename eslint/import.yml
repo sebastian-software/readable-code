@@ -10,17 +10,9 @@ extends:
   - plugin:import/warnings
 
 settings:
-  # Enable typescript support
-  import/parsers:
-    typescript-eslint-parser:
-      - .ts
-      - .tsx
-
   import/extensions:
     - .js
     - .jsx
-    - .ts
-    - .tsx
 
 rules:
   # Loader syntax is useful when loading files with alternative approaches e.g.
