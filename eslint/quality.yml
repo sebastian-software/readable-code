@@ -124,7 +124,7 @@ rules:
   no-caller: error
 
   # Don't let console output slip through were not explicitely stated otherwise
-  no-console: error
+  no-console: warn
 
   # Disallow modifying variables of class declarations
   no-class-assign: error
@@ -237,7 +237,7 @@ rules:
   no-lone-blocks: error
 
   # Disallow if statements as the only statement in else blocks
-  # Disabled as it night be used to improve code for human logic / readability
+  # Disabled as it might be used to improve code for human logic / readability
   no-lonely-if: off
 
   # Disallow Functions in Loops
@@ -402,8 +402,7 @@ rules:
   no-throw-literal: error
 
   # Disabled: Disallow ternary operators
-  no-ternary:
-    - off
+  no-ternary: off
 
   # Disallow template literal placeholder syntax in regular strings
   no-template-curly-in-string: error

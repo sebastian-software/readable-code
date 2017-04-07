@@ -138,7 +138,6 @@ rules:
   react/jsx-indent:
     - error
     - 2
-    # - indentLogicalExpressions: true
 
   # Validate props indentation in JSX
   react/jsx-indent-props:
