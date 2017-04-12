@@ -15,4 +15,5 @@ rules:
   node/no-unpublished-require: off
 
   # Disallow import declarations for files that don't exist.
-  node/no-missing-import: error
+  # Somewhat a duplicate of "import" plugin
+  node/no-missing-import: off
