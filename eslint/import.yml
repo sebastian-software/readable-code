@@ -10,9 +10,11 @@ extends:
   - plugin:import/warnings
 
 settings:
+  import/resolver:
+    babel-module: {}
+
   import/extensions:
     - .js
-    - .jsx
 
 rules:
   # Loader syntax is useful when loading files with alternative approaches e.g.
