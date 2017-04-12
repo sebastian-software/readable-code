@@ -35,7 +35,7 @@
   "repository": "https://github.com/sebastian-software/readable-code",
   "dependencies": {
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.1",
+    "babel-eslint": "^7.2.2",
     "babel-preset-env": "^1.3.3",
     "cross-spawn": "^5.1.0",
     "eslint": "^3.19.0",
