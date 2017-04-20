@@ -10,9 +10,12 @@ import formatter from "stylelint-formatter-pretty"
 
 import { getGitFiles } from "./core"
 
+const SRC_SHEETS = /\.(css|sass|scss|sss)$/
+const SRC_CONFIG = { base: "." }
+
 gulp.task("lint:css", () => {
   return gulp
-    .src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
+    .src(getGitFiles(SRC_SHEETS), SRC_CONFIG)
     .pipe(stylelint({
       reporters: [{
         formatter,
@@ -22,7 +25,7 @@ gulp.task("lint:css", () => {
 })
 
 gulp.task("fix:css", () => {
-  var cssFiles = getGitFiles(/\.(css|sass|scss|sss)$/)
+  var cssFiles = getGitFiles(SRC_SHEETS)
   return Promise.all(cssFiles.map((fileName) => {
     var fileContent = fs.readFileSync(fileName, "utf-8")
     var fileExtension = extname(fileName)
