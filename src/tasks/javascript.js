@@ -20,9 +20,12 @@ gulp.task("pretty:js", () => {
     .pipe(prettier({
       printWidth: 111,
       tabWidth: 2,
+      useTabs: false,
       singleQuote: false,
       trailingComma: "none",
-      bracketSpacing: true
+      jsxBracketSameLine: true,
+      bracketSpacing: true,
+      semi: false
     }))
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format("node_modules/eslint-formatter-pretty"))
