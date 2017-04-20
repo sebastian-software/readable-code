@@ -6,6 +6,7 @@ import stylefmt from "stylefmt"
 import { extname } from "path"
 import scss from "postcss-scss"
 import sugarss from "sugarss"
+import formatter from "stylelint-formatter-pretty"
 
 import { getGitFiles } from "./core"
 
@@ -13,7 +14,10 @@ gulp.task("lint:css", () => {
   return gulp
     .src(getGitFiles(/\.(css|sass|scss|sss)$/), { base: "." })
     .pipe(stylelint({
-      reporters: [{ formatter: "string", console: true }]
+      reporters: [{
+        formatter,
+        console: true
+      }]
     }))
 })
 
