@@ -1,6 +1,7 @@
 extends:
   - ./eslint/basics.yml
   - ./eslint/compat.yml
+  - ./eslint/cssmodules.yml
   - ./eslint/filenames.yml
   - ./eslint/flowtype.yml
   - ./eslint/import.yml
