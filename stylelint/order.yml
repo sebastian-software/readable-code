@@ -2,25 +2,28 @@ plugins:
   - stylelint-order
 
 rules:
-  order/declaration-block-order:
+  order/order:
     - [ custom-properties, at-variables, dollar-variables, declarations, rules ]
     - unspecified: "ignore"
 
-  order/declaration-block-property-groups-structure:
+  order/properties-order:
     # Logic
     - emptyLineBefore: always
+      order: "flexible"
       properties: [
         composes
       ]
 
     # Content
     - emptyLineBefore: always
+      order: "flexible"
       properties: [
         content, src
       ]
 
     # Positioning
     - emptyLineBefore: always
+      order: "flexible"
       properties: [
         position, z-index,
         overflow, box-sizing,
@@ -30,6 +33,7 @@ rules:
 
     # Layout
     - emptyLineBefore: always
+      order: "flexible"
       properties: [
         flex, flex-basis, flex-direction, flex-flow, flex-grow, flex-shrink, flex-wrap,
         justify-content, align, align-items, align-content, align-self, order,
@@ -41,6 +45,7 @@ rules:
 
     # Appearance, Colors & Animation
     - emptyLineBefore: always
+      order: "flexible"
       properties: [
         background, box-shadow, border, outline, color, text-shadow, cursor,
         font, font-family, font-size, font-weight, font-style,
