@@ -11,6 +11,9 @@ extends:
   - ./eslint/promise.yml
   - ./eslint/quality.yml
   - ./eslint/react.yml
-  - ./eslint/security.yml
   - ./eslint/spacing.yml
   - ./eslint/style.yml
+
+  # Disabled for now.
+  # Waiting for fix for https://github.com/nodesecurity/eslint-plugin-security/issues/16
+  # - ./eslint/security.yml
