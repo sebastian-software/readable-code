@@ -26,10 +26,6 @@ rules:
   curly:
     - off
 
-  # See also: https://en.wikipedia.org/wiki/Indent_style
-  # We are okay with both 1tbs and Alman style
-  brace-style: off
-
   # Require Camelcase
   camelcase: error
 
