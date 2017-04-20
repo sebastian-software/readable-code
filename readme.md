@@ -23,6 +23,8 @@ Pool of configuration files and relevant plugins for typical linters.
 
 ### JavaScript
 
+- Follow [clean code ideas for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+
 ### CSS
 
 - Use one discrete selector per line in multi-selector rulesets.
