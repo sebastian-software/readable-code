@@ -9,32 +9,26 @@ rules:
   order/properties-order:
     # Logic
     - emptyLineBefore: always
-      order: "flexible"
+      order: flexible
       properties: [
         composes
       ]
 
     # Content
     - emptyLineBefore: always
-      order: "flexible"
+      order: flexible
       properties: [
         content, src
       ]
 
-    # Positioning
+    # Positioning & Layout
     - emptyLineBefore: always
-      order: "flexible"
+      order: flexible
       properties: [
         position, z-index,
         overflow, box-sizing,
         display, float, clear,
-        top, right, bottom, left
-      ]
-
-    # Layout
-    - emptyLineBefore: always
-      order: "flexible"
-      properties: [
+        top, right, bottom, left,
         flex, flex-basis, flex-direction, flex-flow, flex-grow, flex-shrink, flex-wrap,
         justify-content, align, align-items, align-content, align-self, order,
         min-width, width, max-width,
@@ -45,7 +39,7 @@ rules:
 
     # Appearance, Colors & Animation
     - emptyLineBefore: always
-      order: "flexible"
+      order: flexible
       properties: [
         background, box-shadow, border, outline, color, text-shadow, cursor,
         font, font-family, font-size, font-weight, font-style,
