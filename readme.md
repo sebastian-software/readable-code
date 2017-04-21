@@ -109,15 +109,15 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 ## Technology Stack
 
-### Gulp
+### Gulp ([Project](https://github.com/gulpjs/gulp) | [Homepage](http://gulpjs.com/))
 
 Predefined tasks to import into your custom `gulpfile.js`.
 
-### Stylelint ([Project](https://github.com/stylelint/stylelint))
+### Stylelint ([Project](https://github.com/stylelint/stylelint) | [Homepage](https://stylelint.io/))
 
 PostCSS-based linter for CSS. Supports alternative dialects like SugarSS, SCSS and Sass.
 
-#### Stylelint Plugins
+Plugins:
 
 - `order`: Grouping and sorting of rules and properties.
 
@@ -125,11 +125,11 @@ PostCSS-based linter for CSS. Supports alternative dialects like SugarSS, SCSS a
 
 The counterpart to Stylelint supports auto formatting stylesheets based on the Stylelint rules.
 
-### ESLint ([Homepage](eslint.org))
+### ESLint ([Project](https://github.com/eslint/eslint) | [Homepage](http://eslint.org/))
 
 Effectively a successor of both [JSHint](http://jshint.com/) and [JSCS](http://jscs.info/). Is configured to use the [Babel Parser](https://github.com/babel/babel-eslint) for full ES2017+ support.
 
-#### ESLint Plugins
+Plugins:
 
 - `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
