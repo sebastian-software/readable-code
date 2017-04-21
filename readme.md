@@ -111,11 +111,11 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 ### Gulp
 
-- Predefined tasks to import into your custom `gulpfile.js`.
+Predefined tasks to import into your custom `gulpfile.js`.
 
 ### Stylelint ([Project](https://github.com/stylelint/stylelint))
 
-- PostCSS-based linter for CSS. Supports alternative dialects like SugarSS, SCSS and Sass.
+PostCSS-based linter for CSS. Supports alternative dialects like SugarSS, SCSS and Sass.
 
 #### Stylelint Plugins
 
@@ -123,11 +123,11 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 ### Stylefmt ([Project](https://github.com/morishitter/stylefmt))
 
-- The counterpart to Stylelint supports auto formatting stylesheets based on the Stylelint rules.
+The counterpart to Stylelint supports auto formatting stylesheets based on the Stylelint rules.
 
 ### ESLint ([Homepage](eslint.org))
 
-- Effectively a successor of both [JSHint](http://jshint.com/) and [JSCS](http://jscs.info/). Is configured to use the [Babel Parser](https://github.com/babel/babel-eslint) for full ES2017+ support.
+Effectively a successor of both [JSHint](http://jshint.com/) and [JSCS](http://jscs.info/). Is configured to use the [Babel Parser](https://github.com/babel/babel-eslint) for full ES2017+ support.
 
 #### ESLint Plugins
 
@@ -146,12 +146,11 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 ### Prettier ([Project](https://github.com/prettier/prettier))
 
-- Auto formatting engine for JavaScript which intelligently supports limiting line length and other more advanced features.
-- Advanced support for language features from ES2017, JSX, and Flow.
+Auto formatting engine for JavaScript (+ ES2017, JSX, and Flow) which intelligently supports limiting line length and other more advanced features.
 
 ### Lint Staged ([Project](https://github.com/okonet/lint-staged))
 
-- Auto linting for all `.css` and `.js` staged files when these are about to being committed to the repository.
+Auto linting for all `.css` and `.js` staged files when these are about to being committed to the repository.
 
 
 
