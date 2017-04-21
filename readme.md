@@ -131,6 +131,7 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 #### ESLint Plugins
 
+- `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
 - `flowtype`: Support for checking FlowType syntax to match rules.
 - `flowtype-errors`: Helps writing correct FlowType declarations.
@@ -141,7 +142,7 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 - `node`: Prevents usage of deprecated features and other checks when developing NodeJS based apps.
 - `promise`: Checks for correctly working with Promises.
 - `react`: React specific checks for requiring specific structures of classes + preferring functional patterns.
-- `security`: Checks for security issues in e.g. RegExps.
+- `security`: Checks for security issues in e.g. RegExps. (Disabled right now)
 
 ### Prettier ([Project](https://github.com/prettier/prettier))
 
