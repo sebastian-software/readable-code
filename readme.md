@@ -70,34 +70,37 @@ common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 ## Formatting Rules
 
+### Common
+
+- Unix line breaks.
+- No trailing spaces.
+- Indent with 2 spaces no tabs.
+
 ### JavaScript
 
+- Double quotes for strings and JSX attributes.
 - Follow [clean code ideas for JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
-- Indent with 2 spaces no tabs
-- Double quotes for strings and JSX attributes
-- Unix line breaks
-- No trailing spaces 
-- Tend to more spaces and whitespace in your code
-- No dashes in file names (should match `^[a-zA-Z][a-zA-Z0-9.]+$`)
-- All files have a `.js` extension, no `.jsx`
-- No CommonJS - use only ES2015 modules
+- Tend to more spaces and whitespace in your code.
+- No dashes in file names (should match `^[a-zA-Z][a-zA-Z0-9.]+$`).
+- All files have a `.js` extension, no `.jsx`.
+- No CommonJS - use only ES2015 modules.
 - Prefer efficient ES2015 language like template strings, spreading, arrow functions, ...
 - Keep an eye on code complexity, nesting levels, file length, ...
-- Prefer named parameters (destructing) over long parameter lists
+- Prefer named parameters (destructing) over long parameter lists.
 - No usage of `labels`, `with` and `eval`.
 - No magic numbers. Use variables to describe intention.
 
 ### CSS
 
+- Use double quotes for URLs.
 - Use one discrete selector per line in multi-selector rulesets.
 - Include a single space before the opening brace of a ruleset.
 - Include one declaration per line in a declaration block.
 - Use one level of indentation for each declaration.
 - Include a single space after the colon of a declaration.
-- Use lowercase and shorthand hex values, e.g., #aaa.
-- Use double quotes.
-- Quote attribute values in selectors, e.g., input[type="checkbox"].
-- Where allowed, avoid specifying units for zero-values, e.g., margin: 0.
+- Use lowercase and shorthand hex values, e.g., `#aaa`.
+- Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
+- Where allowed, avoid specifying units for zero-values, e.g., `margin: 0`.
 - Include a space after each comma in comma-separated property or function values.
 - Include a semi-colon at the end of the last declaration in a declaration block.
 - Separate each ruleset by a blank line.
