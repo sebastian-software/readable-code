@@ -1,4 +1,4 @@
-# Readable Code<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor] [![Dependencies][deps-img]][deps]
+# Readable Code<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Dependencies][deps-img]][deps]
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
 [sponsor]: https://www.sebastian-software.de
@@ -7,10 +7,6 @@
 [npm]: https://www.npmjs.com/package/readable-code
 [npm-downloads-img]: https://img.shields.io/npm/dm/readable-code.svg
 [npm-version-img]: https://img.shields.io/npm/v/readable-code.svg
-[travis-img]: https://img.shields.io/travis/sebastian-software/readable-code/master.svg?branch=master&label=unix%20build
-[appveyor-img]: https://img.shields.io/appveyor/ci/swernerx/readable-code/master.svg?label=windows%20build
-[travis]: https://travis-ci.org/sebastian-software/readable-code
-[appveyor]: https://ci.appveyor.com/project/swernerx/readable-code/branch/master
 
 
 Tooling and Configuration for maintainable and readable code for Web Projects.
