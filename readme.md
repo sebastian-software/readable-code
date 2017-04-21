@@ -28,7 +28,7 @@ Tooling and Configuration for maintainable and readable code for Web Projects.
 - Includes a sophisticated ESLint configuration. Optimized for readability.
 - Contains linting support for ES2017, React, JSX, Flow, Lodash, Accessiblity, etc.
 - Includes configuration for [prettier](https://github.com/prettier/prettier) in conjunction with ESLints fix mode for automatic sane code configuration.
-- Offers gulp tasks `lint:js` and `fix:js` for linting and auto formatting of JavaScript code.
+- Offers gulp tasks `lint:js`, `fix:js` and `pretty:js` for linting, fixing and auto formatting of JavaScript code.
 
 ### CSS
 
