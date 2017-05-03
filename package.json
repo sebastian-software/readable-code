@@ -64,6 +64,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-prettier": "^1.1.0",
     "gulp-stylelint": "^3.9.0",
+    "husky": "^0.13.3",
     "lint-staged": "^3.4.1",
     "postcss": "^5.2.17",
     "prepublish": "^0.16.0",
