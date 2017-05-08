@@ -19,8 +19,8 @@ rules:
   # properties do not have those attributes.
   jsx-a11y/aria-unsupported-elements: error
 
-  # Enforce that <img> JSX elements use the alt prop.
-  jsx-a11y/img-has-alt: error
+  # Enforce that <img>, <area>, <input type="image">, and <object> JSX elements use the alt prop.
+  jsx-a11y/alt-text: error
 
   # Enforce <img> alt prop does not contain the word "image", "picture", or "photo".
   jsx-a11y/img-redundant-alt: error
