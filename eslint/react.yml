@@ -81,6 +81,9 @@ rules:
   # Prevent usage of setState in componentDidUpdate
   react/no-did-update-set-state: error
 
+  # Updating the state during the componentWillUpdate step can lead to indeterminate component state.
+  react/no-will-update-set-state: error
+
   # Prevent usage of .bind() and arrow functions in JSX props
   react/jsx-no-bind: warn
 
