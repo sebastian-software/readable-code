@@ -10,7 +10,7 @@ import formatter from "stylelint-formatter-pretty"
 
 import { getGitFiles } from "./core"
 
-const SRC_SHEETS = /\.(css|sass|scss|sss)$/
+const SRC_SHEETS = /\.(css|sass|scss|sss|pcss)$/
 const SRC_CONFIG = { base: "." }
 
 gulp.task("lint:css", () => {
