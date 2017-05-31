@@ -1,6 +1,6 @@
 {
   "name": "readable-code",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "main": "lib/index.commonjs.js",
   "module": "lib/index.esmodules.js",
