@@ -13,9 +13,9 @@
     "prepublish": "prepublish"
   },
   "engines": {
-    "node": ">=4.0.0",
+    "node": ">=6.0.0",
     "npm": ">=4.0.0",
-    "yarn": ">=0.17.9"
+    "yarn": ">=0.21.3"
   },
   "keywords": [
     "lint",
