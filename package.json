@@ -73,7 +73,7 @@
     "stylelint-scss": "^1.4.4"
   },
   "devDependencies": {
-    "eslint-find-rules": "^2.0.1",
+    "eslint-find-rules": "^2.1.0",
     "prepublish": "^0.16.1"
   }
 }
