@@ -469,9 +469,6 @@ rules:
   # unnecessary to provide an empty constructor or one that simply delegates into its parent class.
   no-useless-constructor: error
 
-  # Disallow unnecessary escape usage. Important for code readability.
-  no-useless-escape: error
-
   # Disallow renaming import, export, and destructured assignments to the same name
   no-useless-rename:
     - error
