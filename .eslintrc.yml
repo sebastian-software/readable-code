@@ -15,7 +15,4 @@ extends:
   - ./eslint/react.yml
   - ./eslint/spacing.yml
   - ./eslint/style.yml
-
-  # Disabled for now.
-  # Waiting for fix for https://github.com/nodesecurity/eslint-plugin-security/issues/16
-  # - ./eslint/security.yml
+  - ./eslint/security.yml
