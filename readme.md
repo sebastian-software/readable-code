@@ -32,7 +32,7 @@ Tooling and Configuration for maintainable and readable code for Web Projects.
 
 ### CSS
 
-- Includes configuration for StyleLint 
+- Includes configuration for StyleLint
 - Offers gulp tasks `lint:css` and `fix:css` for linting and auto formatting of CSS code.
 
 
@@ -40,7 +40,7 @@ Tooling and Configuration for maintainable and readable code for Web Projects.
 
 ## Usage
 
-You can copy the relevant files into your own project like `.editorconfig`. 
+You can copy the relevant files into your own project like `.editorconfig`.
 
 For ESLint/StyleLint there is a more sophisticated approach: The configuration can be included like shown below:
 
@@ -60,9 +60,9 @@ extends:
 
 ### Gulp Tasks
 
-We also bundle the whole tooling aspect in here. 
+We also bundle the whole tooling aspect in here.
 
-You can just import "readable-core" into you `gulpfile.js` or `gulpfile.babel.js` for having easy access to some 
+You can just import "readable-core" into you `gulpfile.js` or `gulpfile.babel.js` for having easy access to some
 common tasks like `lint:js`, `lint:css`, `fix:js`, `fix:css`.
 
 
@@ -121,10 +121,6 @@ Plugins:
 
 - `order`: Grouping and sorting of rules and properties.
 
-### Stylefmt ([Project](https://github.com/morishitter/stylefmt))
-
-The counterpart to Stylelint supports auto formatting stylesheets based on the Stylelint rules.
-
 ### ESLint ([Project](https://github.com/eslint/eslint) | [Homepage](http://eslint.org/))
 
 Effectively a successor of both [JSHint](http://jshint.com/) and [JSCS](http://jscs.info/). Is configured to use the [Babel Parser](https://github.com/babel/babel-eslint) for full ES2017+ support.
@@ -142,7 +138,7 @@ Plugins:
 - `node`: Prevents usage of deprecated features and other checks when developing NodeJS based apps.
 - `promise`: Checks for correctly working with Promises.
 - `react`: React specific checks for requiring specific structures of classes + preferring functional patterns.
-- `security`: Checks for security issues in e.g. RegExps. (Disabled right now)
+- `security`: Checks for security issues in e.g. RegExps.
 
 ### Prettier ([Project](https://github.com/prettier/prettier))
 
