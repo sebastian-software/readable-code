@@ -3,20 +3,11 @@ import prettier from "gulp-prettier"
 import eslint from "gulp-eslint"
 import plumber from "gulp-plumber"
 
-import { getGitFiles } from "./core"
+import { getGitFiles, PRETTIER_CONFIG } from "./core"
 
 const SRC_SCRIPTS = /\.(mjs|js|jsx)$/
 const SRC_CONFIG = { base: "." }
-const PRETTIER_CONFIG = {
-  printWidth: 111,
-  tabWidth: 2,
-  useTabs: false,
-  singleQuote: false,
-  trailingComma: "none",
-  jsxBracketSameLine: true,
-  bracketSpacing: true,
-  semi: false
-}
+
 const ESLINT_FORMATTER = "node_modules/eslint-formatter-pretty"
 
 gulp.task("lint:js", () => {
@@ -27,20 +18,20 @@ gulp.task("lint:js", () => {
     .pipe(eslint.failAfterError())
 })
 
-gulp.task("pretty:js", () => {
+gulp.task("fix:js", () => {
   return gulp
     .src(getGitFiles(SRC_SCRIPTS), SRC_CONFIG)
     .pipe(plumber())
-    .pipe(prettier(PRETTIER_CONFIG))
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format(ESLINT_FORMATTER))
     .pipe(gulp.dest("."))
 })
 
-gulp.task("fix:js", () => {
+gulp.task("pretty:js", () => {
   return gulp
     .src(getGitFiles(SRC_SCRIPTS), SRC_CONFIG)
     .pipe(plumber())
+    .pipe(prettier(PRETTIER_CONFIG))
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format(ESLINT_FORMATTER))
     .pipe(gulp.dest("."))
