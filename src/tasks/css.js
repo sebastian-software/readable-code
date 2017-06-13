@@ -30,7 +30,7 @@ gulp.task("fix:css", () => {
         console: true
       }]
     }))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest("."))
 })
 
 gulp.task("pretty:css", () => {
