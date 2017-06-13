@@ -2,7 +2,6 @@ import fs from "fs"
 import gulp from "gulp"
 import postcss from "postcss"
 import stylelint from "gulp-stylelint"
-import stylefmt from "stylefmt"
 import { extname } from "path"
 import scss from "postcss-scss"
 import sugarss from "sugarss"
@@ -25,22 +24,14 @@ gulp.task("lint:css", () => {
 })
 
 gulp.task("fix:css", () => {
-  var cssFiles = getGitFiles(SRC_SHEETS)
-  return Promise.all(cssFiles.map((fileName) => {
-    var fileContent = fs.readFileSync(fileName, "utf-8")
-    var fileExtension = extname(fileName)
-
-    var fileSyntax = fileExtension === ".scss" ? scss : null
-    var fileParser = fileExtension === ".sss" ? sugarss : null
-
-    return postcss([ stylefmt ])
-      .process(fileContent, {
-        from: fileName,
-        syntax: fileSyntax,
-        parser: fileParser
-      })
-      .then((result) => {
-        return fs.writeFileSync(fileName, result.css, "utf-8")
-      })
-  }))
+  return gulp
+    .src(getGitFiles(SRC_SHEETS), SRC_CONFIG)
+    .pipe(stylelint({
+      fix: true,
+      reporters: [{
+        formatter,
+        console: true
+      }]
+    }))
+    .pipe(gulp.dest('.'))
 })
