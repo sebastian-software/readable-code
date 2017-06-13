@@ -2,8 +2,6 @@
 # Basics
 #######################################################################################
 
-installedESLint: true
-
 parser: babel-eslint
 
 parserOptions:
