@@ -8,7 +8,7 @@ import { getGitFiles, PRETTIER_CONFIG } from "./core"
 
 const PRETTIER_CSS_CONFIG = { ...PRETTIER_CONFIG, parser: "postcss" }
 
-const SRC_SHEETS = /\.(css|sass|scss|sss|pcss)$/
+const SRC_SHEETS = /\.(css|scss|pcss)$/
 const SRC_CONFIG = { base: "." }
 
 gulp.task("lint:css", () => {
