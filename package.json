@@ -62,7 +62,6 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-prettier": "^1.1.0",
     "gulp-stylelint": "^3.9.0",
     "husky": "^0.13.4",
     "lint-staged": "^4.0.0",

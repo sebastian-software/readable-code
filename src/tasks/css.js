@@ -1,7 +1,7 @@
 import gulp from "gulp"
 import stylelint from "gulp-stylelint"
 import plumber from "gulp-plumber"
-import prettier from "gulp-prettier"
+import prettier from "../prettier"
 import formatter from "stylelint-formatter-pretty"
 
 import { getGitFiles, PRETTIER_CONFIG } from "./core"

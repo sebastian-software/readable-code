@@ -1,5 +1,5 @@
 import gulp from "gulp"
-import prettier from "gulp-prettier"
+import prettier from "../prettier"
 import eslint from "gulp-eslint"
 import plumber from "gulp-plumber"
 
