@@ -3,7 +3,7 @@ plugins:
 
 rules:
   order/order:
-    - [ custom-properties, at-variables, dollar-variables, declarations, rules ]
+    - [ custom-properties, dollar-variables, declarations, rules, at-rules ]
     - unspecified: "ignore"
 
   order/properties-order:
@@ -34,6 +34,8 @@ rules:
         min-width, width, max-width,
         min-height, height, max-height,
         padding, margin,
+        padding-top, padding-right, padding-bottom, padding-left,
+        margin-top, margin-right, margin-bottom, margin-left,
         columns, column-gap, column-fill, column-rule, column-span, column-count, column-width
       ]
 
@@ -41,7 +43,10 @@ rules:
     - emptyLineBefore: always
       order: flexible
       properties: [
-        background, box-shadow, border, outline, color, text-shadow, cursor,
+        background, box-shadow,
+        border, border-color, border-width,
+        outline, outline-color, outline-width,
+        color, text-shadow, cursor,
         font, font-family, font-size, font-weight, font-style,
         text-align, text-decoration, text-indent, text-overflow, text-rendering, text-shadow, text-transform,
         line-height, word-spacing, letter-spacing, white-space, quotes,
