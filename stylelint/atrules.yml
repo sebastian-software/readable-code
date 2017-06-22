@@ -10,7 +10,7 @@ rules:
   at-rule-name-space-after: always-single-line
   at-rule-no-unknown:
     - true
-    - ignoreAtRules: [ if, else, import, include, mixin, content, lost, value ]
+    - ignoreAtRules: [ if, else, import, include, extend, mixin, content, lost, value ]
   at-rule-no-vendor-prefix: true
   at-rule-semicolon-newline-after: always
   at-rule-name-case: lower
