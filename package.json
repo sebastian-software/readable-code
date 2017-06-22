@@ -10,7 +10,7 @@
     "release:minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
     "check": "eslint-find-rules -u .eslintrc.yml || true",
-    "prepublish": "prepublish"
+    "prepare": "prepublish"
   },
   "engines": {
     "node": ">=6.0.0",
@@ -48,7 +48,7 @@
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-flowtype-errors": "^3.3.0",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-jsdoc": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-lodash": "^2.4.3",
