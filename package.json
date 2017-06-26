@@ -1,14 +1,14 @@
 {
   "name": "readable-code",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "JavaScript/CSS Coding Standard and Tooling",
   "main": "lib/index.commonjs.js",
   "module": "lib/index.esmodules.js",
   "scripts": {
     "test": "eslint --print-config .eslintrc.yml > /dev/null",
-    "release": "release-it --github.release --npm.publish --non-interactive",
-    "release:minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
+    "release": "git push && release-it --github.release --npm.publish --non-interactive",
+    "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
+    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
     "check": "eslint-find-rules -u .eslintrc.yml || true",
     "prepare": "prepublish"
   },
