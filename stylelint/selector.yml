@@ -23,12 +23,11 @@ rules:
   selector-pseudo-class-no-unknown:
     - true
     - ignorePseudoClasses: [ export, import, global, local ]
-  selector-no-type:
-    - true
+  selector-max-type:
+    - 0
     - ignore: descendant
   selector-class-pattern:
     - ^[a-z][a-zA-Z0-9]+$
     - resolveNestedSelectors: true
   selector-max-id:
-    - true
     - 0
