@@ -1,6 +1,12 @@
 node_modules
+src
+test
+assets
+
 .eslintignore
 .gitignore
+.npmignore
+
 yarn.lock
-src
+
 gulpfile.babel.js
