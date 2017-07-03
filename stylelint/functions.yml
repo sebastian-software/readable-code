@@ -10,7 +10,7 @@ rules:
   function-parentheses-space-inside: never-single-line
 
   # Inline data should not written by the author but injected by tools
-  function-url-scheme-blacklist: [ "data", "ftp", "file" ]
+  function-url-scheme-blacklist: [ "data", "ftp", "file", "http" ]
 
   function-url-quotes: always
   function-whitespace-after: always
