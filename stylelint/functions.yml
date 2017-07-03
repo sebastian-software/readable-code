@@ -8,6 +8,9 @@ rules:
   function-name-case: lower
   function-parentheses-newline-inside: always-multi-line
   function-parentheses-space-inside: never-single-line
-  function-url-data-uris: never
+
+  # Inline data should not written by the author but injected by tools
+  function-url-scheme-blacklist: [ "data", "ftp", "file" ]
+
   function-url-quotes: always
   function-whitespace-after: always
