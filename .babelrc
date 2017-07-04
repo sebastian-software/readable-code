@@ -1,8 +1,5 @@
 {
   "presets": [
-    [ "env", { "useBuiltIns": true }]
-  ],
-  "plugins": [
-    [ "transform-object-rest-spread", { "useBuiltIns": true }]
+    [ "edge", { "target": "script" }]
   ]
 }
