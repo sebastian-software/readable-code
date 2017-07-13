@@ -41,20 +41,20 @@
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-module-resolver": "^3.0.0-beta.3",
-    "babel-preset-edge": "^0.9.5",
-    "eslint": "^4.1.1",
+    "babel-preset-edge": "^0.9.6",
+    "eslint": "^4.2.0",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-import-resolver-babel-module": "^4.0.0-beta.2",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-compat": "^1.0.4",
     "eslint-plugin-css-modules": "^2.7.2",
     "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-flowtype-errors": "^3.3.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsdoc": "^3.1.1",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-lodash": "^2.4.3",
+    "eslint-plugin-lodash": "^2.4.4",
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^5.1.0",
     "eslint-plugin-promise": "^3.5.0",
@@ -71,13 +71,13 @@
     "lint-staged": "^4.0.1",
     "postcss": "^6.0.6",
     "prettier": "^1.5.2",
-    "stylelint": "^7.12.0",
+    "stylelint": "^7.13.0",
     "stylelint-formatter-pretty": "^1.0.3",
     "stylelint-order": "^0.5.0",
-    "stylelint-scss": "^1.4.4"
+    "stylelint-scss": "^1.5.1"
   },
   "devDependencies": {
     "eslint-find-rules": "^3.1.1",
-    "prepublish": "^0.20.1"
+    "prepublish": "^1.0.6"
   }
 }
