@@ -3,7 +3,17 @@ plugins:
 
 rules:
   order/order:
-    - [ custom-properties, dollar-variables, declarations, rules, at-rules ]
+    -
+      - type: at-rule
+        name: extend
+      - type: at-rule
+        name: include
+      - custom-properties
+      - dollar-variables
+      - declarations
+      - rules
+      - type: at-rule
+        name: media
     - unspecified: "ignore"
 
   order/properties-order:
