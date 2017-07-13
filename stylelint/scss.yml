@@ -15,7 +15,8 @@ rules:
   scss/dollar-variable-pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
   scss/dollar-variable-colon-space-after: always
 
-  scss/media-feature-value-dollar-variable: always
+  # Might also be another kind of lookup e.g. CSS variables or map() getter
+  # scss/media-feature-value-dollar-variable: always
 
   scss/percent-placeholder-pattern: ^[a-z0-9]+(-[a-z0-9]+)*$
 
