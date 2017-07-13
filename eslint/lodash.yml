@@ -16,3 +16,6 @@ rules:
 
   # Warns on "global" imports, but also detects cherry imports (which are the future)
   lodash/import-scope: off
+
+  # This is not really a problem, but often times premature optimization
+  lodash/prefer-noop: off
