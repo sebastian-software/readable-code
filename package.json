@@ -61,7 +61,7 @@
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-security": "^1.4.0",
     "esprint": "^0.4.0-beta.11",
-    "flow-bin": "^0.49.1",
+    "flow-bin": "^0.50.0",
     "flow-coverage-report": "^0.3.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.0",
