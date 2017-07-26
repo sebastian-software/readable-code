@@ -139,6 +139,7 @@ Plugins:
 - `promise`: Checks for correctly working with Promises.
 - `react`: React specific checks for requiring specific structures of classes + preferring functional patterns.
 - `security`: Checks for security issues in e.g. RegExps.
+- `you-dont-need-lodash-underscore`: Showcases where ES5 would be a better solution than Lodash.
 
 ### Prettier ([Project](https://github.com/prettier/prettier))
 
