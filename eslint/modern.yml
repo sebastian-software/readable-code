@@ -5,7 +5,7 @@
 rules:
   # Suggest using arrow functions as callbacks.
   prefer-arrow-callback:
-    - error
+    - warn
 
   # Suggest using the rest parameters instead of arguments
   prefer-rest-params:

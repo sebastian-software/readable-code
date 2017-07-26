@@ -15,6 +15,7 @@ settings:
 
   import/extensions:
     - .js
+    - .jsx
     - .mjs
 
 rules:
