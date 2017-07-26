@@ -1,8 +1,10 @@
 plugins:
   - lodash
+  - you-dont-need-lodash-underscore
 
 extends:
   - plugin:lodash/recommended
+  - plugin:you-dont-need-lodash-underscore/all-warn
 
 rules:
   # Most of the normal ES2015 methods are okay to use nowadays
