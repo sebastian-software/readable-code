@@ -53,9 +53,16 @@ rules:
     - emptyLineBefore: always
       order: flexible
       properties: [
-        background, box-shadow,
+        background, background-color, background-repeat, background-clip, background-repeat,
+        background-position, background-position-x, background-position-y,
+        background-position-x, background-position-y,
+        box-shadow,
         border, border-color, border-width,
-        outline, outline-color, outline-width,
+        border-left, border-left-color, border-left-width,
+        border-right, border-right-color, border-right-width,
+        border-top, border-top-color, border-top-width,
+        border-bottom, border-bottom-color, border-bottom-width,
+        outline, outline-color, outline-width, outline-offset,
         color, text-shadow, cursor,
         font, font-family, font-size, font-weight, font-style,
         text-align, text-decoration, text-indent, text-overflow, text-rendering, text-shadow, text-transform,
