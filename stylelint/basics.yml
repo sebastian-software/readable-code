@@ -21,9 +21,11 @@ rules:
   property-no-vendor-prefix:
     - true
 
+  # Warn on unknown properties, but add support for
+  # CSS Modules, PostCSS Responsive Type and PostCSS Losd Grid
   property-no-unknown:
     - true
-    - ignoreProperties: ["composes", "/^lost-/"]
+    - ignoreProperties: ["composes", "font-range", "/^lost-/"]
 
   # Keyframe
   keyframe-declaration-no-important: true
