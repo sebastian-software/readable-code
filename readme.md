@@ -17,7 +17,7 @@ Tooling and Configuration for maintainable and readable code for Web Projects.
 - Don't try to prematurely optimize your code; keep it readable and understandable.
 - All code in any code-base should look like a single person typed it, even when many people are contributing to it.
 
-
+> "If you want your code to be easy to write, make it easy to read." -- Robert C. Martin
 
 ## Features
 
