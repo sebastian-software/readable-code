@@ -1,6 +1,6 @@
 {
   "name": "readable-code",
-  "version": "3.4.5",
+  "version": "3.4.6",
   "description": "JavaScript/CSS Coding Standards and Tooling",
   "main": "lib/index.es5.cjs.js",
   "module": "lib/index.es5.esm.js",
