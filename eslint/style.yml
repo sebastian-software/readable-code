@@ -70,7 +70,7 @@ rules:
       # 'fs' = built-in fs module
       exceptions: [
         "i", "l",
-        "id", "fs", "url", "uri", "map", "env",
+        "id", "fs", "url", "uri", "map", "env", "err",
         "key", "val", "obj",
         "pos", "row", "col",
         "min", "max",
