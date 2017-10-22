@@ -8,7 +8,7 @@ import { getGitFiles, PRETTIER_CONFIG } from "./core"
 const SRC_SCRIPTS = /\.(mjs|js|jsx)$/
 const SRC_CONFIG = { base: "." }
 
-const ESLINT_FORMATTER = "node_modules/eslint-formatter-pretty"
+const ESLINT_FORMATTER = require.resolve("eslint-formatter-pretty")
 
 gulp.task("lint:js", () => {
   return gulp
